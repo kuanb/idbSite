@@ -11,6 +11,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <!-- ReactJS fun -->
+    <script src="http://fb.me/react-0.12.1.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+
     <title>Map Page</title>
 
     <!-- Bootstrap core CSS -->
@@ -74,9 +80,9 @@
     </div>
 
     <nav class="navbar navbar-default navbar-fixed-bottom" style="height:40%">
-        <div class="container">
-            <h1 class="text-muted">Main text. Such data!</h1>
-            <p class="text-muted">Lots of text for no reason. Lots of text for no reason. Lots of text for no reason. Lots of text for no reason. Lots of text for no reason.</p>
+        <div class="container" id="infoDiv">
+            <h1>Such data and many maps</h1>
+            <p>Lorem ipsum and much other such content for days and days because remember that. Lorem ipsum and much other such content for days and days because remember that. </p>
         </div>
     </nav>
 
@@ -104,30 +110,64 @@
 
     introSequence = function(map) {
 
-        // we will be manipulating this to walk through intro to Haiti
-        var shownJSON = L.geoJson().addTo(map);
+        // standard retrieval of different layer data
+        standardRetrieve = function(filename, zoom, next) {
+            $.ajax({
+                url: './src/geojson/' + filename,
+                dataType: 'json',
+                success: function(data) {
+                    var returnedShape = data; 
+                    // init intro to northern area
+                    shownJSON.addData(returnedShape);
+                    map.setZoom(zoom)
 
-        // init intro to northern area
-            shownJSON.addData(wholeCountry);
-            map.setZoom(7)
+                    $('#infoDiv').empty();
 
-        showNorthernRegion = function() {
-            shownJSON.clearLayers()
-            shownJSON.addData(northRegions);
-            map.setZoom(7)
+                    var title = document.createElement('h1');
+                        title.innerHTML = data.title;
+                    document.getElementById('infoDiv').appendChild(title);
+
+                    var subtext = document.createElement('p');
+                        subtext.innerHTML = data.description;
+                    document.getElementById('infoDiv').appendChild(subtext);
+
+                    var nextButton = document.createElement('button');
+                                nextButton.innerHTML = 'nextButton';
+                                nextButton.setAttribute('onclick', next + '()');
+                    document.getElementById('infoDiv').appendChild(nextButton);
+                },
+                error: function(xhr, status, err) {
+                    console.log(status, err.toString());
+                }
+            });
         }
+
+        // setting the standard visual style for all the geojsons
+        var flatStyle = {
+            "color": "#ff0000",
+            "weight": 0,
+            "opacity": 0.5
+        };
+
+        // we will be manipulating this to walk through intro to Haiti
+        var shownJSON = L.geoJson(null, {
+            style: flatStyle
+        }).addTo(map);
+
+        // run the draw of the first geojson
+        standardRetrieve('country.geojson', 7, 'northRegions');
+
+        northRegions = function() { 
+            standardRetrieve('northRegions.geojson', 8, 'northRegions');
+        }
+
     }
 
     window.onload = initPage;
 
 </script>
 
-<!-- All the GeoJSON files -->
-<script src="src/geojson/country.geojson"></script>
-<script src="src/geojson/northRegions.geojson"></script>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
+<!-- Bootstrap core JavaScript -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="lib/jquery.min.js"></script>
 <script src="lib/bootstrap.min.js"></script>

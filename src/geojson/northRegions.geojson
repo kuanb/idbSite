@@ -1,5 +1,7 @@
-northernRegions = {
+{
 "type": "FeatureCollection",
+"title": "Title for N regions.",
+"description": "This is just the northern areas would you look at.",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
 "features": [

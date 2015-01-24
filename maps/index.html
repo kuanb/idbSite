@@ -65,8 +65,8 @@
             margin-bottom: 5px;
         }
         .center_logos {
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 20px;
+            margin-right: 20px;
             height: 4em;
             margin-top: 80px;
         }
@@ -90,33 +90,52 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">NHDC</a>
+          <a class="navbar-brand" href="../index.html">NHDC</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
+          
           <ul class="nav navbar-nav">
+            
             <li><a href="#">Home</a></li>
+
             <li><a href="#interactive">Interactive Map</a></li>
-            <li ><a href="#context">Context</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Overview <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
+                    <li><a href="index.html">Haiti Introduction</a></li>
+                    <li><a href="index.html#context">Research Context</a></li>
+                <li class="dropdown-header" style="margin-top:1em">Development Plans</li>
+                    <li ><a href="#context">Navigation</a></li>
+              </ul>
+            </li>
+
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Geospatial Research <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
-                <li><a href="index.html">Haiti Introduction</a></li>
-                <li><a href="index.html#context">Research Context</a></li>
                 <li class="dropdown-header" style="margin-top:1em">Report Sections</li>
                 <li><a href="#">Inland and Coastal Flooding</a></li>
                 <li><a href="#">Hurricane Risk</a></li>
                 <li><a href="#">Seismic Risk</a></li>
                 <li><a href="#">Transport Study</a></li>
                 <li><a href="#">Land Use</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
                 <li><a href="index.html#about">About Project</a></li>
                 <li><a href="http://www.iadb.org/">More about IADB</a></li>
               </ul>
             </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="http://www.iadb.org/">IDB</a></li>
+
+            <li><a href="http://www.iadb.org/">IADB</a></li>
+
           </ul>
+
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -127,10 +146,37 @@
     </div>
 
     <!-- This is the dynamic div that gets modified for the button click through... -->
-    <div class="beneathMap" style="height:250px;">
+    <div class="beneathMap" style="height:175px;">
         <div class="container" id="infoDiv">
             <h1>Welcome</h1>
             <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom:25px;margin-bottom:35px; margin-top:35px;vertical-align:bottom;">
+        <div class="col-md-4" style="vertical-align:middle;">
+            <center><img src="../static/logos/jigsaw.svg" style="height:300px;"/></center>
+        </div>
+        <div class="col-md-8" style="vertical-align:bottom;">
+            <h1 style="margin-bottom:35px">Jump to a specific report area:</h1>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
+            </a></div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info btn-lg btn-block" style="margin-bottom:10px">Hurricane Risk</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-bottom:10px">Seismic Risk</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-success btn-lg btn-block" style="margin-bottom:10px">Transport Study</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
+            </a></div>
         </div>
     </div>
 
@@ -138,6 +184,16 @@
     <a id='context'></a>
     <div class="beneathMap">
     <div>
+
+    <div class="container" style="margin-bottom:35px">
+        <div class="col-sm-8">
+            <h1>Context</h1>
+            <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+        </div>
+        <div class="col-sm-4">
+            <center><img src="../static/logos/flag.png" style="width:9.5em" /></center>
+        </div>
+    </div>
 
     <div class="container" style="margin-bottom:35px">
         <div class="col-sm-4">
@@ -201,33 +257,6 @@
         </div>
     </div>
 
-    <!-- context div -->
-    <a id='landuse'></a>
-    <div>
-        <ul class="bxslider" id='slider03'>
-            <li class='slider_img'><img src="../static/maps/040_landUse86.png" />
-                <div class='bx_subtext'>
-                    <h4>Test text blah</h4>
-                </div>
-            </li>
-            <li class='slider_img'><img src="../static/maps/041_landUse10.png" />
-                <div class='bx_subtext'>
-                    <h4>Number two blah</h4>
-                </div>
-            </li>
-            <li class='slider_img'><img src="../static/maps/042_floodingRisk.png" />
-                <div class='bx_subtext'>
-                    <h4>Number three</h4>
-                </div>
-            </li>
-            <li class='slider_img'><img src="../static/maps/044_urbanFootprints.png" />
-                <div class='bx_subtext'>
-                    <h4>Number four</h4>
-                </div>
-            </li>
-        </ul>
-    </div>
-
     <div style="height:200px"></div>
 
     <!-- About section -->
@@ -246,7 +275,10 @@
     <!-- IDB section -->
     <a id='idb'></a>
     <div class="foot_aerial">
-        <center><a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
+        <center>
+            <a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
+            <a href="http://www.urbanlaunchpad.org/"><img src="../static/logos/ul_logo.png" class="center_logos"/></a>
+        </center>
     </div>
 
 </body>
@@ -277,11 +309,11 @@
         pause: 3000
     });
 
-    $('#slider03').bxSlider({
-        mode: 'fade',
-        autoControls: true,
-        pause: 3000
-    });
+    // $('#slider03').bxSlider({
+    //     mode: 'fade',
+    //     autoControls: true,
+    //     pause: 3000
+    // });
 
     // loads page elements like leaflet map and generates first view
     initPage = function() {

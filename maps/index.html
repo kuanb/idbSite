@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Map Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="../lib/leaflet.css" />
+    <script src="../lib/leaflet.js"></script>
+
+    <style>
+
+        body {
+        background-color: #d3d3d3;
+        }
+        .foot_aerial {
+            background: url('../static/footer/coastAerial.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        @media screen and (max-width: 925px) {
+            .foot_aerial {
+                background-size: auto 100%;
+            }
+        }
+        .bxslider {
+            padding: 0px;
+        }
+        .slider_img {
+            background-color: #d3d3d3;
+        }
+        .bx_subtext {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+        .beneathMap {
+            width:100%;
+            background-color: #f8f8f8;
+            border-color: #e7e7e7;
+        }
+        .span_image {
+            width: 100%;
+        }
+        .container {
+            margin-bottom: 50px;
+            margin-bottom: 5px;
+        }
+        .center_logos {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 4em;
+            margin-top: 80px;
+        }
+        .img_forSlider {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container" style="margin-bottom: 0px">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">NHDC</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          
+          <ul class="nav navbar-nav">
+            
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#interactive">Interactive Map</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Overview <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">General</li>
+                    <li><a href="index.html">Haiti Introduction</a></li>
+                    <li><a href="index.html#context">Research Context</a></li>
+                <li class="dropdown-header" style="margin-top:1em">Report Specific</li>
+                    <li><a href="index.html#context">Baseline Studies</a></li>
+                    <li><a href="index.html#context">Northern Corridor</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Geospatial Research <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">Report Sections</li>
+                <li><a href="#">Inland and Coastal Flooding</a></li>
+                <li><a href="#">Hurricane Risk</a></li>
+                <li><a href="#">Seismic Risk</a></li>
+                <li><a href="#">Transport Study</a></li>
+                <li><a href="#">Land Use</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
+                <li><a href="index.html#about">About Project</a></li>
+                <li><a href="http://www.iadb.org/">More about IADB</a></li>
+              </ul>
+            </li>
+
+            <li><a href="http://www.iadb.org/">IADB</a></li>
+
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <a id='interactive'></a>
+    <div id="map" style="margin-top:50px;width:100%;height:400px;z-index:0">
+
+    </div>
+
+    <!-- This is the dynamic div that gets modified for the button click through... -->
+    <div class="beneathMap" style="height:175px;">
+        <div class="container" id="infoDiv">
+            <h1>Welcome</h1>
+            <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom:25px;margin-bottom:35px; margin-top:35px;vertical-align:bottom;">
+        <div class="col-md-4" style="vertical-align:middle;">
+            <center><img src="../static/logos/jigsaw.svg" style="height:300px;"/></center>
+        </div>
+        <div class="col-md-8" style="vertical-align:bottom;">
+            <h1 style="margin-bottom:35px">Jump to a specific report area:</h1>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
+            </a></div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-info btn-lg btn-block" style="margin-bottom:10px">Hurricane Risk</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-bottom:10px">Seismic Risk</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-success btn-lg btn-block" style="margin-bottom:10px">Transport Study</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
+            </a></div>
+        </div>
+    </div>
+
+    <!-- context div -->
+    <a id='context'></a>
+    <div class="beneathMap">
+    <div>
+
+    <div class="container" style="margin-bottom:35px">
+        <div class="col-sm-8">
+            <h1>Context</h1>
+            <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+        </div>
+        <div class="col-sm-4">
+            <center><img src="../static/logos/flag.png" style="width:9.5em" /></center>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom:35px">
+        <div class="col-sm-4">
+            <center><img src="../static/logos/flag.png" style="width:9.5em" /></center>
+        </div>
+        <div class="col-sm-8">
+            <h1>Context</h1>
+            <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+        </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="container">
+        <div class="col-sm-4">
+            <h3>Northern Development Corridor</h3>
+            <p>The study area is located along Route National 6, from Cap-Haitien (Nord dep.) to Ouanaminthe (Nord-Est dep.) The region of study has been highlighted in yellow in the below map.</p>
+        </div>
+        <div class="col-sm-8">
+            <img src="../static/maps/010_nationOverview.png" class="img_forSlider"/>
+        </div>
+    </div>
+
+    <!-- Northern area in detail -->
+    <div class="container">
+        <div class="col-sm-4">
+            <h3>Corridor cities by population</h3>
+                <p>Nord & Nord-Est Departments, Haiti. Left and right arrows navigate slides. <i>Source: IHSI, 2009 Projections.</i></p>
+            <h3>Regional Economies</h3>
+                <p>The PIC will unlock rapid demographic growth and urban expansion, especially in the four surrounding communities and on the Corridor’s resources and infrastructure.</p>
+        </div>
+        <div class="col-sm-8">
+            <ul class="bxslider" id='slider01'>
+                <li class='slider_img'><img src="../static/maps/020_northCorridors.png" /></li>
+                <li class='slider_img'><img src="../static/maps/023_citiesPopulations.png" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-sm-4">
+            <h3>Caracol Industrial Parc</h3>
+                <p>Image 3 provides a summary of PIC's operations, as well as context to Route National 6.</p>
+            <h3>New Growth Dynamics</h3>
+                <p>In addition to the Caracol Industrial Park, other anchor projects are currently being developed in the region.</p>
+        </div>
+        <div class="col-sm-8">
+            <ul class="bxslider" id='slider02'>
+                <li class='slider_img'><img src="../static/maps/025_picIntro.png" /></li>
+                <li class='slider_img'><img src="../static/maps/027_newGrowth.png" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-sm-4">
+            <h3>Urban Challenges and Needs</h3>
+            <p>Unplanned, rapid growth can increase conditions of informality as well as deteriorate community, landscape, and ecological conditions.</p>
+        </div>
+        <div class="col-sm-8">
+            <img src="../static/maps/030_urbanChallenges.png" class="img_forSlider"/>
+        </div>
+    </div>
+
+    <div style="height:200px"></div>
+
+    <!-- About section -->
+    <a id='about'></a>
+    <div>
+        <div class="container">
+            <div class="col-sm-4">
+                <h2>About this Project</h2>
+            </div>
+            <div class="col-sm-8">
+                <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- IDB section -->
+    <a id='idb'></a>
+    <div class="foot_aerial">
+        <center>
+            <a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
+            <a href="http://www.urbanlaunchpad.org/"><img src="../static/logos/ul_logo.png" class="center_logos"/></a>
+        </center>
+    </div>
+
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../lib/ie10-viewport-bug-workaround.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script src="../lib/jquery.bxslider.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../lib/jquery.bxslider.css" rel="stylesheet" />
+
+<script>
+
+    $('#slider01').bxSlider({
+        mode: 'fade',
+        autoControls: true,
+        pause: 3000
+    });
+
+    $('#slider02').bxSlider({
+        mode: 'fade',
+        autoControls: true,
+        pause: 3000
+    });
+
+    // $('#slider03').bxSlider({
+    //     mode: 'fade',
+    //     autoControls: true,
+    //     pause: 3000
+    // });
+
+    // loads page elements like leaflet map and generates first view
+    initPage = function() {
+        // set map height
+        document.getElementById('map').setAttribute('padding', window.innerHeight)
+        document.getElementById('map').setAttribute('width', window.innerWidth)
+
+        var map = L.map('map').setView([18.75, -72.000590], 3);
+
+        // add an OpenStreetMap tile layer
+        var sk_accessToken = 'pk.eyJ1Ijoic3RlcGhlbmtlbm5lZHkiLCJhIjoidjE2aTktdyJ9.gpYsw_JQAEuHlK5rAq0rsw';
+        var access_token = 'stephenkennedy.ad4e43ac'
+
+        L.tileLayer('http://api.tiles.mapbox.com/v4/mapbox.outdoors/{z}/{x}/{y}.png?access_token=' + sk_accessToken, {
+        }).addTo(map);
+
+        // remove leaflet (+/-) controls, attribution
+        $(".leaflet-control-zoom").css("visibility", "hidden");
+        $('.leaflet-control-attribution').remove()
+
+        introSequence(map);
+    };
+
+    // handles production of new map scenes
+    introSequence = function(map) {
+
+        // standard retrieval of different layer data
+        standardRetrieve = function(filename, next) {
+            $.ajax({
+                url: '../src/geojson/' + filename,
+                dataType: 'json',
+                success: function(data) { console.log(data);
+                    var returnedShape = data; 
+
+                    // init intro to northern area
+                    shownJSON.clearLayers();
+                    shownJSON.addData(returnedShape);
+                    map.fitBounds(shownJSON);
+
+                    // clear out details blob
+                    $('#infoDiv').empty();
+
+                    // map title
+                    var title = document.createElement('h1');
+                        title.innerHTML = data.title;
+                    document.getElementById('infoDiv').appendChild(title);
+
+                    // map subtitle
+                    var subtext = document.createElement('p');
+                        subtext.innerHTML = data.description;
+                    document.getElementById('infoDiv').appendChild(subtext);
+
+                    // map next button
+                    if (next !== undefined) {
+                        var nextButton = document.createElement('button');
+                                    nextButton.innerHTML = 'Next Map Item';
+                                    nextButton.setAttribute('class', 'btn btn-default');
+                                    nextButton.setAttribute('onclick', next + '()');
+                        document.getElementById('infoDiv').appendChild(nextButton);   
+                    };
+                },
+                error: function(xhr, status, err) {
+                    console.log(status, err.toString());
+                }
+            });
+        }
+
+        // setting the standard visual style for all the geojsons
+        var flatStyle = {
+            "color": "#ff0000",
+            "weight": 1,
+            "opacity": 0.5
+        };
+
+        // we will be manipulating this to walk through intro to Haiti
+        var shownJSON = L.geoJson(null, {
+            style: flatStyle
+        }).addTo(map);
+
+        // run the draw of the first geojson
+        setTimeout(function(){ standardRetrieve('country.geojson','northRegions') }, 1000);
+
+        northRegions = function() { 
+            standardRetrieve('northRegions.geojson', 'studyAreas');
+        }
+
+        studyAreas = function() { 
+            standardRetrieve('study_area.geojson');
+        }
+
+    }
+
+    window.onload = initPage;
+
+    // THIS HANDLES JUMPING TO #A HREFs
+    // The function actually applying the offset
+    function offsetAnchor() {
+        if(location.hash.length !== 0) {
+            window.scrollTo(window.scrollX, window.scrollY - 100);
+        }
+    }
+
+    // This will capture hash changes while on the page
+    $(window).on("hashchange", function () {
+        offsetAnchor();
+    });
+
+    // This is here so that when you enter the page with a hash,
+    // it can provide the offset in that case too. Having a timeout
+    // seems necessary to allow the browser to jump to the anchor first.
+    window.setTimeout(function() {
+        offsetAnchor();
+    }, 1);
+
+</script>
+
+
+</html>

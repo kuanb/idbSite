@@ -453,6 +453,16 @@
                     // clear out details blob
                     $('#infoDiv').empty();
 
+                    // map next button
+                    if (next !== undefined) {
+                        var nextButton = document.createElement('button');
+                                    nextButton.innerHTML = 'View Next Map Item';
+                                    nextButton.setAttribute('style', "float:right;margin-top:2em;");
+                                    nextButton.setAttribute('class', 'btn btn-success');
+                                    nextButton.setAttribute('onclick', next + '()');
+                        document.getElementById('infoDiv').appendChild(nextButton);   
+                    };
+
                     // map title
                     var title = document.createElement('h1');
                         title.innerHTML = data.title;
@@ -462,16 +472,6 @@
                     var subtext = document.createElement('p');
                         subtext.innerHTML = data.description;
                     document.getElementById('infoDiv').appendChild(subtext);
-
-                    // map next button
-                    if (next !== undefined) {
-                        var nextButton = document.createElement('button');
-                                    nextButton.innerHTML = 'Next Map Item';
-                                    nextButton.cssText = ""
-                                    nextButton.setAttribute('class', 'btn btn-default');
-                                    nextButton.setAttribute('onclick', next + '()');
-                        document.getElementById('infoDiv').appendChild(nextButton);   
-                    };
                 },
                 error: function(xhr, status, err) {
                     console.log(status, err.toString());
@@ -494,13 +494,9 @@
         // run the draw of the first geojson
         setTimeout(function(){ standardRetrieve('country.geojson','northRegions') }, 1000);
 
-        northRegions = function() { 
-            standardRetrieve('northRegions.geojson', 'studyAreas');
-        }
-
-        studyAreas = function() { 
-            standardRetrieve('study_area.geojson');
-        }
+        // LOAD SHAPEFILES SERIES
+        northRegions = function() { standardRetrieve('northRegions.geojson', 'studyAreas'); };
+        studyAreas = function() { standardRetrieve('study_area_caracol.geojson'); };
 
     }
 

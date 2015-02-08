@@ -35,6 +35,38 @@
             width: 100%;
             margin-top: 50px;
         }
+        .intro_nav {
+            background: url('../static/photos/panorama.jpg');
+            background-size: auto 100% ;
+            background-width: 200px;
+            margin-top: 50px;
+            padding-bottom:35px; 
+            padding-top:35px;
+            height: 380px;
+            background-position: center;
+        }
+        .ndc_splash {
+            background: url('../static/photos/motorbike.jpg');
+            background-size:  100% auto;
+            margin-bottom: 50px;
+            padding-bottom:25px; 
+            padding-top:45px;
+            height: 250px;
+            background-position: center;
+            background-position-y: bottom;
+        }
+        @media screen and (max-width: 600px) {
+            .ndc_splash {
+                background-size: auto 100%;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .intro_nav {
+                color: white;
+                text-align: center;
+                height: 800px;
+            }
+        }
         @media screen and (max-width: 925px) {
             .foot_aerial {
                 background-size: auto 100%;
@@ -81,7 +113,7 @@
 <body>
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
       <div class="container" style="margin-bottom: 0px">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -105,17 +137,12 @@
               <ul class="dropdown-menu" role="menu">
 
                 <li class="dropdown-header" style="margin-top:1em">General</li>
-                    <li><a href="index.html">Haiti Introduction</a></li>
+                    <li><a href="index.html#howtouse">How to Use Site</a></li>
+                    <li><a href="index.html#welcome">Orientation Map</a></li>
                     <li><a href="index.html#context">Research Context</a></li>
                 <li class="dropdown-header" style="margin-top:1em">Report Specific</li>
                     <li><a href="index.html#context">Baseline Studies</a></li>
                     <li><a href="index.html#context">Northern Corridor</a></li>
-
-                <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
-                    <li><a href="index.html">Haiti Introduction</a></li>
-                    <li><a href="index.html#context">Research Context</a></li>
-                <li class="dropdown-header" style="margin-top:1em">Development Plans</li>
-                    <li ><a href="#context">Navigation</a></li>
 
               </ul>
             </li>
@@ -136,7 +163,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
-                <li><a href="index.html#about">About Project</a></li>
+                <li><a href="#about">About Project</a></li>
+                <li><a href="#more_about">About Website</a></li>
                 <li><a href="http://www.iadb.org/">More about IADB</a></li>
               </ul>
             </li>
@@ -149,25 +177,12 @@
       </div>
     </nav>
 
-    <a id='interactive'></a>
-    <div id="map" style="margin-top:50px;width:100%;height:400px;z-index:0">
-
-    </div>
-
-    <!-- This is the dynamic div that gets modified for the button click through... -->
-    <div class="beneathMap" style="height:175px;">
-        <div class="container" id="infoDiv">
-            <h1>Welcome</h1>
-            <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
-        </div>
-    </div>
-
-    <div class="container" style="margin-bottom:25px;margin-bottom:35px; margin-top:35px;vertical-align:bottom;">
+    <div class="intro_nav" >
         <div class="col-md-4" style="vertical-align:middle;">
             <center><img src="../static/logos/jigsaw.svg" style="height:300px;"/></center>
         </div>
         <div class="col-md-8" style="vertical-align:bottom;">
-            <h1 style="margin-bottom:35px">Jump to a specific report area:</h1>
+            <h1 style="margin-bottom:35px">Jump to specific report:</h1>
             <div class="col-md-6"><a href="index.html#context">
                 <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
             </a></div>
@@ -183,45 +198,92 @@
             <div class="col-md-6"><a href="index.html#context">
                 <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
             </a></div>
-            <div class="col-md-6"><a href="index.html#context">
+            <div class="col-md-6"><a href="#about">
                 <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
             </a></div>
         </div>
     </div>
 
+
     <!-- context div -->
-    <a id='context'></a>
+    <a id='welcome'></a>
     <div class="beneathMap">
     <div>
 
-    <div class="container" style="margin-bottom:35px">
+    <a id='howtouse'></a>
+    <div class="container" style="margin-bottom:35px;padding-top:35px">
         <div class="col-sm-8">
-            <h1>Context</h1>
-            <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+            <h1>How to use this site</h1>
+            <p>Welcome! A number of reports have been prepared as part of the (Inter-American Development Bank) IDB's Emerging and Sustainable Cities Initiative's research for the Northern Development Corridor in Haiti. These reports focus, more broadly, on the northern region of Haiti and can serve as a valuable resource to those working or interested in the area.</p>
+            <p>This website contains selected content from that research. To navigate to specific reports, either use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window or select from the above topic buttons. For more information on the Northern Development Corridor, specifically, either scroll down or click the above "About Research" button.</p>
         </div>
-        <div class="col-sm-4">
-            <center><img src="../static/logos/flag.png" style="width:9.5em" /></center>
+        <div class="col-sm-4" style="margin-top:5%;margin-bottom:auto;">
+            <br>
+            <center><img src="../static/logos/flag.png" style="width:9em" />  +  
+            <img src="../static/logos/idb_logo.png" style="width:9.5em" /></center>
         </div>
     </div>
 
-    <div class="container" style="margin-bottom:35px">
-        <div class="col-sm-4">
-            <center><img src="../static/logos/flag.png" style="width:9.5em" /></center>
+    <!-- HAITI ABOUT MAP... -->
+    <a id='welcome'></a>
+    <div class="container" style="margin-bottom:50px;margin-top:35px;">
+        <div class="col-sm-12">
+            <h1>Welcome</h1>
+            <p>The below map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
         </div>
-        <div class="col-sm-8">
-            <h1>Context</h1>
-            <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+    </div>
+
+    <a id='interactive'></a>
+    <div class="container" >
+        <div id="map" style="width:100%;height:400px;z-index:0"></div>
+    </div>
+
+    <div class="beneathMap" style="height:175px;">
+        <div class="container">
+            <div class="col-sm-12" id="infoDiv">
+                <h1>Welcome</h1>
+                <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
+            </div>
+        </div>
+    </div>
+
+    <a id='about'></a>
+    <div class="ndc_splash">
+        <div class="container" style="margin-bottom:35px">
+            <div class="col-sm-5">
+            </div>
+            <div class="col-sm-7" style="color:white;background-color:rgba(0,0,0,0.5)">
+                <h1>Context</h1>
+                <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom:50px;">
+        <div class="col-sm-12">
+            <h2>About this Research</h2>
+            <p>TThe Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6).</p>
+            <p>Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
+        </div>
+        <div class="col-sm-12">
+            <h2>Goals of the Study</h2>
+            <p>This study seeks to address the very complex question of where and how should development occur in the Northern Development Corridor of Haiti, with special emphasis on how human settlement ought to occur in light of the different dy- namics and forces that will shape population growth and migration in the area. But the complexity is not only because of the challenges inherent to the question itself; it is so, also because the challenges posed by a setting of which there is limited information, whose population dynamics express a volatility strongly in- fluenced by poverty at the rural and urban levels.</p>
+            <p>In December 2012, the Government of Haiti issued the Cap Haïtien – Ouana- minthe Development Corridor Regional Comprehensive Plan, supported jointly by the USAID and the IDBi. ERM’s goal is to draw from the significant work and find- ings as well as to contribute further on some of the areas and topics covered by this effort. For the purposes of this study, ERM will refer to this as the AIA – RCP.</p>
         </div>
     </div>
 
     <!-- Overview -->
     <div class="container">
-        <div class="col-sm-4">
-            <h3>Northern Development Corridor</h3>
-            <p>The study area is located along Route National 6, from Cap-Haitien (Nord dep.) to Ouanaminthe (Nord-Est dep.) The region of study has been highlighted in yellow in the below map.</p>
+        <div class="col-sm-5">
+            <img src="../static/maps/010_nationOverview_thumb.png" class="img_forSlider"/>
         </div>
-        <div class="col-sm-8">
-            <img src="../static/maps/010_nationOverview.png" class="img_forSlider"/>
+        <div class="col-sm-7">
+            <h3>Northern Development Corridor</h3>
+            <p>The study area is located along Route National 6, from Cap-Haitien (Nord dep.) to Ouanaminthe (Nord-Est dep.). The region of study has been highlighted in yellow in the map to the left. Explore the map in detail by scrolling left-right and up-down in the below image.</p>
+            <p>Later slides can also be toggled with left and right buttons visible on the edges of the image.</p>
+        </div>
+        <div class="col-sm-12">
+            <embed src="../img_embed/010_nationOverview.html"  class="img_forSlider" style="height:400px">
         </div>
     </div>
 
@@ -266,14 +328,40 @@
         </div>
     </div>
 
-    <div style="height:200px"></div>
+    <div class="container" style="margin-bottom:75px;margin-top:=55px">
+        <div class="col-md-12">
+            <div class="col-md-12"><a href="#">
+                <button class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color: rgba(0,0,0,0.1)">
+                    Individual Reports Selection
+                </button>
+            </a></div>
+            <div class="col-md-4"><a href="index.html#context">
+                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
+            </a></div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-info btn-lg btn-block" style="margin-bottom:10px">Hurricane Risk</button>
+            </a></div>
+            <div class="col-md-4"><a href="index.html#context">
+                <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-bottom:10px">Seismic Risk</button>
+            </a></div>
+            <div class="col-md-4"><a href="index.html#context">
+                <button type="button" class="btn btn-success btn-lg btn-block" style="margin-bottom:10px">Transport Study</button>
+            </a></div>
+            <div class="col-md-4"><a href="index.html#context">
+                <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
+            </a></div>
+            <div class="col-md-4"><a href="#about">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
+            </a></div>
+        </div>
+    </div>
 
     <!-- About section -->
-    <a id='about'></a>
+    <a id='more_about'></a>
     <div>
         <div class="container">
             <div class="col-sm-4">
-                <h2>About this Project</h2>
+                <h2>More about project</h2>
             </div>
             <div class="col-sm-8">
                 <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
@@ -354,7 +442,7 @@
             $.ajax({
                 url: '../src/geojson/' + filename,
                 dataType: 'json',
-                success: function(data) { console.log(data);
+                success: function(data) {
                     var returnedShape = data; 
 
                     // init intro to northern area
@@ -379,6 +467,7 @@
                     if (next !== undefined) {
                         var nextButton = document.createElement('button');
                                     nextButton.innerHTML = 'Next Map Item';
+                                    nextButton.cssText = ""
                                     nextButton.setAttribute('class', 'btn btn-default');
                                     nextButton.setAttribute('onclick', next + '()');
                         document.getElementById('infoDiv').appendChild(nextButton);   

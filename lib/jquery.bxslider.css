@@ -100,11 +100,13 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
+	z-index: 10;
 	left: 10px;
 	background: url(images/controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
+	z-index: 10;
 	right: 10px;
 	background: url(images/controls.png) no-repeat -43px -32px;
 }
@@ -118,6 +120,7 @@
 }
 
 .bx-wrapper .bx-controls-direction a {
+	z-index: 10;
 	position: absolute;
 	top: 50%;
 	margin-top: -16px;
@@ -125,7 +128,6 @@
 	width: 32px;
 	height: 32px;
 	text-indent: -9999px;
-	z-index: 9999;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {

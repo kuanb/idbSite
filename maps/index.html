@@ -440,7 +440,7 @@
         // standard retrieval of different layer data
         standardRetrieve = function(filename, next) {
             $.ajax({
-                url: '../src/geojson/' + filename,
+                url: 'src/geojson/' + filename,
                 dataType: 'json',
                 success: function(data) {
                     var returnedShape = data; 
@@ -457,7 +457,7 @@
                     if (next !== undefined) {
                         var nextButton = document.createElement('button');
                                     nextButton.innerHTML = 'View Next Map Item';
-                                    nextButton.setAttribute('style', "float:right;margin-top:2em;");
+                                    nextButton.setAttribute('style', "float:right;margin-top:1.25em;");
                                     nextButton.setAttribute('class', 'btn btn-success');
                                     nextButton.setAttribute('onclick', next + '()');
                         document.getElementById('infoDiv').appendChild(nextButton);   
@@ -492,7 +492,7 @@
         }).addTo(map);
 
         // run the draw of the first geojson
-        setTimeout(function(){ standardRetrieve('country.geojson','northRegions') }, 1000);
+        setTimeout(function(){ standardRetrieve('country_overview.geojson','northRegions') }, 2000);
 
         // LOAD SHAPEFILES SERIES
         northRegions = function() { standardRetrieve('northRegions.geojson', 'studyAreas'); };

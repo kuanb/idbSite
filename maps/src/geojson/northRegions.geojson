@@ -2,7 +2,7 @@
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 
-"title": "Northern Regions of Haiti",
+"title": "The Northern Region of Haiti",
 "description": "The northern region consists of the Massif du Nord (Northern Massif) and the Plaine du Nord (Northern Plain). The Massif du Nord, an extension of the central mountain range in the Dominican Republic, begins at Haiti's eastern border, north of the Guayamouc River, and extends to the northwest through the northern peninsula. The Massif du Nord ranges in elevation from 600 to 1,100 meters. The Plaine du Nord lies along the northern border with the Dominican Republic, between the Massif du Nord and the North Atlantic Ocean. This lowland area of 2,000 square kilometers is about 150 kilometers long and 30 kilometers wide.",
                                                                                 
 "features": [

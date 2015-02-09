@@ -23,7 +23,7 @@
     <style>
 
         body {
-        background-color: #d3d3d3;
+        background-color: #f8f8f8;
         }
         .btn {
             border-radius:0px
@@ -131,7 +131,7 @@
           
           <ul class="nav navbar-nav">
             
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
 
             <li><a href="#interactive">Interactive Map</a></li>
             
@@ -185,10 +185,10 @@
             <center><img src="../static/logos/jigsaw.svg" style="height:300px;"/></center>
         </div>
         <div class="col-md-8" style="vertical-align:bottom;">
-            <h1 style="margin-bottom:35px">Jump to specific report:</h1>
+            <h1 style="margin-bottom:35px;color:#323270;">Jump to specific report:</h1>
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;" onclick='loadGrowth()'>Urban Growth Projections</button>
                 </a></div>
                 <div class="col-md-6"><a href="flooding.html">
                     <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Vulnerability to Risks & Natural Hazards</button>
@@ -200,7 +200,7 @@
                     <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
                 </a></div>
 
-                <div class="col-md-6"><a href="#">=
+                <div class="col-md-6"><a href="#">
                 </a></div>
                 <div class="col-md-6"><a href="#about">
                     <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(955,955,955,0.35);color:white;border-width:0px;">Northern Haiti Plan</button>
@@ -210,207 +210,219 @@
     </div>
 
 
+
+
+
+
+
     <!-- context div -->
-    <a id='welcome'></a>
-    <div class="beneathMap">
-    <div>
 
-    <a id='howtouse'></a>
-    <div class="container" style="margin-bottom:35px;padding-top:35px">
-        <div class="col-sm-8">
-            <h1>How to use this site</h1>
-            <p>Welcome! A number of reports have been prepared as part of the (Inter-American Development Bank) IDB's Emerging and Sustainable Cities Initiative's research for the Northern Development Corridor in Haiti. These reports focus, more broadly, on the northern region of Haiti and can serve as a valuable resource to those working or interested in the area.</p>
-            <p>This website contains selected content from that research. To navigate to specific reports, either use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window or select from the above topic buttons. For more information on the Northern Development Corridor, specifically, either scroll down or click the above "About Research" button.</p>
+    <div class="beneathMap" id="includedContent">
+
+        <!-- INTERNAL CAN BE SWAPPED -->
+        <a id='howtouse'></a>
+        <div class="container" style="margin-bottom:35px;padding-top:35px">
+            <div class="col-sm-8">
+                <h1>How to use this site</h1>
+                <p>Welcome! A number of reports have been prepared as part of the (Inter-American Development Bank) IDB's Emerging and Sustainable Cities Initiative's research for the Northern Development Corridor in Haiti. These reports focus, more broadly, on the northern region of Haiti and can serve as a valuable resource to those working or interested in the area.</p>
+                <p>This website contains selected content from that research. To navigate to specific reports, either use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window or select from the above topic buttons. For more information on the Northern Development Corridor, specifically, either scroll down or click the above "About Research" button.</p>
+            </div>
+            <div class="col-sm-4" style="margin-top:5%;margin-bottom:auto;">
+                <br>
+                <center><img src="../static/logos/flag.png" style="width:9em" />  +  
+                <img src="../static/logos/idb_logo.png" style="width:9.5em" /></center>
+            </div>
         </div>
-        <div class="col-sm-4" style="margin-top:5%;margin-bottom:auto;">
-            <br>
-            <center><img src="../static/logos/flag.png" style="width:9em" />  +  
-            <img src="../static/logos/idb_logo.png" style="width:9.5em" /></center>
-        </div>
-    </div>
 
-    <!-- HAITI ABOUT MAP... -->
-    <a id='welcome'></a>
-    <div class="container" style="margin-bottom:50px;margin-top:35px;">
-        <div class="col-sm-12">
-            <h1>Welcome</h1>
-            <p>The below map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
-        </div>
-    </div>
-
-    <a id='interactive'></a>
-    <div class="container" >
-        <div id="map" style="width:100%;height:450px;z-index:0"></div>
-    </div>
-
-    <div class="beneathMap" style="height:250px;">
-        <div class="container">
-            <div class="col-sm-12" id="infoDiv">
+        <!-- HAITI ABOUT MAP... -->
+        <a id='welcome'></a>
+        <div class="container" style="margin-bottom:50px;margin-top:35px;">
+            <div class="col-sm-12">
                 <h1>Welcome</h1>
-                <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
+                <p>The below map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
             </div>
         </div>
-    </div>
 
-    <a id='about'></a>
-    <div class="ndc_splash">
-        <div class="container" style="margin-bottom:35px">
+        <a id='interactive'></a>
+        <div class="container" >
+            <div id="map" style="width:100%;height:450px;z-index:0"></div>
+        </div>
+
+        <div class="beneathMap" style="height:250px;">
+            <div class="container">
+                <div class="col-sm-12" id="infoDiv">
+                    <h1>Welcome</h1>
+                    <p>The above map provides a brief walkthrough, to orient viewers with the region of Haiti on which this research reports. To learn more, simply click the below "Next" button, once the inital content has completed loading.</p>
+                </div>
+            </div>
+        </div>
+
+        <a id='about'></a>
+        <div class="ndc_splash">
+            <div class="container" style="margin-bottom:35px">
+                <div class="col-sm-5">
+                </div>
+                <div class="col-sm-7" style="color:white;background-color:rgba(0,0,0,0.5);padding-bottom:0.45em;">
+                    <h1>Context</h1>
+                    <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom:50px;">
+            <div class="col-sm-12">
+                <h2>About this Research</h2>
+                <p>TThe Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6).</p>
+                <p>Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
+            </div>
+            <div class="col-sm-12">
+                <h2>Goals of the Study</h2>
+                <p>This study seeks to address the very complex question of where and how should development occur in the Northern Development Corridor of Haiti, with special emphasis on how human settlement ought to occur in light of the different dynamics and forces that will shape population growth and migration in the area. But the complexity is not only because of the challenges inherent to the question itself; it is so, also because the challenges posed by a setting of which there is limited information, whose population dynamics express a volatility strongly influenced by poverty at the rural and urban levels.</p>
+                <p>In December 2012, the Government of Haiti issued the Cap Haïtien – Ouanaminthe Development Corridor Regional Comprehensive Plan, supported jointly by the USAID and the IDB. ERM’s goal is to draw from the significant work and findings as well as to contribute further on some of the areas and topics covered by this effort. For the purposes of this study, ERM will refer to this as the AIA – RCP.</p>
+            </div>
+        </div>
+
+        <!-- Overview -->
+        <div class="container">
             <div class="col-sm-5">
+                <img src="../static/maps/010_nationOverview_thumb.png" class="img_forSlider"/>
             </div>
-            <div class="col-sm-7" style="color:white;background-color:rgba(0,0,0,0.5);padding-bottom:0.45em;">
-                <h1>Context</h1>
-                <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
+            <div class="col-sm-7">
+                <h3>Northern Development Corridor</h3>
+                <p>The study area is located along Route National 6, from Cap-Haitien (Nord dep.) to Ouanaminthe (Nord-Est dep.). The region of study has been highlighted in yellow in the map to the left. Explore the map in detail by scrolling left-right and up-down in the below image.</p>
+                <p>Later slides can also be toggled with left and right buttons visible on the edges of the image.</p>
             </div>
-        </div>
-    </div>
-
-    <div class="container" style="margin-bottom:50px;">
-        <div class="col-sm-12">
-            <h2>About this Research</h2>
-            <p>TThe Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6).</p>
-            <p>Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
-        </div>
-        <div class="col-sm-12">
-            <h2>Goals of the Study</h2>
-            <p>This study seeks to address the very complex question of where and how should development occur in the Northern Development Corridor of Haiti, with special emphasis on how human settlement ought to occur in light of the different dynamics and forces that will shape population growth and migration in the area. But the complexity is not only because of the challenges inherent to the question itself; it is so, also because the challenges posed by a setting of which there is limited information, whose population dynamics express a volatility strongly influenced by poverty at the rural and urban levels.</p>
-            <p>In December 2012, the Government of Haiti issued the Cap Haïtien – Ouanaminthe Development Corridor Regional Comprehensive Plan, supported jointly by the USAID and the IDB. ERM’s goal is to draw from the significant work and findings as well as to contribute further on some of the areas and topics covered by this effort. For the purposes of this study, ERM will refer to this as the AIA – RCP.</p>
-        </div>
-    </div>
-
-    <!-- Overview -->
-    <div class="container">
-        <div class="col-sm-5">
-            <img src="../static/maps/010_nationOverview_thumb.png" class="img_forSlider"/>
-        </div>
-        <div class="col-sm-7">
-            <h3>Northern Development Corridor</h3>
-            <p>The study area is located along Route National 6, from Cap-Haitien (Nord dep.) to Ouanaminthe (Nord-Est dep.). The region of study has been highlighted in yellow in the map to the left. Explore the map in detail by scrolling left-right and up-down in the below image.</p>
-            <p>Later slides can also be toggled with left and right buttons visible on the edges of the image.</p>
-        </div>
-        <div class="col-sm-12">
-            <embed src="../img_embed/010_nationOverview.html"  class="img_forSlider" style="height:400px">
-        </div>
-        <div class="col-sm-12">
-        <p>The Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6). Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
-        </div>
-    </div>
-
-    <!-- Northern area in detail -->
-    <div class="container">
-        <div class="col-sm-4">
-            <h3>Corridor cities by population</h3>
-                <p>Nord & Nord-Est Departments, Haiti. Left and right arrows navigate slides. <i>Source: IHSI, 2009 Projections.</i></p>
-            <h3>Regional Economies</h3>
-                <p>The PIC will unlock rapid demographic growth and urban expansion, especially in the four surrounding communities and on the Corridor’s resources and infrastructure.</p>
-        </div>
-        <div class="col-sm-8">
-            <ul class="bxslider" id='slider01'>
-                <li class='slider_img'><img src="../static/maps/020_northCorridors.png" /></li>
-                <li class='slider_img'><img src="../static/maps/023_citiesPopulations.png" /></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="col-sm-4">
-            <h3>Caracol Industrial Parc</h3>
-                <p>Image 3 provides a summary of PIC's operations, as well as context to Route National 6.</p>
-            <h3>New Growth Dynamics</h3>
-                <p>In addition to the Caracol Industrial Park, other anchor projects are currently being developed in the region.</p>
-        </div>
-        <div class="col-sm-8">
-            <ul class="bxslider" id='slider02'>
-                <li class='slider_img'><img src="../static/maps/025_picIntro.png" /></li>
-                <li class='slider_img'><img src="../static/maps/027_newGrowth.png" /></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="col-sm-4">
-            <h3>Urban Challenges and Needs</h3>
-            <p>Unplanned, rapid growth can increase conditions of informality as well as deteriorate community, landscape, and ecological conditions.</p>
-        </div>
-        <div class="col-sm-8">
-            <img src="../static/maps/030_urbanChallenges.png" class="img_forSlider"/>
-        </div>
-    </div>
-
-    <div class="container" style="margin-bottom:50px;">
-        <div class="col-sm-12">
-            <h2>Baseline Studies Introduction</h2>
-            <p>Introduction to core components of included reports.</p>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="col-sm-6">
-            <div class="img_forSlider">
-                <img src="../static/logos/baseline/header.png"/ style="width:100%">
-                <img src="../static/logos/baseline/vulnerability.png"style="width:100%"/>
-                <img src="../static/logos/baseline/growth.png" style="width:100%"/>
-                <img src="../static/logos/baseline/survey.png" style="width:100%"/>
-                <img src="../static/logos/baseline/mobility.png" style="width:100%"/>
+            <div class="col-sm-12">
+                <embed src="../img_embed/010_nationOverview.html"  class="img_forSlider" style="height:400px">
+            </div>
+            <div class="col-sm-12">
+            <p>The Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6). Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
             </div>
         </div>
-        <div class="col-sm-6">
-            <h3>Planning for Growth</h3>
-            <p>To help Haitian communities address the challenges of Growth, IDP's Emerging and Sustainable Cities Initiative (ESCI) has partnered with Haiti’s Interministerial Committee for Territorial Management and the Ministry of Economy & Finance.</p>
 
-            <h3>Joint Objectives</h3>
-            <li>Mitigate short-term impacts while ensuring future sustainable growth.</li>
-            <li>Generate and analyze previously unavailable data and information.</li>
-            <li>Achieve the highest level of specificity in both diagnostic and future planning work.</li>
-            <li>Translate a regional vision into site-specific and interdisciplinary plans for the communes closest to the PIC.</li>
+        <!-- Northern area in detail -->
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Corridor cities by population</h3>
+                    <p>Nord & Nord-Est Departments, Haiti. Left and right arrows navigate slides. <i>Source: IHSI, 2009 Projections.</i></p>
+                <h3>Regional Economies</h3>
+                    <p>The PIC will unlock rapid demographic growth and urban expansion, especially in the four surrounding communities and on the Corridor’s resources and infrastructure.</p>
+            </div>
+            <div class="col-sm-8">
+                <ul class="bxslider" id='slider01'>
+                    <li class='slider_img'><img src="../static/maps/020_northCorridors.png" /></li>
+                    <li class='slider_img'><img src="../static/maps/023_citiesPopulations.png" /></li>
+                </ul>
+            </div>
         </div>
+
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Caracol Industrial Parc</h3>
+                    <p>Image 3 provides a summary of PIC's operations, as well as context to Route National 6.</p>
+                <h3>New Growth Dynamics</h3>
+                    <p>In addition to the Caracol Industrial Park, other anchor projects are currently being developed in the region.</p>
+            </div>
+            <div class="col-sm-8">
+                <ul class="bxslider" id='slider02'>
+                    <li class='slider_img'><img src="../static/maps/025_picIntro.png" /></li>
+                    <li class='slider_img'><img src="../static/maps/027_newGrowth.png" /></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Urban Challenges and Needs</h3>
+                <p>Unplanned, rapid growth can increase conditions of informality as well as deteriorate community, landscape, and ecological conditions.</p>
+            </div>
+            <div class="col-sm-8">
+                <img src="../static/maps/030_urbanChallenges.png" class="img_forSlider"/>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom:50px;">
+            <div class="col-sm-12">
+                <h2>Baseline Studies Introduction</h2>
+                <p>Introduction to core components of included reports.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="col-sm-6">
+                <div class="img_forSlider">
+                    <img src="../static/logos/baseline/header.png"/ style="width:100%">
+                    <img src="../static/logos/baseline/vulnerability.png"style="width:100%"/>
+                    <img src="../static/logos/baseline/growth.png" style="width:100%"/>
+                    <img src="../static/logos/baseline/survey.png" style="width:100%"/>
+                    <img src="../static/logos/baseline/mobility.png" style="width:100%"/>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <h3>Planning for Growth</h3>
+                <p>To help Haitian communities address the challenges of Growth, IDP's Emerging and Sustainable Cities Initiative (ESCI) has partnered with Haiti’s Interministerial Committee for Territorial Management and the Ministry of Economy & Finance.</p>
+
+                <h3>Joint Objectives</h3>
+                <li>Mitigate short-term impacts while ensuring future sustainable growth.</li>
+                <li>Generate and analyze previously unavailable data and information.</li>
+                <li>Achieve the highest level of specificity in both diagnostic and future planning work.</li>
+                <li>Translate a regional vision into site-specific and interdisciplinary plans for the communes closest to the PIC.</li>
+            </div>
+        </div>
+        <!-- END OF SWAPPED SECTION -->
+    
     </div>
+
+
 
 
     <!-- About section -->
     <a id='more_about'></a>
 
-    <center style="padding:4em;">
-        <img src="../static/logos/flag.png" style="width:6em" />
-    </center>
-
-    <div>
-        <div class="container">
-            <div class="col-sm-4">
-                <h2>More about project</h2>
-            </div>
-            <div class="col-sm-8">
-                <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container" style="margin-bottom:75px;margin-top:55px">
-        <div class="col-sm-4">
-            <h2 style="margin-bottom:35px">Individual Reports</h2>
-        </div>
-        <div class="col-md-8">
-            <div class="col-md-6">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
-            </a></div>
-            <div class="col-md-6"><a href="flooding.html">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Risks & Natural Hazards</button>
-            </a></div>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(136,191,141,0.75);color:white;border-width:0px;">Survey Plus</button>
-            </a></div>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
-            </a></div>
-        </div>
-    </div>
-
-    <!-- IDB section -->
-    <a id='idb'></a>
-    <div class="foot_aerial">
-        <center>
-            <a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
-            <a href="http://www.urbanlaunchpad.org/"><img src="../static/logos/ul_logo.png" class="center_logos"/></a>
+    <div class="beneathMap">
+        <center style="padding:4em;">
+            <img src="../static/logos/flag.png" style="width:6em" />
         </center>
+
+        <div>
+            <div class="container">
+                <div class="col-sm-4">
+                    <h2>More about project</h2>
+                </div>
+                <div class="col-sm-8">
+                    <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom:75px;margin-top:55px">
+            <div class="col-sm-4">
+                <h2 style="margin-bottom:35px">Individual Reports</h2>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
+                </a></div>
+                <div class="col-md-6"><a href="flooding.html">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Risks & Natural Hazards</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(136,191,141,0.75);color:white;border-width:0px;">Survey Plus</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
+                </a></div>
+            </div>
+        </div>
+
+        <!-- IDB section -->
+        <a id='idb'></a>
+        <div class="foot_aerial">
+            <center>
+                <a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
+                <a href="http://www.urbanlaunchpad.org/"><img src="../static/logos/ul_logo.png" class="center_logos"/></a>
+            </center>
+        </div>
     </div>
 
 </body>
@@ -428,6 +440,21 @@
 <link href="../lib/jquery.bxslider.css" rel="stylesheet" />
 
 <script>
+
+///////////////// PAGES MANAGEMENT /////////////////////////
+
+    loadMain = function(){
+        $("#includedContent").empty(); 
+        $("#includedContent") = global_basePageContent; 
+    };
+
+    loadGrowth = function(){
+        global_basePageContent = $("#includedContent");
+        $("#includedContent").empty(); 
+        $("#includedContent").load("growth.html"); 
+    };
+
+///////////////// END PAGES MANAGEMENT /////////////////////
 
     $('#slider01').bxSlider({
         mode: 'fade',
@@ -449,6 +476,7 @@
 
     // loads page elements like leaflet map and generates first view
     initPage = function() {
+
         // set map height
         document.getElementById('map').setAttribute('padding', window.innerHeight)
         document.getElementById('map').setAttribute('width', window.innerWidth)

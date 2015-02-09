@@ -26,9 +26,70 @@
 
 <body>
 
-<!-- HEADER -->
-<div id="header">
-</div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+      <div class="container" style="margin-bottom: 0px">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">NHDC</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          
+          <ul class="nav navbar-nav">
+            
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="#interactive">Interactive Map</a></li>
+            
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Overview <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+
+                <li class="dropdown-header" style="margin-top:1em">General</li>
+                    <li><a href="index.html#howtouse">How to Use Site</a></li>
+                    <li><a href="index.html#welcome">Orientation Map</a></li>
+                    <li><a href="index.html#context">Research Context</a></li>
+                <li class="dropdown-header" style="margin-top:1em">Report Specific</li>
+                    <li><a href="index.html#context">Baseline Studies</a></li>
+                    <li><a href="index.html#context">Northern Corridor</a></li>
+
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Geospatial Research <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">Report Sections</li>
+                <li><a href="flooding.html">Inland and Coastal Flooding</a></li>
+                <li><a href="#">Hurricane Risk</a></li>
+                <li><a href="#">Seismic Risk</a></li>
+                <li><a href="#">Transport Study</a></li>
+                <li><a href="#">Land Use</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header" style="margin-top:1em">Project Overview</li>
+                <li><a href="#about">About Project</a></li>
+                <li><a href="#more_about">About Website</a></li>
+                <li><a href="http://www.iadb.org/">More about IADB</a></li>
+              </ul>
+            </li>
+
+            <li><a href="http://www.iadb.org/">IADB</a></li>
+
+          </ul>
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
     <div class="intro_nav">
         <div class="col-md-4" style="vertical-align:middle;">
@@ -38,9 +99,7 @@
             <h1 style="margin-bottom:35px;color:#323270;">Jump to specific report:</h1>
             <div class="col-md-12">
                 <div class="col-md-6">
-                    <a href="growth.html">
-                        <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;" >Urban Growth Projections</button>
-                    </a>
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;" onclick='loadGrowth()'>Urban Growth Projections</button>
                 </a></div>
                 <div class="col-md-6"><a href="flooding.html">
                     <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Vulnerability to Risks & Natural Hazards</button>
@@ -60,6 +119,12 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
 
     <!-- context div -->
 
@@ -221,10 +286,55 @@
 
 
 
-<!-- FOOTER -->
-<div id="footer">
-</div>
 
+    <!-- About section -->
+    <a id='more_about'></a>
+
+    <div class="beneathMap">
+        <center style="padding:4em;">
+            <img src="../static/logos/flag.png" style="width:6em" />
+        </center>
+
+        <div>
+            <div class="container">
+                <div class="col-sm-4">
+                    <h2>More about project</h2>
+                </div>
+                <div class="col-sm-8">
+                    <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom:75px;margin-top:55px">
+            <div class="col-sm-4">
+                <h2 style="margin-bottom:35px">Individual Reports</h2>
+            </div>
+            <div class="col-md-8">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
+                </a></div>
+                <div class="col-md-6"><a href="flooding.html">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Risks & Natural Hazards</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(136,191,141,0.75);color:white;border-width:0px;">Survey Plus</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
+                </a></div>
+            </div>
+        </div>
+
+        <!-- IDB section -->
+        <a id='idb'></a>
+        <div class="foot_aerial">
+            <center>
+                <a href="http://www.iadb.org/"><img src="../static/logos/idb_logo_white.png" class="center_logos"/></a>
+                <a href="http://www.urbanlaunchpad.org/"><img src="../static/logos/ul_logo.png" class="center_logos"/></a>
+            </center>
+        </div>
+    </div>
 
 </body>
 
@@ -242,6 +352,20 @@
 
 <script>
 
+///////////////// PAGES MANAGEMENT /////////////////////////
+
+    loadMain = function(){
+        $("#includedContent").empty(); 
+        $("#includedContent") = global_basePageContent; 
+    };
+
+    loadGrowth = function(){
+        global_basePageContent = $("#includedContent");
+        $("#includedContent").empty(); 
+        $("#includedContent").load("growth.html"); 
+    };
+
+///////////////// END PAGES MANAGEMENT /////////////////////
 
     $('#slider01').bxSlider({
         mode: 'fade',
@@ -263,8 +387,6 @@
 
     // loads page elements like leaflet map and generates first view
     initPage = function() {
-        $("#header").load("header.html"); 
-        $("#footer").load("footer.html"); 
 
         // set map height
         document.getElementById('map').setAttribute('padding', window.innerHeight)

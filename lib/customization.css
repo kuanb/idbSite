@@ -1,0 +1,114 @@
+
+        body {
+            background-color: #1a2020;
+            background: -webkit-linear-gradient(#1a2020, #0a1212); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#1a2020, #0a1212); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#1a2020, #0a1212); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#1a2020, #0a1212); /* Standard syntax */
+        }
+        .btn {
+            border-radius:0px
+        }
+        .foot_aerial {
+            background: url('../static/footer/coastAerial.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            margin-top: 50px;
+        }
+        .intro_nav {
+            background: url('../static/photos/panorama.jpg');
+            background-size: auto 100% ;
+            background-width: 200px;
+            margin-top: 50px;
+            padding-bottom:35px; 
+            padding-top:35px;
+            height: 380px;
+            background-position: center;
+        }
+        .ndc_splash {
+            background: url('../static/photos/motorbike.jpg');
+            background-size:  100% auto;
+            margin-bottom: 50px;
+            padding-bottom:25px; 
+            padding-top:45px;
+            height: 250px;
+            background-position: center;
+            background-position-y: bottom;
+        }
+        @media screen and (max-width: 600px) {
+            .ndc_splash {
+                background-size: auto 100%;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .intro_nav {
+                color: white;
+                text-align: center;
+                height: 800px;
+            }
+        }
+        @media screen and (max-width: 925px) {
+            .foot_aerial {
+                background-size: auto 100%;
+            }
+        }
+        .bxslider {
+            padding: 0px;
+        }
+        .slider_img {
+            background-color: #d3d3d3;
+        }
+        .bx_subtext {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+        .beneathMap {
+            max-width: 2000px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #f8f8f8;
+            border-color: #e7e7e7;
+        }
+        .span_image {
+            width: 100%;
+        }
+        .container {
+            margin-bottom: 50px;
+            margin-bottom: 5px;
+        }
+        .center_logos {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 4em;
+            margin-top: 80px;
+        }
+        .img_forSlider {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .sideBar, .siderBar:link, .siderBar:active {
+            background-color: rgba(0,0,0,.5);
+            color: white;
+            border-width:0px;
+        }
+        .sideBar a {
+            color: white;
+            text-decoration: none;
+        }
+        .sideBar:hover {
+            font-weight: 900;
+            text-decoration: none;
+            padding-left: 2em;
+            background-color: red;
+        }
+
+
+
+
+

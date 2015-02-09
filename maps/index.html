@@ -25,6 +25,9 @@
         body {
         background-color: #d3d3d3;
         }
+        .btn {
+            border-radius:0px
+        }
         .foot_aerial {
             background: url('../static/footer/coastAerial.png');
             background-size: 100%;
@@ -151,7 +154,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Geospatial Research <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li class="dropdown-header" style="margin-top:1em">Report Sections</li>
-                <li><a href="#">Inland and Coastal Flooding</a></li>
+                <li><a href="flooding.html">Inland and Coastal Flooding</a></li>
                 <li><a href="#">Hurricane Risk</a></li>
                 <li><a href="#">Seismic Risk</a></li>
                 <li><a href="#">Transport Study</a></li>
@@ -177,30 +180,32 @@
       </div>
     </nav>
 
-    <div class="intro_nav" >
+    <div class="intro_nav">
         <div class="col-md-4" style="vertical-align:middle;">
             <center><img src="../static/logos/jigsaw.svg" style="height:300px;"/></center>
         </div>
         <div class="col-md-8" style="vertical-align:bottom;">
             <h1 style="margin-bottom:35px">Jump to specific report:</h1>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
-            </a></div>
-            <div class="col-md-6">
-                <button type="button" class="btn btn-info btn-lg btn-block" style="margin-bottom:10px">Hurricane Risk</button>
-            </a></div>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-bottom:10px">Seismic Risk</button>
-            </a></div>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-success btn-lg btn-block" style="margin-bottom:10px">Transport Study</button>
-            </a></div>
-            <div class="col-md-6"><a href="index.html#context">
-                <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
-            </a></div>
-            <div class="col-md-6"><a href="#about">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
-            </a></div>
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
+                </a></div>
+                <div class="col-md-6"><a href="flooding.html">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Vulnerability to Risks & Natural Hazards</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(136,191,141,0.75);color:white;border-width:0px;">Survey Plus</button>
+                </a></div>
+                <div class="col-md-6"><a href="index.html#context">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
+                </a></div>
+
+                <div class="col-md-6"><a href="#">=
+                </a></div>
+                <div class="col-md-6"><a href="#about">
+                    <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(955,955,955,0.35);color:white;border-width:0px;">Northern Haiti Plan</button>
+                </a></div>
+            </div>
         </div>
     </div>
 
@@ -235,10 +240,10 @@
 
     <a id='interactive'></a>
     <div class="container" >
-        <div id="map" style="width:100%;height:400px;z-index:0"></div>
+        <div id="map" style="width:100%;height:450px;z-index:0"></div>
     </div>
 
-    <div class="beneathMap" style="height:175px;">
+    <div class="beneathMap" style="height:250px;">
         <div class="container">
             <div class="col-sm-12" id="infoDiv">
                 <h1>Welcome</h1>
@@ -252,7 +257,7 @@
         <div class="container" style="margin-bottom:35px">
             <div class="col-sm-5">
             </div>
-            <div class="col-sm-7" style="color:white;background-color:rgba(0,0,0,0.5)">
+            <div class="col-sm-7" style="color:white;background-color:rgba(0,0,0,0.5);padding-bottom:0.45em;">
                 <h1>Context</h1>
                 <p>The following section provides context for the project, including a brief overview of the country of Haiti and the Northern Region's economic, social, and geological qualities. To navigate through the reports, use the "Geospatial Research" index in the navigation bar affixed to the top of this browser's window.</p>
             </div>
@@ -284,6 +289,9 @@
         </div>
         <div class="col-sm-12">
             <embed src="../img_embed/010_nationOverview.html"  class="img_forSlider" style="height:400px">
+        </div>
+        <div class="col-sm-12">
+        <p>The Inter-American Development Bank’s (IDB) Emerging and Sustainable Cities Initiative (ESCI) goal is to contribute to the improvement of the quality of life in Latin America and Caribbean (LAC) cities in terms of environmental, urban and fiscal sustainability. Haiti’s Northern Corridor stretches some 70 km between the city of Cap Haïtien and the Dominican Republic border city of Ouanaminthe and hosts a population of some 600,000 people along Route Nationale 6 (RN6). Beyond the jobs directly created by the development of the Caracol Industrial Park (PIC) for which 20,000 to 40,000 jobs are projected, Haiti's Northern Corridor will see a rapid and significant growth in urbanization and demography.</p>
         </div>
     </div>
 
@@ -328,36 +336,43 @@
         </div>
     </div>
 
-    <div class="container" style="margin-bottom:75px;margin-top:=55px">
-        <div class="col-md-12">
-            <div class="col-md-12"><a href="#">
-                <button class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color: rgba(0,0,0,0.1)">
-                    Individual Reports Selection
-                </button>
-            </a></div>
-            <div class="col-md-4"><a href="index.html#context">
-                <button type="button" class="btn btn-primary btn-lg btn-block" style="margin-bottom:10px">Flooding</button>
-            </a></div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-info btn-lg btn-block" style="margin-bottom:10px">Hurricane Risk</button>
-            </a></div>
-            <div class="col-md-4"><a href="index.html#context">
-                <button type="button" class="btn btn-warning btn-lg btn-block" style="margin-bottom:10px">Seismic Risk</button>
-            </a></div>
-            <div class="col-md-4"><a href="index.html#context">
-                <button type="button" class="btn btn-success btn-lg btn-block" style="margin-bottom:10px">Transport Study</button>
-            </a></div>
-            <div class="col-md-4"><a href="index.html#context">
-                <button type="button" class="btn btn-danger btn-lg btn-block" style="margin-bottom:10px">Land Use</button>
-            </a></div>
-            <div class="col-md-4"><a href="#about">
-                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px">About Research</button>
-            </a></div>
+    <div class="container" style="margin-bottom:50px;">
+        <div class="col-sm-12">
+            <h2>Baseline Studies Introduction</h2>
+            <p>Introduction to core components of included reports.</p>
         </div>
     </div>
 
+    <div class="container">
+        <div class="col-sm-6">
+            <div class="img_forSlider">
+                <img src="../static/logos/baseline/header.png"/ style="width:100%">
+                <img src="../static/logos/baseline/vulnerability.png"style="width:100%"/>
+                <img src="../static/logos/baseline/growth.png" style="width:100%"/>
+                <img src="../static/logos/baseline/survey.png" style="width:100%"/>
+                <img src="../static/logos/baseline/mobility.png" style="width:100%"/>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h3>Planning for Growth</h3>
+            <p>To help Haitian communities address the challenges of Growth, IDP's Emerging and Sustainable Cities Initiative (ESCI) has partnered with Haiti’s Interministerial Committee for Territorial Management and the Ministry of Economy & Finance.</p>
+
+            <h3>Joint Objectives</h3>
+            <li>Mitigate short-term impacts while ensuring future sustainable growth.</li>
+            <li>Generate and analyze previously unavailable data and information.</li>
+            <li>Achieve the highest level of specificity in both diagnostic and future planning work.</li>
+            <li>Translate a regional vision into site-specific and interdisciplinary plans for the communes closest to the PIC.</li>
+        </div>
+    </div>
+
+
     <!-- About section -->
     <a id='more_about'></a>
+
+    <center style="padding:4em;">
+        <img src="../static/logos/flag.png" style="width:6em" />
+    </center>
+
     <div>
         <div class="container">
             <div class="col-sm-4">
@@ -366,6 +381,26 @@
             <div class="col-sm-8">
                 <p>This website was prepared for IADB by Urban Launchpad, LLC. February 2015. This is a project of the Emerging and Sustainable Cities Initiative (ESCI). More on ESCI can be found by visiting their <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities">website.</a> More on Urban Launchpad can be found by visiting their <a href="http://www.urbanlaunchpad.org/">website</a>, as well. Questions or comments? Please <a href="esci@iadb.org">email ESCI (esci@iadb.org)</a>.</p>
             </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-bottom:75px;margin-top:55px">
+        <div class="col-sm-4">
+            <h2 style="margin-bottom:35px">Individual Reports</h2>
+        </div>
+        <div class="col-md-8">
+            <div class="col-md-6">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(171,195,55,0.75);color:white;border-width:0px;">Urban Growth Projections</button>
+            </a></div>
+            <div class="col-md-6"><a href="flooding.html">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(205,201,43,0.75);color:white;border-width:0px;">Risks & Natural Hazards</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(136,191,141,0.75);color:white;border-width:0px;">Survey Plus</button>
+            </a></div>
+            <div class="col-md-6"><a href="index.html#context">
+                <button type="button" class="btn btn-default btn-lg btn-block" style="margin-bottom:10px;background-color:rgba(103,182,204,0.75);color:white;border-width:0px;">Mobility & Logistics</button>
+            </a></div>
         </div>
     </div>
 

@@ -39,9 +39,17 @@
             background-position: center;
             background-position-y: bottom;
         }
+        .leftNav {
+            z-index:100;
+            padding-left:0px;
+            position:fixed
+        }
         @media screen and (max-width: 600px) {
             .ndc_splash {
                 background-size: auto 100%;
+            }
+            .leftNav {
+                 position:relative
             }
         }
         @media screen and (max-width: 1000px) {
@@ -49,6 +57,9 @@
                 color: white;
                 text-align: center;
                 height: 800px;
+            }
+            .leftNav {
+                 position:relative
             }
         }
         @media screen and (max-width: 925px) {
@@ -96,6 +107,29 @@
             background-color: rgba(0,0,0,.5);
             color: white;
             border-width:0px;
+        }
+        .sideBarTitle {
+            background-color: rgba(0,0,0,.5);
+            color: white;
+            border-width:0px;
+            display:inline-block;
+            padding:6px 12px;
+            margin-bottom:0;
+            font-size:18px;
+            font-weight:900;
+            line-height:1.42857143;
+            text-align:center;
+            white-space:nowrap;
+            vertical-align:middle;
+            cursor:pointer;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            background-image:none;
+            margin-top:1em;
+            border-radius:0px;
+
         }
         .sideBar a {
             color: white;

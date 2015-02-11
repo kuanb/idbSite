@@ -202,6 +202,7 @@
 
 .bx-caption>span {
 	float:right;
+	text-align: right;
 }
 
 .bx-wrapper .bx-caption span {

@@ -23,7 +23,7 @@
 
 .bx-wrapper img {
 	max-width: 100%;
-	max-height: 650px;
+	max-height: 750px;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
@@ -194,6 +194,13 @@
 	background: #666\9;
 	background: rgba(80, 80, 80, 0.75);
 	width: 100%;
+	float:right;
+	margin-left: 0%;
+	margin-right: 0px;
+}
+
+.bx-caption>span {
+	float:right;
 }
 
 .bx-wrapper .bx-caption span {

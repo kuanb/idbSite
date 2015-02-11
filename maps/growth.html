@@ -64,50 +64,52 @@
     <!-- buffers the top -->
     <div style="margin-top:50px"></div>
 
+    <!-- SIDEBAR DIV -->
+    <div class="col-md-2 leftNav">
+    <div class="col-xs-9">
+        <a href="growth.html#maps">
+            <div class="sideBarTitle">Map Graphics</div>
+        </a>
+        
+        <div id="bx_slider01" class="top_slider">
+
+                <div class="sideBarTitle subTitle">Growth Levels</div><br>
+                <a data-slide-index="0">
+                    <div class="btn btn-default btn-md sideBar">Year: 1985</div></a><br>
+                <a data-slide-index="1">
+                    <div class="btn btn-default btn-md sideBar">Year: 2010</div></a><br>
+                <a data-slide-index="2">
+                    <div class="btn btn-default btn-md sideBar">Year: 2013</div></a><br>
+                
+                <div class="sideBarTitle subTitle">Land Development</div><br>
+                <a data-slide-index="3">
+                    <div class="btn btn-default btn-md sideBar">Year: 1986</div></a><br>
+                <a data-slide-index="4">
+                    <div class="btn btn-default btn-md sideBar">Year: 2010</div></a><br>
+        </div>
+        
+        <div class="sideBarTitle">Other Items</div>
+        <div id="">
+                <a data-slide-index="0">
+                    <div class="btn btn-default btn-md sideBar">Item One</div></a><br>
+                <a data-slide-index="1">
+                    <div class="btn btn-default btn-md sideBar">Item Two</div></a><br>
+                <a data-slide-index="2">
+                    <div class="btn btn-default btn-md sideBar">Item Three</div></a><br>
+                <a data-slide-index="3">
+                    <div class="btn btn-default btn-md sideBar">Item Four</div></a><br>
+                <a data-slide-index="4">
+                    <div class="btn btn-default btn-md sideBar">Item Five</div></a><br>
+        </div>
+    </div>
+    </div>
+
     <!-- context div -->
     <div class="beneathMap" id="includedContent" style="">
-
-    <!-- SIDEBAR DIV -->
-        <div class="col-sm-12 leftNav">
-            <a href="growth.html#maps">
-                <div class="sideBarTitle">Map Graphics</div>
-            </a>
-            
-            <div id="bx_slider01">
-
-                    <div class="sideBarTitle subTitle">Growth Levels</div><br>
-                    <a data-slide-index="0">
-                        <div class="btn btn-default btn-md sideBar">Year: 1985</div></a><br>
-                    <a data-slide-index="1">
-                        <div class="btn btn-default btn-md sideBar">Year: 2010</div></a><br>
-                    <a data-slide-index="2">
-                        <div class="btn btn-default btn-md sideBar">Year: 2013</div></a><br>
-                    
-                    <div class="sideBarTitle subTitle">Land Development</div><br>
-                    <a data-slide-index="3">
-                        <div class="btn btn-default btn-md sideBar">Year: 1986</div></a><br>
-                    <a data-slide-index="4">
-                        <div class="btn btn-default btn-md sideBar">Year: 2010</div></a><br>
-            </div>
-            
-            <div class="sideBarTitle">Later Elements</div>
-            <div id="">
-                    <a data-slide-index="0">
-                        <div class="btn btn-default btn-md sideBar">Examples of other content</div></a><br>
-                    <a data-slide-index="1">
-                        <div class="btn btn-default btn-md sideBar">Examples of other content</div></a><br>
-                    <a data-slide-index="2">
-                        <div class="btn btn-default btn-md sideBar">Could reference other sections of the page</div></a><br>
-                    <a data-slide-index="3">
-                        <div class="btn btn-default btn-md sideBar">198Examples of other content</div></a><br>
-                    <a data-slide-index="4">
-                        <div class="btn btn-default btn-md sideBar">201Examples of other content</div></a><br>
-            </div>
-        </div>
         
         <!-- context div -->
         <a id='maps'></a>
-        <div class="">
+        <div class="bxslider">
             <ul class="bxslider" id='slider01'>
                 <li class='slider_img'><img src="growth/growth_1985.png" title="1985 Growth Levels"/></li>
                 <li class='slider_img'><img src="growth/growth_2010.png" title="2010 Growth Levels"/></li>
@@ -175,7 +177,9 @@
     $('#slider01').bxSlider({
         mode: 'fade',
         captions: true,
-        pagerCustom: '#bx_slider01'
+        pagerCustom: '#bx_slider01',
+        minSlides: 1,
+        maxSlides: 2,
     });
 
     $('#slider02').bxSlider({

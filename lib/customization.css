@@ -44,7 +44,14 @@
         .leftNav {
             z-index:100;
             padding-left:0px;
-            position:fixed
+            position:fixed;
+            height:100%;
+            /*width:100%;*/
+        }
+        .leftNav>div {
+            background-color:rgba(0,0,0,0.5);
+            height:100%;
+            width:150px
         }
         @media screen and (max-width: 600px) {
             .ndc_splash {
@@ -52,6 +59,9 @@
             }
             .leftNav {
                  position:relative
+            }
+            .leftNav>div {
+                 width:none
             }
         }
         @media screen and (max-width: 1000px) {
@@ -61,7 +71,10 @@
                 height: 800px;
             }
             .leftNav {
-                 position:relative
+                 position:fixed;
+            }
+            .leftNav>div {
+                 width:none
             }
         }
         @media screen and (max-width: 925px) {
@@ -71,9 +84,11 @@
         }
         .bxslider {
             padding: 0px;
+            max-width: 1600px;
+            margin: 0px 0 0 0
         }
         .slider_img {
-            background-color: #d3d3d3;
+            background-color: rgba(0,0,0,0);
         }
         .bx_subtext {
             padding-left: 15px;
@@ -115,20 +130,23 @@
             width: 100%;
             margin-bottom: 30px;
         }
+        .sideBarAll {
+            background-color: rgba(0,0,0,0.5);
+        }
         .sideBar, .siderBar:link, .siderBar:active {
-            background-color: rgba(0,0,0,.5);
+            background-color: rgba(0,0,0,0);
             color: white;
             border-width:0px;
-            padding-left: 2em;
+            padding-left: 1em;
             text-decoration: none;
             white-space:nowrap;
         }
         .sideBarTitle {
-            background-color: rgba(0,0,0,.5);
+            /*background-color: rgba(0,0,0,.5);*/
             color: white;
             border-width:0px;
             display:inline-block;
-            padding:6px 12px;
+            padding: 0px;
             margin-bottom:0;
             font-size:18px;
             font-weight:900;

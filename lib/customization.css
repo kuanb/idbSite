@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway');
 
         body {
             background: -webkit-linear-gradient(#1a2020, #0a1212); /* For Safari 5.1 to 6.0 */
@@ -5,8 +6,10 @@
             background: -moz-linear-gradient(#1a2020, #0a1212); /* For Firefox 3.6 to 15 */
             background: linear-gradient(#1a2020, #0a1212); /* Standard syntax */
             max-width:1600px;
+            min-width: 1010px !important;
             margin-right: auto;
-            margin-left: auto
+            margin-left: auto;
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
         }
         .btn {
             border-radius:0px
@@ -108,17 +111,26 @@
             margin-bottom: 50px;
             margin-top: 5px;
         }
+        .navbar {
+            min-width: 1010px !important;
+        }
         .navbar.navbar-default.navbar-fixed-top>.container {
             margin-bottom: 0px;
             margin-top: 0px;
         }
+        .cardTop {
+            background-color: red;
+        }
         .card {
             background-color: #f8f8f8;
-            border-top-left-radius: 0.5em;
-            border-top-right-radius: 0.5em;
-            border-bottom-left-radius: 0.5em;
-            border-bottom-right-radius: 3em;
             box-shadow: 0px 10px 0px rgba(0,50,50,0.95);
+            padding-top: 50px;
+        }
+        .cardSideBox {
+            background-color: rgba(0,0,0,0.5);
+            color:white;
+            font-weight: 300;
+            padding: 25px;
         }
         .center_logos {
             margin-left: 20px;
@@ -142,7 +154,6 @@
             white-space:nowrap;
         }
         .sideBarTitle {
-            /*background-color: rgba(0,0,0,.5);*/
             color: white;
             border-width:0px;
             display:inline-block;
@@ -163,6 +174,7 @@
             border-radius:0px;
         }
         .sideBarTitle.subTitle {
+            background-color: rgba(0,0,0,0);
             font-size:14px;
             font-weight:300;
             margin-top:0em;
@@ -175,11 +187,181 @@
         .sideBar:hover {
             font-weight: 900;
             text-decoration: none;
-            padding-left: 4em;
-            padding-right: 2em;
-            margin-right: 2em;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-right: 0em;
+            margin-left: -15px;
+            width:155px;
             background-color: #00cdcd;
+            border-right-width: 5px;
         }
+
+        .sideBar.risks:hover {
+            background-color: rgba(210,199,77,1);
+            border-color: rgba(190,176,33,1);
+        }
+        .sideBar.growth:hover {
+            background-color: rgba(168,194,96,1);
+            border-color: rgba(113,135,68,1);
+        }
+        .sideBar.survey:hover {
+            background-color: rgba(130,191,152,1);
+            border-color: rgba(123,156,136,1);
+        }
+        .sideBar.mobility:hover {
+            background-color: rgba(86,182,199,1);
+            border-color: rgba(100,140,190,1);
+        }
+        .sideBar.smart:hover {
+            background-color: rgba(233,233,233,1);
+            border-color: rgba(100,100,100,1);
+        }
+
+        /*JUST COLORS*/
+
+        .risksColor {
+            background-color: rgba(210,199,77,1);
+            border-color: rgba(190,176,33,1);
+        }
+        .growthColor {
+            background-color: rgba(168,194,96,1);
+            border-color: rgba(113,135,68,1);
+        }
+        .surveyColor {
+            background-color: rgba(130,191,152,1);
+            border-color: rgba(123,156,136,1);
+        }
+        .mobilityColor {
+            background-color: rgba(86,182,199,1);
+            border-color: rgba(100,140,190,1);
+        }
+        .smartColor {
+            background-color: rgba(233,233,233,1);
+            border-color: rgba(100,100,100,1);
+        }
+
+        /*navbars*/
+
+        .navbar {
+            background-color: black;
+            border-bottom-width:0px;
+            height:60px;
+        }
+        .navbar-brand {
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:900;
+            padding-right: 1.5em;
+        }
+        .navbar-brand>h1 {
+            color:rgba(248,208,72,1);
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:900;
+            font-size: 14px;
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .navbar-brand>p {
+            color:rgba(248,208,72,1);
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:500;
+            font-size: 11px;
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .nav.navbar-nav {
+            float:right;
+        }
+        .nav.navbar-nav>li {
+            min-width:125px;
+        }
+        .nav.navbar-nav>li>a {
+            color:black;
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:500;
+            text-align:center;
+            line-height:15px;
+            vertical-align: center;
+            height: 60px;
+        }
+
+        .risksTab {
+            background-color: rgba(210,199,77,1);
+        }
+        .risksTab:hover, .risksTab:focus, .risksTab.select {
+            background-color: rgba(210,199,77,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(190,176,33,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .growthTab {
+            background-color: rgba(168,194,96,1);
+        }
+        .growthTab:hover, .growthTab:focus, .growthTab.select {
+            background-color: rgba(168,194,96,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(113,135,68,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .surveyTab {
+            background-color: rgba(130,191,152,1);
+        }
+        .surveyTab:hover, .surveyTab:focus, .surveyTab.select {
+            background-color: rgba(130,191,152,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(123,156,136,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .mobilityTab {
+            background-color: rgba(86,182,199,1);
+        }
+        .mobilityTab:hover, .mobilityTab:focus, .mobilityTab.select {
+            background-color: rgba(86,182,199,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(100,140,190,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .smartTab {
+            background-color: rgba(233,233,233,1);
+        }
+        .smartTab:hover, .smartTab:focus, .smartTab.select {
+            background-color: rgba(233,233,233,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(100,100,100,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .nav.navbar-nav>li.aboutTab_div {
+            width:65px;
+            min-width:0px;
+        }
+        .aboutTab {
+            background-color: rgba(100,100,100,1);
+            font-size: 2em;
+        }
+        .aboutTab:hover, .aboutTab:focus, .aboutTab.select {
+            background-color: rgba(100,100,100,1) !important;
+            color: black !important;
+        }
+
+
+
+
+
+
 
 
 

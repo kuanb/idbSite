@@ -193,11 +193,10 @@
 	left: 0;
 	background: #666\9;
 	background: rgba(80, 80, 80, 0.75);
-	width: 75%;
+	width: 80%;
 	float:right;
-	margin-left: 25%;
+	margin-left: 20%;
 	margin-right: 0px;
-	border-top-left-radius: 2em;
 }
 
 .bx-caption>span {

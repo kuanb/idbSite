@@ -1,0 +1,47 @@
+
+.intro p {
+	text-align: left;
+	margin: 1em auto;
+	font-size: 2em;
+}
+
+#challenge {
+	background: url(./images/SLIDES_challenge.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fff;
+}
+
+#challenge h3 {
+	padding: 0 30px;
+}
+
+/* Styles for studies */
+
+.study-main {
+	background-color: #000;
+}
+.study-vuln {
+	background-color: #d0c729;
+}
+.study-grow {
+	background-color: #a8c160;
+}
+.study-surv {
+	background-color: #80bd95;
+}
+.study-mobi {
+	background-color: #56b6c6;
+}
+
+.study-buckets > div {
+	padding: 25px 15px;
+}
+
+.study-buckets h4 {
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 1px;
+}

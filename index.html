@@ -9,6 +9,9 @@
   <meta name="Resource-type" content="Document">
 
 
+  <link href="lib/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="lib/customization.css" />
+
   <link rel="stylesheet" type="text/css" href="lib/fp/jquery.fullPage.css">
   <link rel="stylesheet" type="text/css" href="lib/fp/examples.css">
   <style>
@@ -21,6 +24,9 @@
     color: #fff;
     margin:0;
     padding:0;
+  }
+  li {
+    font-size: 1.75em;
   }
   .intro p{
     color: #fff;
@@ -64,6 +70,17 @@
     z-index: 999;
   }
 
+  /* Defining each sectino background and styles
+  * --------------------------------------- */
+  #section0{
+    background: url(maps/splash/haiti.png) center center;
+  }
+  #section1{
+    background: url(maps/splash/corridor.png) center center;
+  }
+  #section2{
+  }
+
   </style>
 
   <!--[if IE]>
@@ -83,8 +100,17 @@
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage', '3rdPage'],
-        sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage'],
+        sectionsColor: ['rgb(0,159,255)', 
+          '#1BBC9B', 
+          '#7E8F7C', 
+          '#C63D0F', 
+          '#1BBC9B', 
+          '#7E8F7C', 
+          '#C63D0F', 
+          '#1BBC9B', 
+          '#7E8F7C', 
+          '#C63D0F'],
         css3: true
       });
     });
@@ -96,40 +122,149 @@
 
 
 
-<div id="header">ESCI Header</div>
+<div id="header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <h1 style="float:left">ESCI's Approach: Adapted Methodology</h1>
+                    <p>NORTHERN DEVELOPMENT CORRIDOR, HAITI 2014</p>
+                </a>
+            </div>
+            
+            <div id="navbar" class="collapse navbar-collapse">
+              
+                <ul class="nav navbar-nav">
+                
+                    <li><a href="index.html#interactive" class="risksTab">Risks &<br>Vulnerability</a></li>
+                    <li><a href="growth.html" class="growthTab">Urban Growth<br>& Projections</a></li>
+                    <li><a href="index.html#interactive" class="surveyTab">Survey<br>Plus</a></li>
+                    <li><a href="index.html#interactive" class="mobilityTab">Mobility<br>& Logistics</a></li>
+                    <li><a href="index.html#interactive" class="smartTab">Smart Growth<br>Scenario</a></li>
+                    <li class="aboutTab_div"><a href="index.html#interactive" class="aboutTab"><i class="fa fa-bars" style="color:rgba(160,160,160,1)"></i></a></li>
+
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</div>
 <div id="footer">About IDB</div>
 
 <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px);">
   
-  <div class="section fp-section active fp-table" id="section0" data-anchor="firstPage" style="height: 657px; background-color: rgba(198, 61, 15,0.5);">
-    <div class="fp-tableCell" style="height: 657px;">
+  <div class="section fp-section active fp-table" id="section0" data-anchor="1stPage">
+    <div class="fp-tableCell">
       <div class="intro">
-        <h1>The challenge</h1>
-        <p>This is the challenge</p>
+        <h1>Background</h1>
+        <p>In 2013, the IDB’s Emerging and Sustainable Cities Initiative (ESCI) started to develop interdisciplinary urban development plans for selected communes in Haiti’s Northern Development Corridor of Haiti.</p>
       </div>
     </div>
   </div>
 
-  <div class="section fp-section fp-table" id="section1" data-anchor="secondPage" style="height: 657px; background-color: rgb(27, 188, 155);">
-    <div class="fp-tableCell" style="height: 657px;">
+
+
+  <div class="section fp-section fp-table" id="section1" data-anchor="2ndPage">
+    <div class="fp-tableCell">
       <div class="intro">
-        <h1>Enjoy it</h1>
+        <h1>Area</h1>
+        <p>A 70 km corridor in Northern Haiti, extending along Route Nationale 6 and connecting roughly 600,000 people between Cap Haitian and neighboring Dominican Republic.</p>
       </div>
     </div>
   </div>
 
-  <div class="section fp-section fp-table" id="section2" data-anchor="3rdPage" style="height: 657px; background-color: rgb(126, 143, 124);">
-    <div class="fp-tableCell" style="height: 657px;">
+  <div class="section fp-section fp-table" id="section2" data-anchor="3rdPage">
+    <div class="fp-tableCell">
       <div class="intro">
-        <h1>Enjoy it</h1>
+        <h1>Site</h1>
+        <p>The Corridor contains the Caracol Industrial Park (PIC), which potentially will bring  20,000-40,000 new manufacturing jobs to the region within the next years and will produce a rapid demographic and urban growth in the municipalities of its area of influence.</p>
       </div>
     </div>
   </div>
 
-  <div class="section fp-section fp-table" id="section2" data-anchor="4thPage" style="height: 657px; background-color: rgb(33, 33, 124);">
-    <div class="fp-tableCell" style="height: 657px;">
+  <div class="section fp-section fp-table" id="section3" data-anchor="4thPage">
+    <div class="fp-tableCell">
       <div class="intro">
-        <h1>4th page</h1>
+        <h1>Goals</h1>
+        <ul>
+          <li>• Mitigate short-term impacts while ensuring future sustainable growth</li>
+          <li>• Generate and analyze previously unavailable data and information</li>
+          <li>• Achieve the highest level of specificity in both diagnostic and future planning work</li>
+          <li>• Translate a regional vision into site-specific and interdisciplinary plans for the communes closest to the PIC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fp-section fp-table" id="section4" data-anchor="5thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>Process</h1>
+        <p>IDB´s ESCI has performed four Baseline Studies:</p>
+        <ul>
+          <li>• Vulnerability to Risks & Natural Hazards<br>
+            <i>Probabilistic Modeling & Composite Mapping</i></li> 
+          <li>• Urban Growth Projections
+            Multiple scenario approach based on potential growth from the Caracol Industrial Park</li> 
+          <li>• Survey Plus<br>
+            <i>Implementation of Socio-demographic & Public Opinion Survey</i></li> 
+          <li>• Mobility & Logistics<br>
+            <i>Unprecedented Data Collection & Analysis For Transportation</i></li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fp-section fp-table" id="section5" data-anchor="6thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>Vulnerability to Risks & Natural Hazards</h1>
+        <p>Create a composite model based on diverse studies to identify key areas of the Region that need action by means of a development plan.</p>
+        <ul>
+          <li>• Inland and coastal flooding</li>
+          <li>• Seismicity</li>
+          <li>• Hurricanes</li>
+          <li>• Drought (including water balance study)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section fp-section fp-table" id="section6" data-anchor="7thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>Growth Projections</h1>
+        <p>Model the region focusing on identifying ‘suitability’ areas in which development ‘as a whole’ should and should not occur based on a mechanism that combines ‘attraction’ and ‘restriction’ elements that contribute to the rationale of an individual, family or firm’s location decision.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="section fp-section fp-table" id="section7" data-anchor="8thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>Survey Plus</h1>
+        <p>Understand local conditions of each community to face the challenges the Rural Urban Continuum has the regional analysis through a “Survey Plus” implementation to collect basic socio-demographic data, information on risk preparedness and vulnerability as well as public opinion.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section fp-section fp-table" id="section8" data-anchor="9thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>Mobility & Logistics</h1>
+        <p>Data collection and analysis for transportation to get the relationship between land use and economic activities and calculate the increase container/logistics volumes generated by the PIC growth.</p>
       </div>
     </div>
   </div>

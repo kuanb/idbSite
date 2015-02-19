@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0058)http://alvarotrigo.com/fullPage/examples/fixedHeaders.html -->
 <html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
   
   <title>FullScreen Backgrounds - fullPage.js</title>
   <meta name="author" content="Alvaro Trigo Lopez">
@@ -117,99 +116,6 @@
     });
   </script>
 
-	
-	<title>FullScreen Backgrounds - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez">
-	<meta name="description" content="fullPage fixed header and footer.">
-	<meta name="keywords" content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css">
-	<meta name="Resource-type" content="Document">
-
-
-	<link rel="stylesheet" type="text/css" href="lib/fp/jquery.fullPage.css">
-	<link rel="stylesheet" type="text/css" href="lib/fp/examples.css">
-	<link rel="stylesheet" type="text/css" href="lib/idb-style.css">
-	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
-
-	<style>
-
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-	.intro p{
-		color: #000;
-	}
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-	/* Fixed header and footer.
-	* --------------------------------------- */
-	#header, #footer{
-		position:fixed;
-		height: 50px;
-		display:block;
-		width: 100%;
-		background: #333;
-		z-index:9;
-		text-align:center;
-		color: #f2f2f2;
-		padding: 20px 0 0 0;
-	}
-
-	#header{
-		top:0px;
-	}
-	#footer{
-		bottom:0px;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu {
-		bottom: 80px;
-	}
-	#infoMenu li a {
-		color: #fff;
-		z-index: 999;
-	}
-
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="lib/fp/jquery.min.js"></script>
-	<script src="lib/fp/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="lib/fp/jquery.slimscroll.min.js"></script>
-
-	<script type="text/javascript" src="lib/fp/jquery.fullPage.min.js"></script>
-	<script type="text/javascript" src="lib/fp/examples.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage'],
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-				css3: true
-			});
-		});
-	</script>
-
-
 <style type="text/css"></style></head>
 
 <body style="overflow: hidden; height: 100%; font-size: 79.64%;">
@@ -254,7 +160,6 @@
 <div id="footer">About IDB</div>
 
 <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px);">
-
   
   <div class="section fp-section active fp-table" id="section0" data-anchor="1stPage">
     <div class="fp-tableCell">
@@ -363,97 +268,6 @@
       </div>
     </div>
   </div>
-=======
-	
-	<div class="section fp-section active fp-table" id="section0" data-anchor="firstPage" style="height: 657px; background-color: #000;">
-		<div id="challenge" class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>The challenge</h1>
-				<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae tortor lobortis, ullamcorper enim id, congue lorem. Vestibulum lectus nisi, varius a metus eget, viverra placerat urna. Suspendisse nec magna nec mauris faucibus laoreet quis at massa.</h3>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table" id="section1" data-anchor="secondPage" style="height: 657px; background-color: rgb(27, 188, 155);">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>The people working to solve this.</h1>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table study-main" id="section2" data-anchor="3rdPage" style="height: 657px;">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>Baseline Studies</h1>
-				<div class="container-fluid">
-					<div class="row study-buckets">
-						<div class="col-sm-6 col-md-3 study-vuln" style="height: 100%">
-							<h3>Vulnerability to Risks &amp; Natural Hazards</h3>
-							<h4>Probabilistic modeling &amp; composite mapping</h4>
-						</div>
-						<div class="col-sm-6 col-md-3 study-grow">
-							<h3>Urban Growth Projections</h3>
-							<h4>Multiple scenario approach based on potential growth from the PIC</h4>
-						</div>
-						<div class="col-sm-6 col-md-3 study-surv">
-							<h3>Survey Plus</h3>
-							<h4>Implementation of socio-demographic &amp; public opinion survey</h4>
-						</div>
-						<div class="col-sm-6 col-md-3 study-mobi">
-							<h3>Mobility &amp; Logistics</h3>
-							<h4>Unprecedented data collection &amp; analysis for transportation</h4>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table study-vuln" id="section2" data-anchor="4thPage" style="height: 657px;">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>Vulnerability to Risks &amp; Natural Hazards</h1>
-				<h4>Probabilistic modeling &amp; composite mapping</h4>
-				<p>Ut porttitor mauris nisl, eget ultrices sem consectetur et. Curabitur et libero lacus. Nulla aliquam felis at suscipit porta. Morbi eu odio et mi consequat placerat. Phasellus mauris urna, faucibus eu volutpat sed, gravida eget erat. Suspendisse aliquet ac quam aliquet egestas. Nam posuere elit orci, eu pharetra elit sollicitudin ut. Donec laoreet vel diam non imperdiet. Pellentesque bibendum, nulla quis vehicula dictum, magna turpis porttitor dolor, sit amet iaculis purus tortor eu est. Duis non commodo risus. Praesent nec rutrum erat. Proin id eros et felis iaculis pulvinar ut a arcu.</p>
-				<button type="button" class="btn btn-default ">See the study</button>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table study-grow" id="section4" data-anchor="5thPage" style="height: 657px;">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>Urban Growth Projections</h1>
-				<h4>Multiple scenario approach based on potential growth from the PIC</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere eros libero, in euismod nisl viverra et. Sed id rutrum ante, ut vulputate purus. Sed vel nisl purus. Nam porttitor gravida felis, et maximus ex ullamcorper nec. Morbi dolor quam, convallis aliquam condimentum sit amet, suscipit vitae purus. Vivamus placerat leo leo, eget malesuada lectus cursus at. Aliquam finibus ex nec eros feugiat semper.</p>
-				<button type="button" class="btn btn-default ">See the study</button>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table study-surv" id="section5" data-anchor="6thPage" style="height: 657px;">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>Survey Plus</h1>
-				<h4>Implementation of socio-demographic &amp; public opinion survey</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere eros libero, in euismod nisl viverra et. Sed id rutrum ante, ut vulputate purus. Sed vel nisl purus. Nam porttitor gravida felis, et maximus ex ullamcorper nec. Morbi dolor quam, convallis aliquam condimentum sit amet, suscipit vitae purus. Vivamus placerat leo leo, eget malesuada lectus cursus at. Aliquam finibus ex nec eros feugiat semper.</p>
-				<button type="button" class="btn btn-default ">See the study</button>
-			</div>
-		</div>
-	</div>
-
-	<div class="section fp-section fp-table study-mobi" id="section6" data-anchor="7thPage" style="height: 657px;">
-		<div class="fp-tableCell" style="height: 657px;">
-			<div class="intro">
-				<h1>Mobility &amp; Logistics</h1>
-				<h4>Unprecedented data collection &amp; analysis for transportation</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere eros libero, in euismod nisl viverra et. Sed id rutrum ante, ut vulputate purus. Sed vel nisl purus. Nam porttitor gravida felis, et maximus ex ullamcorper nec. Morbi dolor quam, convallis aliquam condimentum sit amet, suscipit vitae purus. Vivamus placerat leo leo, eget malesuada lectus cursus at. Aliquam finibus ex nec eros feugiat semper.</p>
-				<button type="button" class="btn btn-default ">See the study</button>
-			</div>
-		</div>
-	</div>
-
 
 </div>
 

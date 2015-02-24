@@ -93,8 +93,32 @@ p{
 	font-size: 1em;
 	font-weight: 100;
 }
+.intro button {
+	border-width:0px;
+	margin: 0px 0px 0px 0px;
+	border-top-left-radius: 20px;
+	/*border-bottom-right-radius: 100px*/
+}
 .section{
 	text-align:center;
+}
+.btn_num {
+	position:absolute;
+	border-radius: 50%;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+    width: 36px;
+    height: 36px;
+    padding-top: 4px;
+    padding-left: 14px;
+    padding-bottom: 18px;
+    
+    background: #05221c;
+    text-align: center;
+    vertical-align: middle;
+
 }
 #menu li {
 	display:inline-block;

@@ -83,6 +83,13 @@
     background: url(maps/splash/corridor.png) center center;
   }
   #section2{
+    background: url(maps/splash/corridor.png) center center;
+  }
+  #section3{
+    background: url(maps/splash/goals.png) center center;
+  }
+  #section4{
+    background: url(maps/splash/process.png) center center;
   }
 
   </style>
@@ -101,24 +108,7 @@
   <script type="text/javascript" src="lib/fp/jquery.fullPage.min.js"></script>
   <script type="text/javascript" src="lib/fp/examples.js"></script>
 
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fullpage').fullpage({
-        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage'],
-        sectionsColor: ['rgb(0,159,255)', 
-          '#1BBC9B', 
-          '#7E8F7C', 
-          '#C63D0F', 
-          '#1BBC9B', 
-          '#7E8F7C', 
-          '#C63D0F', 
-          '#1BBC9B', 
-          '#7E8F7C', 
-          '#C63D0F'],
-        css3: true
-      });
-    });
-  </script>
+
 
 <style type="text/css"></style></head>
 
@@ -165,7 +155,7 @@
     </nav>
 </div>
 <div id="footer">
-  <p>About ESCI @ IDB: The Emerging and Sustainable Cities Initiative (ESCI) is a technical assistance program that helps intermediate cities in Latin America and the Caribbean in identifying prioritizing and structuring projects to improve their environmental, urban and fiscal sustainability.</p>
+  <p>About ESCI @ IDB: The <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities/">Emerging and Sustainable Cities Initiative</a> (ESCI) is a technical assistance program of the <a href="http://www.iadb.org/">Inter-American Development Bank</a> (IDB) that helps intermediate cities in Latin America and the Caribbean in identifying prioritizing and structuring projects to improve their environmental, urban and fiscal sustainability. <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities/responding-to-urban-development-challenges-in-emerging-cities,6690.html">Learn more here.</a></p>
 </div>
 
 <div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px);">
@@ -173,7 +163,9 @@
   <div class="section fp-section active fp-table" id="section0" data-anchor="1stPage">
     <div class="fp-tableCell">
       <div class="intro">
-        <h1>Background</h1>
+        <h1>
+          <i class="fa fa-briefcase"></i> Background
+        </h1>
         <p>In 2013, the IDB’s Emerging and Sustainable Cities Initiative (ESCI) started to develop interdisciplinary urban development plans for selected communes in Haiti’s Northern Development Corridor of Haiti.</p>
       </div>
     </div>
@@ -184,7 +176,9 @@
   <div class="section fp-section fp-table" id="section1" data-anchor="2ndPage">
     <div class="fp-tableCell">
       <div class="intro">
-        <h1>Area</h1>
+        <h1>
+          <i class="fa fa-compass"></i> Area
+        </h1>
         <p>A 70 km corridor in Northern Haiti, extending along Route Nationale 6 and connecting roughly 600,000 people between Cap Haitian and neighboring Dominican Republic.</p>
       </div>
     </div>
@@ -194,7 +188,9 @@
     <div class="fp-tableCell">
       <div class="intro">
         <p><i>[some image that is one thing causing other things...]</i><br> park is direct instigator of upgrade roads, power inf, port inf, logistics platofrms, solid waste, water treatment, new housing... in parallel is developing unie, agricultur, protected park, econ opportunity</p>
-        <h1>Sites</h1>
+        <h1>
+          <i class="fa fa-map-marker"></i> Sites
+        </h1>
         <p>PIC emblematic of a wave of other projects...</p>
         <p>The Corridor contains the Caracol Industrial Park (PIC), which potentially will bring  20,000-40,000 new manufacturing jobs to the region within the next years and will produce a rapid demographic and urban growth in the municipalities of its area of influence.</p>
       </div>
@@ -204,7 +200,9 @@
   <div class="section fp-section fp-table" id="section3" data-anchor="4thPage">
     <div class="fp-tableCell">
       <div class="intro">
-        <h1>Goals</h1>
+        <h1 style="text-shadow: 0px 0px 10px #445e57;">
+          <i class="fa fa-bullseye"></i> Goals
+        </h1>
         <ul>
           <li>• Mitigate short-term impacts while ensuring future sustainable growth</li>
           <li>• Generate and analyze previously unavailable data and information</li>
@@ -218,73 +216,76 @@
   <div class="section fp-section fp-table" id="section4" data-anchor="5thPage">
     <div class="fp-tableCell">
       <div class="intro">
-        <h1>Process</h1>
+        <h1>
+          <i class="fa fa-sitemap"></i> Process
+        </h1>
         <p>IDB´s ESCI has performed four Baseline Studies:</p>
         <ul>
-          <li>• Vulnerability to Risks & Natural Hazards<br>
-            <i>Probabilistic Modeling & Composite Mapping</i></li> 
-          <li>• Urban Growth Projections
-            Multiple scenario approach based on potential growth from the Caracol Industrial Park</li> 
-          <li>• Survey Plus<br>
-            <i>Implementation of Socio-demographic & Public Opinion Survey</i></li> 
-          <li>• Mobility & Logistics<br>
-            <i>Unprecedented Data Collection & Analysis For Transportation</i></li> 
+          <li>
+            <div class="btn_num">1</div>
+            <a href="maps/risks.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(205,201,43,0.75);">
+                <b>Risks & Natural Hazards</b>
+                <br>
+                <i>Probabilistic Modeling & Composite Mapping</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">2</div>
+            <a href="maps/growth.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(171,195,55,0.75);">
+                <b>Urban Growth Projections</b>
+                <br>
+                <i>Multiple scenario approach based on potential regional growth</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">3</div>
+            <a href="maps/survey.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(136,191,141,0.75);">
+                <b>Survey Plus</b>
+                <br>
+                <i>Implementation of Socio-demographic & Public Opinion Survey</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">4</div>
+            <a href="maps/transport.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(103,182,204,0.75);">
+                <b>Mobility & Logistics</b>
+                <br>
+                <i>Unprecedented Data Collection & Analysis For Transportation</i>
+              </button>
+            </a>
+          </li> 
         </ul>
       </div>
     </div>
   </div>
-
-  <div class="section fp-section fp-table" id="section5" data-anchor="6thPage">
-    <div class="fp-tableCell">
-      <div class="intro">
-        <h1>Vulnerability to Risks & Natural Hazards</h1>
-        <p>Create a composite model based on diverse studies to identify key areas of the Region that need action by means of a development plan.</p>
-        <ul>
-          <li>• Inland and coastal flooding</li>
-          <li>• Seismicity</li>
-          <li>• Hurricanes</li>
-          <li>• Drought (including water balance study)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="section fp-section fp-table" id="section6" data-anchor="7thPage">
-    <div class="fp-tableCell">
-      <div class="intro">
-        <h1>Growth Projections</h1>
-        <p>Model the region focusing on identifying ‘suitability’ areas in which development ‘as a whole’ should and should not occur based on a mechanism that combines ‘attraction’ and ‘restriction’ elements that contribute to the rationale of an individual, family or firm’s location decision.</p>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="section fp-section fp-table" id="section7" data-anchor="8thPage">
-    <div class="fp-tableCell">
-      <div class="intro">
-        <h1>Survey Plus</h1>
-        <p>Understand local conditions of each community to face the challenges the Rural Urban Continuum has the regional analysis through a “Survey Plus” implementation to collect basic socio-demographic data, information on risk preparedness and vulnerability as well as public opinion.</p>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="section fp-section fp-table" id="section8" data-anchor="9thPage">
-    <div class="fp-tableCell">
-      <div class="intro">
-        <h1>Mobility & Logistics</h1>
-        <p>Data collection and analysis for transportation to get the relationship between land use and economic activities and calculate the increase container/logistics volumes generated by the PIC growth.</p>
-      </div>
-    </div>
-  </div>
-
 </div>
 
-<div id="infoMenu">
-</div>
-
+<div id="infoMenu"></div>
 
 </body>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+        sectionsColor: ['rgb(0,159,255)', 
+          '#1BBC9B', 
+          '#1BBC9B',
+          '#C63D0F',
+          '#1BBC9B',],
+        css3: true,
+        navigation: true,
+        navigationPosition: 'left',
+        navigationTooltips: ['Background', 'Study Area', 'Site', 'Goals', 'Process'],
+      });
+    });
+</script>
+
 </html>

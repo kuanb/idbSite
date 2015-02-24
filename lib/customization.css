@@ -14,6 +14,19 @@
         .btn {
             border-radius:0px
         }
+        .btn-plotCards {
+            margin: 10px !important;
+            margin-top: 25px !important;
+            margin-right: 50px !important;
+            float: right;
+            font-size: 1em;
+            font-weight: 900;
+            background-color: rgba(0,0,0,0);
+            color: rgba(955, 955, 955, 0.35);
+        }
+        .btn-plotCards:hover {
+            color:white;
+        }
         .foot_aerial {
             background: url('../static/footer/coastAerial.png');
             background-size: 100%;

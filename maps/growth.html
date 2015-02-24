@@ -15,6 +15,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="../lib/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     
     <!-- Google Font -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -53,12 +54,12 @@
               
                 <ul class="nav navbar-nav">
                 
-                    <li><a href="index.html#interactive" class="risksTab">Risks &<br>Vulnerability</a></li>
+                    <li><a href="risk.html" class="risksTab">Risks &<br>Vulnerability</a></li>
                     <li><a href="growth.html" class="growthTab select">Urban Growth<br>& Projections</a></li>
-                    <li><a href="index.html#interactive" class="surveyTab">Survey<br>Plus</a></li>
-                    <li><a href="index.html#interactive" class="mobilityTab">Mobility<br>& Logistics</a></li>
-                    <li><a href="index.html#interactive" class="smartTab">Smart Growth<br>Scenario</a></li>
-                    <li class="aboutTab_div"><a href="index.html#interactive" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
+                    <li><a href="survey.html" class="surveyTab">Survey<br>Plus</a></li>
+                    <li><a href="mobility.html" class="mobilityTab">Mobility<br>& Logistics</a></li>
+                    <li><a href="smart.html" class="smartTab">Smart Growth<br>Scenario</a></li>
+                    <li class="aboutTab_div"><a href="#about" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
 
                 </ul>
 
@@ -176,42 +177,45 @@
                 </div>
             </div>
         </div>
-        
+
         <a id='graphs'></a>
-        <div class="col-sm-12 darkCard"/>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 textContainer">
-                <h2>Land Use</h2>
-                <p>An analysis of land use evolution from years 1986 to 2010.</p>
-            </div>
-            <div class="col-sm-8">
-                <div class="bxslider">
+
+        <div class="row">
+            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards_scenarios')">Scenarios</button>
+            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards_population')">Population</button>
+            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards_landuse')">Land Use</button>
+        </div>
+
+        <div id="plotCards">
+            <div class="col-sm-12 darkCard" id="plotCards_landuse">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Land Use</h2>
+                    <p>An analysis of land use evolution from years 1986 to 2010.</p>
+                </div>
+                <div class="col-sm-8">
                     <img src="growth/landchage.png"  style="width:100%"/>
                 </div>
             </div>
-        </div>
 
-        <div class="col-sm-12 darkCard"/>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 textContainer">
-                <h2>Population</h2>
-                <p>A multiple scenario approach to population projections. The scenarios present a detailed analysis of the population of the area study in order to understand the dynamics in place and better predict the impact of development projects and investments and future needs.</p>
-            </div>
-            <div class="col-sm-8">
-                <div class="bxslider">
+            <div class="col-sm-12 darkCard" id="plotCards_population" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Population</h2>
+                    <p>A multiple scenario approach to population projections. The scenarios present a detailed analysis of the population of the area study in order to understand the dynamics in place and better predict the impact of development projects and investments and future needs.</p>
+                </div>
+                <div class="col-sm-8">
                     <img src="growth/pop_projection.png"  style="width:100%"/>
                 </div>
             </div>
-        </div>
 
-        <div class="col-sm-12 darkCard"/>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 textContainer">
-                <h2>Scenarios</h2>
-                <p>The ‘smart’ growth scenario is the one that results from the instance in which, attractions and restrictions are ‘maximized’. In this case, the computational process selects and creates a hierarchy of all the areas with the highest degrees of attraction from all the factors that have been classified as such, but discards, also hierarchically, all those areas affected or controlled by factors that ought to restrict settlement.</p>
-            </div>
-            <div class="col-sm-8">
-                <div class="bxslider">
+            <div class="col-sm-12 darkCard" id="plotCards_scenarios" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Scenarios</h2>
+                    <p>The ‘smart’ growth scenario is the one that results from the instance in which, attractions and restrictions are ‘maximized’. In this case, the computational process selects and creates a hierarchy of all the areas with the highest degrees of attraction from all the factors that have been classified as such, but discards, also hierarchically, all those areas affected or controlled by factors that ought to restrict settlement.</p>
+                </div>
+                <div class="col-sm-8">
                     <img src="growth/model_overlap.png"  style="width:100%"/>
                 </div>
             </div>
@@ -263,6 +267,15 @@
     //     autoControls: true,
     //     pause: 3000
     // });
+    
+    swapPlotCard = function(toToggle) {
+        $('div#plotCards>div').each(function(){ 
+            $(this).hide();
+        });
+        $('#'+toToggle).show()
+    };
+
+    $( "#footer" ).load( "footer.html" );
 
 </script>
 

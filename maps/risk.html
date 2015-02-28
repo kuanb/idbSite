@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Risks & Vulnerability</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="../lib/leaflet.css" />
+    <link rel="stylesheet" href="../lib/customization.css" />
+    <script src="../lib/leaflet.js"></script>
+
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <h1>ESCI's Approach: Adapted Methodology</h1>
+                    <p>NORTHERN DEVELOPMENT CORRIDOR, HAITI 2014</p>
+                </a>
+            </div>
+            
+            <div id="navbar" class="collapse navbar-collapse">
+              
+                <ul class="nav navbar-nav">
+                
+                    <li><a href="risk.html" class="riskTab select">Risks &<br>Vulnerability</a></li>
+                    <li><a href="growth.html" class="growthTab">Urban Growth<br>& Projections</a></li>
+                    <li><a href="survey.html" class="surveyTab">Survey<br>Plus</a></li>
+                    <li><a href="mobility.html" class="mobilityTab">Mobility<br>& Logistics</a></li>
+                    <li><a href="smart.html" class="smartTab">Smart Growth<br>Scenario</a></li>
+                    <li class="aboutTab_div"><a href="about.html" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
+
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <!-- buffers the top -->
+    <div style="margin-top:50px"></div>
+
+    <!-- SIDEBAR DIV -->
+    <div class="col-md-2 leftNav">
+    <div class="col-xs-9">
+        <a href="risk.html#maps">
+            <div class="sideBarTitle">Maps Data</div>
+        </a>
+        
+        <div id="bx_slider01" class="top_slider">
+
+                <div class="sideBarTitle subTitle">Risk Modeling</div><br>
+                <a data-slide-index="0">
+                    <div class="btn btn-default btn-md sideBar risk">Coastal Floods</div></a><br>
+        </div>
+        
+        <div class="sideBarTitle">Learn More</div>
+        <div id="">
+                <a href="risk.html#description">
+                    <div class="btn btn-default btn-md sideBar risk">Description</div></a><br>
+                <a href="risk.html#graphs">
+                    <div class="btn btn-default btn-md sideBar risk">Graphs</div></a><br>
+                
+                <div class="sideBarTitle subTitle">Urban Centers</div><br>
+                <a href="risk.html#villages">
+                    <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">
+                        Flood Hazard
+                    </div></a><br>
+                <a href="risk.html#villages">
+                    <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
+                        Water Balance
+                    </div></a><br>
+        </div>
+    </div>
+    </div>
+
+    <!-- context div -->
+    <div class="beneathMap" id="includedContent">
+        
+        <!-- context div -->
+        <a id='maps'></a>
+        <div class="bxslider">
+            <ul class="bxslider" id='slider01'>
+                <li class='slider_img'><img src="risk/flooding.png" title="Risk modeling example: Coastal flooding high resolution model"/></li>
+            </ul>
+        </div>
+
+        <!-- INTERNAL CAN BE SWAPPED -->
+        
+        <a id='description'></a>
+        <div class="col-sm-12 cardTop riskColor">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10" style="margin-top:30px;margin-bottom:30px">
+                <h1 style="font-weight:700;">
+                    Vulnerability to Risks & Natural Hazards
+                </h1>
+                <h5>PROBABILISTIC MODELING & COMPOSITE MAPPING</h5>
+            </div>
+        </div>
+
+        <div class="col-sm-12 card">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <h3>Objective</h3>
+                    <p>Create a composite model based on diverse studies to identify key areas of the Region that need action by means of a development plan.</p>
+                <h3>Key Aspects</h3>
+                    <p>An analysis of four categories of risk:</p>
+                    <p>• Inland and coastal flooding.</p>
+                    <p>• Seismicity. That is, the occurrence or frequency of earthquakes in a region.</p>
+                    <p>• Hurricanes.</p>
+                    <p>• Drought risks, including a water balance study.</p>
+                <h3>Deliverables</h3>
+                    <p>• Probabilistic modeling for risk categories, including effects of climate change.</p>
+                    <p>• Risk and exposure maps, including loss estimation for hazard events.</p>
+                    <p>• Composite map that weights all the factors involved.</p>
+                    <p>• Identification of attraction-restriction zones under two categories:</p>
+                    <ul>
+                        <li>Highest aggregated risk zones.</li>
+                        <li>Greatest expected risk resilience.</li>
+                    </ul>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                        <h4>Full Report</h4>
+                        <p>Download the full report by selecting one the language options below.</p>
+                        <hr>
+                        <p>ENGLISH</p>
+                        <p>SPANISH</p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row"  style="padding-top:25px">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                        <h4>Report Data</h4>
+                        <p>Data and geospatial shapefiles pertaining to this report that have been made available through the below links.</p>
+                        <hr>
+                        <p>MAP IMAGES</p>
+                        <p>GIS SHAPEFILES</p>
+                        <p>DATABASE FILES</p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <a id='villages'></a>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 plotCard-hdr">
+            Development Strategy
+        </div>
+        <div class="row">
+            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">Water Balance</button>
+            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">Flood Hazard</button>
+        </div>
+
+        <a id='graphs'></a>
+        <div id="riskGraphs">
+            <div class="col-sm-12 darkCard" id="plotCards_flood_hazard">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Impacts & Losses</h2>
+                    <p>Shown is an estimate of the losses attributable to each hazard, arranged according to average period of re-occurrence and arrayed vertically by probability and imact level.</p>
+                </div>
+                <div class="col-sm-8">
+                    <img src="risk/graphs/flood_hazard.png"  style="width:100%"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_water_balance" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Water Balance</h2>
+                    <p>Monthly variations in water availability potential: Climate change and projected growth will reduce the available water stock and potentially increase the impacts of prolonged periods of water deficit. The analysis does not consider the effects of salinization and potentially higher aquifer pollution levels.</p>
+                </div>
+                <div class="col-sm-8">
+                    <img src="risk/graphs/water_balance.png"  style="width:100%"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF SWAPPED SECTION -->
+    
+    </div>
+
+
+
+<!-- FOOTER -->
+<div id="footer">
+</div>
+
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../lib/ie10-viewport-bug-workaround.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script src="../lib/jquery.bxslider.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../lib/jquery.bxslider.css" rel="stylesheet" />
+
+<script>
+
+
+    $('#slider01').bxSlider({
+        mode: 'fade',
+        captions: true,
+        pagerCustom: '#bx_slider01',
+    });
+
+    // $('#slider02').bxSlider({
+    //     mode: 'fade',
+    //     auto: true,
+    //     pause: 3000,
+    // });
+
+    // $('#slider03').bxSlider({
+    //     mode: 'fade',
+    //     autoControls: true,
+    //     pause: 3000
+    // });
+    
+    swapPlotCard = function(superDiv, toToggle) {
+        $('div#' + superDiv + '>div').each(function(){ 
+            $(this).hide();
+        });
+        $('#'+toToggle).show()
+    };
+    
+
+    $( "#footer" ).load( "footer.html" );
+
+</script>
+
+
+</html>

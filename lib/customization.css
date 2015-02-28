@@ -128,6 +128,10 @@
             margin-right: auto;
             /*background-color: #f8f8f8;*/
         }
+        .beneathMap .row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
         .span_image {
             width: 100%;
         }
@@ -231,7 +235,7 @@
             border-right-width: 5px;
         }
 
-        .sideBar.risks:hover {
+        .sideBar.risk:hover {
             background-color: rgba(210,199,77,1);
             border-color: rgba(190,176,33,1);
         }
@@ -254,7 +258,7 @@
 
         /*JUST COLORS*/
 
-        .risksColor {
+        .riskColor {
             background-color: rgba(210,199,77,1);
             border-color: rgba(190,176,33,1);
         }
@@ -319,10 +323,10 @@
             height: 60px;
         }
 
-        .risksTab {
+        .riskTab {
             background-color: rgba(210,199,77,1);
         }
-        .risksTab:hover, .risksTab:focus, .risksTab.select {
+        .riskTab:hover, .riskTab:focus, .riskTab.select {
             background-color: rgba(210,199,77,1) !important;
             border-width: 0px 0px 5px 0px;
             height: 65px !important;

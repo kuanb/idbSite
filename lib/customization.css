@@ -324,7 +324,7 @@
         }
 
         .riskTab {
-            background-color: rgba(210,199,77,1);
+            color: rgba(210,199,77,1) !important;
         }
         .riskTab:hover, .riskTab:focus, .riskTab.select {
             background-color: rgba(210,199,77,1) !important;
@@ -336,7 +336,7 @@
         }
 
         .growthTab {
-            background-color: rgba(168,194,96,1);
+            color: rgba(168,194,96,1) !important;
         }
         .growthTab:hover, .growthTab:focus, .growthTab.select {
             background-color: rgba(168,194,96,1) !important;
@@ -348,7 +348,7 @@
         }
 
         .surveyTab {
-            background-color: rgba(130,191,152,1);
+            color: rgba(130,191,152,1) !important;
         }
         .surveyTab:hover, .surveyTab:focus, .surveyTab.select {
             background-color: rgba(130,191,152,1) !important;
@@ -360,7 +360,7 @@
         }
 
         .mobilityTab {
-            background-color: rgba(86,182,199,1);
+            color: rgba(86,182,199,1) !important;
         }
         .mobilityTab:hover, .mobilityTab:focus, .mobilityTab.select {
             background-color: rgba(86,182,199,1) !important;
@@ -372,7 +372,7 @@
         }
 
         .smartTab {
-            background-color: rgba(233,233,233,1);
+            color: rgba(233,233,233,1) !important;
         }
         .smartTab:hover, .smartTab:focus, .smartTab.select {
             background-color: rgba(233,233,233,1) !important;

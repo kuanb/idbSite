@@ -20,11 +20,14 @@
     <!-- Google Font -->
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    
+    <!-- bxSlider CSS file -->
+    <link href="../lib/jquery.bxslider.css" rel="stylesheet" />
+    
+    <!-- Slider Image -->
+    <link rel="stylesheet" href="../lib/diffWidget/diffWidget.css" />
 
-    <!-- Leaflet -->
-    <link rel="stylesheet" href="../lib/leaflet.css" />
     <link rel="stylesheet" href="../lib/customization.css" />
-    <script src="../lib/leaflet.js"></script>
 
 
 </head>
@@ -172,30 +175,51 @@
             Data Visualizations
         </div>
         <div class="row">
-            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')">Travel Times</a>
-            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')">Mode Volumes</a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_bike')">PIC Bike Path</a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_trou')">Urban Intermodal Station</a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_limonade')">Regional Tranist Hub</a>
         </div>
 
         <div id="mobilityCharts">
-            <div class="col-sm-12 darkCard" id="plotCards_traveltimes">
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
-                    <h2>Traffic Volumes</h2>
-                    <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+            <div class="col-sm-12 darkCard" id="plotCards_bike">
+                <div class="row">
+                    <div class="col-sm-10 pull-right">
+                        <h2>Traffic Volumes</h2>
+                        <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <img src="mobility/graphs/traveltimes.png"  style="width:100%"/>
+                <div class="row">
+                    <div class="col-sm-12" style="margin-left:-25px; overflow:hidden">
+                        <div id="ex1"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-sm-12 darkCard" id="plotCards_modevolumes" hidden>
-                <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
-                    <h2>Mode Volumes</h2>
-                    <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+            <div class="col-sm-12 darkCard" id="plotCards_trou" hidden>
+                <div class="row">
+                    <div class="col-sm-10 pull-right">
+                        <h2>Mode Volumes</h2>
+                        <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+                    </div>
                 </div>
-                <div class="col-sm-8">
-                    <img src="mobility/graphs/volumes.png"  style="width:100%"/>
+                <div class="row">
+                    <div class="col-sm-12" style="margin-left:-25px; overflow:hidden">
+                        <div id="ex2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_limonade" hidden>
+                <div class="row">
+                    <div class="col-sm-10 pull-right">
+                        <h2>Mode Volumes</h2>
+                        <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12" style="margin-left:-25px; overflow:hidden">
+                        <div id="ex3"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,7 +245,11 @@
 
 <!-- bxSlider Javascript file -->
 <script src="../lib/jquery.bxslider.js"></script>
-<!-- bxSlider CSS file -->
+
+<!-- Image Slider Javascript file -->
+<script src="../lib/diffWidget/diffWidget.js"></script>
+
+<!-- Image Slider -->
 <link href="../lib/jquery.bxslider.css" rel="stylesheet" />
 
 <script>
@@ -233,17 +261,33 @@
         pagerCustom: '#bx_slider01',
     });
 
-    // $('#slider02').bxSlider({
-    //     mode: 'fade',
-    //     auto: true,
-    //     pause: 3000,
-    // });
+    $(document).ready(function(){
 
-    // $('#slider03').bxSlider({
-    //     mode: 'fade',
-    //     autoControls: true,
-    //     pause: 3000
-    // });
+        $('#ex1').diffWidget({
+            'width': '1500px',
+            'height': '1000',
+            'top': 'smart/slide_imgs/bike_before.jpg',
+            'bottom': 'smart/slide_imgs/bike_after.jpg',
+            'position': '25%'
+        });
+
+        $('#ex2').diffWidget({
+            'width': '1500px',
+            'height': '591px',
+            'top': 'smart/slide_imgs/intermodal_before.jpg',
+            'bottom': 'smart/slide_imgs/intermodal_after.jpg',
+            'position': '25%'
+        });
+
+        $('#ex3').diffWidget({
+            'width': '1500px',
+            'height': '495px',
+            'top': 'smart/slide_imgs/limon_before.jpg',
+            'bottom': 'smart/slide_imgs/limon_after.jpg',
+            'position': '25%'
+        })
+
+    })
     
     swapPlotCard = function(superDiv, toToggle) {
         $('div#' + superDiv + '>div').each(function(){ 

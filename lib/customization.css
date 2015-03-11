@@ -395,6 +395,9 @@
             background-color: rgba(100,100,100,1) !important;
             color: black !important;
         }
+        .smart_sideBox {
+            width: 100%;
+        }
 
 
 

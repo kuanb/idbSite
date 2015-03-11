@@ -74,7 +74,7 @@
     <!-- SIDEBAR DIV -->
     <div class="col-md-2 leftNav">
     <div class="col-xs-9">
-        <a href="mobility.html#maps">
+        <a href="smart.html#maps">
             <div class="sideBarTitle">Maps Data</div>
         </a>
         
@@ -91,8 +91,10 @@
         
         <div class="sideBarTitle">Learn More</div>
         <div id="">
-                <a href="mobility.html#description">
+                <a href="smart.html#description">
                     <div class="btn btn-default btn-md sideBar mobility">Description</div></a><br>
+                <a href="smart.html#graphs">
+                    <div class="btn btn-default btn-md sideBar mobility">Graphs</div></a><br>
         </div>
     </div>
     </div>
@@ -105,8 +107,8 @@
         <div class="bxslider">
             <ul class="bxslider" id='slider01'>
                 <li class='slider_img'><img src="mobility/patterns.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
-                <li class='slider_img'><img src="mobility/volumes.png" title="Average travel time arranged by mode of transport."/></li>
-                <li class='slider_img'><img src="mobility/traveltimes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
+                <li class='slider_img'><img src="mobility/volumes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
+                <li class='slider_img'><img src="mobility/traveltimes.png" title="Average travel time arranged by mode of transport."/></li>
             </ul>
         </div>
 
@@ -166,6 +168,40 @@
                         <p>DATABASE FILES</p>
                     </div>
                     <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <a id='graphs'></a>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 plotCard-hdr">
+            Data Visualizations
+        </div>
+        <div class="row">
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')">Travel Times</a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')">Mode Volumes</a>
+        </div>
+
+        <div id="mobilityCharts">
+            <div class="col-sm-12 darkCard" id="plotCards_traveltimes">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Traffic Volumes</h2>
+                    <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+                </div>
+                <div class="col-sm-8">
+                    <img src="mobility/graphs/traveltimes.png"  style="width:100%"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_modevolumes" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2 textContainer">
+                    <h2>Mode Volumes</h2>
+                    <p>Modes measured through multimodal research: private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses, bicycles, and pedestrians.</p>
+                </div>
+                <div class="col-sm-8">
+                    <img src="mobility/graphs/volumes.png"  style="width:100%"/>
                 </div>
             </div>
         </div>

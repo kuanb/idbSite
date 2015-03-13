@@ -24,6 +24,9 @@
             color: rgba(955, 955, 955, 0.35);
             font-style: italic;
         }
+        .bx_maps {
+            margin-bottom: -30px;
+        }
         .btn-plotCards {
             margin: 10px !important;
             margin-top: 13px !important;

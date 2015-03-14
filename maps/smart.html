@@ -90,18 +90,25 @@
                 </a>
                 
                 <div id="bx_slider01" class="top_slider">
-                    <div class="sideBarTitle subTitle">
-                        Smart Growth
-                    </div>
-                    <br>
                     <a data-slide-index="0"><a href="smart.html#maps">
                         <div class="btn btn-default btn-md sideBar smart">Limonade Plan</div>
-                    </a></a><br>
+                    </a></a>
                 </div>
                 
                 <div class="sideBarTitle">Learn More</div>
-                    <a href="smart.html#graphs">
-                        <div class="btn btn-default btn-md sideBar smart">Graphs</div></a><br>
+                    <div class="sideBarTitle subTitle">
+                        Before/After
+                    </div>
+                    <br>
+                    <a href="smart.html#bike_path">
+                        <div class="btn btn-default btn-md sideBar smart">PIC Bike Path</div>
+                    </a>
+                    <a href="smart.html#intermodal">
+                        <div class="btn btn-default btn-md sideBar smart">Intermodal Hub</div>
+                    </a>
+                    <a href="smart.html#limon_bus">
+                        <div class="btn btn-default btn-md sideBar smart">Bus Station</div>
+                    </a>
             </div>
         </div>
     </div>
@@ -192,45 +199,132 @@
             </div>
         </div>
 
-        <a id='graphs'></a>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 plotCard-hdr">
-                Data Visualizations
-            </div>
+        <a id='bike_path'></a>
             <div class="row">
-                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_bike_after')">PIC Bike Path After</a>
-                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_bike_before')">PIC Bike Path Before</a>
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2 plotCard-hdr">
+                    Data Visualizations
+                </div>
+                <!-- Slideshow -->
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_after')">
+                    PIC Bike Path After
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_before')">
+                    PIC Bike Path Before
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_map')">
+                    Path Map
+                </a>
             </div>
 
-            <div id="mobilityCharts">
-                <div class="col-sm-12 darkCard" id="plotCards_bike_before" hidden>
-                    <div class="row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2 textContainer">
-                            <h2>Traffic Volumes</h2>
-                            <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
-                        </div>
-                        <div class="col-sm-8">
-                            <img alt="before" src="smart/slide_imgs/bike_before.jpg" width="100%" />
+                
+            <div id="bike_path_scenes">
+                <div class="row" id="plotCards_bike_map" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer">
+                                <h2>Pilot Bike Path Network</h2>
+                                <p>Proposed intervention with estimated cost of US$1,125,000 (or $150K/km). Pilot path shown: PIC to Caracol.</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/bike_map.jpg" width="100%"  onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_after')"/>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-sm-12 darkCard" id="plotCards_bike_after">
-                    <div class="row">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-2 textContainer">
-                            <h2>Traffic Volumes</h2>
-                            <p>Market day (in Ouanaminthe/Dominican border) traffic loads in Northern Haiti. Peak is reached earlier due to market closing times. Primary congestion points exacerbated by collective transport vehicles’ frequent stops.</p>
+                <div class="row" id="plotCards_bike_before" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer">
+                                <h2>Pilot Bike Path Network</h2>
+                                <p>Proposed intervention with estimated cost of US$1,125,000 (or $150K/km). Pilot path shown: PIC to Caracol.</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/bike_before.jpg" width="100%"  onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_after')"/>
+                            </div>
                         </div>
-                        <div class="col-sm-8">
-                            <img alt="before" src="smart/slide_imgs/bike_after.jpg" width="100%" />
+                    </div>
+                </div>
+
+                <div class="row" id="plotCards_bike_after">
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer">
+                                <h2>Pilot Bike Path Network</h2>
+                                <p>Proposed intervention with estimated cost of US$1,125,000 (or $150K/km). Pilot path shown: PIC to Caracol.</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img alt="before" src="smart/slide_imgs/bike_after.jpg" width="100%"  onclick="swapPlotCard('bike_path_scenes', 'plotCards_bike_before')"/>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        <a id='intermodal'></a>
+            <div class="row">
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_after')">
+                    Intermodal Hub After
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_before')">
+                    Intermodal Hub Before
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_map')">
+                    Intermodal Hubs Mapped
+                </a>
+            </div>
+
+            
+            <div id="intermodal_scenes">
+                <div class="row" id="plotCards_intermodal_map" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Multimodal Transport Stations</h2>
+                                <p>Locations proposed: Limonade, Trou-du-Nord, and Terrier Rouge.</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/intermodal_map.jpg" width="100%"  onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_after')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="plotCards_intermodal_before" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Multimodal Transport Stations</h2>
+                                <p>Example intervention proposal for Trou du Nord. Estimated construction cost of USD$3,000,000 (based on existing Port-au-Prince projects).</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/intermodal_before.jpg" width="100%"  onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_after')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="plotCards_intermodal_after">
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Multimodal Transport Stations</h2>
+                                <p>Example intervention proposal for Trou du Nord. Estimated construction cost of USD$3,000,000 (based on existing Port-au-Prince projects).</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img alt="before" src="smart/slide_imgs/intermodal_after.jpg" width="100%"  onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_before')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         <!-- END OF SWAPPED SECTION -->
     

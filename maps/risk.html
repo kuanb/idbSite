@@ -74,34 +74,30 @@
     <!-- SIDEBAR DIV -->
     <div class="col-md-2 leftNav">
     <div class="col-xs-9">
-        <a href="risk.html#maps">
-            <div class="sideBarTitle">Maps Data</div>
-        </a>
-        
-        <div id="bx_slider01" class="top_slider">
+        <a href="risk.html#"><div class="sideBarTitle">Introduction</div></a>
+        <a href="risk.html#description">
+            <div class="btn btn-default btn-md sideBar risk">Description</div></a><br>
 
+        <a href="risk.html#maps"><div class="sideBarTitle">Maps Data</div></a>
+        <div id="bx_slider01" class="top_slider">
                 <div class="sideBarTitle subTitle">Risk Modeling</div><br>
                 <a data-slide-index="0">
                     <div class="btn btn-default btn-md sideBar risk">Coastal Floods</div></a><br>
         </div>
         
         <div class="sideBarTitle">Learn More</div>
-        <div id="">
-                <a href="risk.html#description">
-                    <div class="btn btn-default btn-md sideBar risk">Description</div></a><br>
-                <a href="risk.html#graphs">
-                    <div class="btn btn-default btn-md sideBar risk">Graphs</div></a><br>
-                
-                <div class="sideBarTitle subTitle">Risk Analyses</div><br>
-                <a href="risk.html#villages">
-                    <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">
-                        Flood Hazard
-                    </div></a><br>
-                <a href="risk.html#villages">
-                    <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
-                        Water Balance
-                    </div></a><br>
-        </div>
+        <a href="risk.html#graphs">
+            <div class="btn btn-default btn-md sideBar risk">Graphs</div></a><br>
+        
+        <div class="sideBarTitle subTitle">Risk Analyses</div><br>
+        <a href="risk.html#villages">
+            <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">
+                Flood Hazard
+            </div></a><br>
+        <a href="risk.html#villages">
+            <div class="btn btn-default btn-md sideBar risk" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
+                Water Balance
+            </div></a><br>
     </div>
     </div>
 
@@ -190,7 +186,7 @@
         <a id='villages'></a>
         <div class="col-sm-2"></div>
         <div class="col-sm-2 plotCard-hdr">
-            Development Strategy
+            Risk Analyses
         </div>
         <div class="row">
             <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">Water Balance</a>

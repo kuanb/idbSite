@@ -88,18 +88,19 @@
                 <a href="smart.html#maps">
                     <div class="sideBarTitle">Maps Data</div>
                 </a>
-                
+
                 <div id="bx_slider01" class="top_slider">
+                    <div class="sideBarTitle subTitle">Limonade</div>
                     <a data-slide-index="0"><a href="smart.html#maps">
-                        <div class="btn btn-default btn-md sideBar smart">Limonade Plan</div>
+                        <div class="btn btn-default btn-md sideBar smart">GIS Model</div>
+                    </a></a>
+                    <a data-slide-index="1"><a href="smart.html#maps">
+                        <div class="btn btn-default btn-md sideBar smart">Strategy</div>
                     </a></a>
                 </div>
                 
                 <div class="sideBarTitle">Learn More</div>
-                    <div class="sideBarTitle subTitle">
-                        Before/After
-                    </div>
-                    <br>
+                    <div class="sideBarTitle subTitle">Before/After</div>
                     <a href="smart.html#bike_path">
                         <div class="btn btn-default btn-md sideBar smart">PIC Bike Path</div>
                     </a>
@@ -192,9 +193,8 @@
         <div class="row bx_maps">
             <div class="bxslider">
                 <ul class="bxslider" id='slider01'>
+                    <li class='slider_img'><img src="smart/smartgrowth_limonade.png" title="Future + Sustainable Land Use Map, Limonade: Based on the potential restrictions for future development, and considering the many attractions in the city (infrastructure such as roads, schools, markets, etc.) the map below shows the areas that could accommodate future urban development."/></li>
                     <li class='slider_img'><img src="smart/limonade_plan.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
-                    <li class='slider_img'><img src="smart/volumes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
-                    <li class='slider_img'><img src="smart/traveltimes.png" title="Average travel time arranged by mode of transport."/></li>
                 </ul>
             </div>
         </div>
@@ -278,7 +278,6 @@
                 </a>
             </div>
 
-            
             <div id="intermodal_scenes">
                 <div class="row" id="plotCards_intermodal_map" hidden>
                     <div class="col-xs-12 darkCard">
@@ -320,6 +319,68 @@
                             </div>
                             <div class="col-sm-8">
                                 <img alt="before" src="smart/slide_imgs/intermodal_after.jpg" width="100%"  onclick="swapPlotCard('intermodal_scenes', 'plotCards_intermodal_before')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <a id='limon_bus'></a>
+            <div class="row">
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_after')">
+                    Limon Bus Station After
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_before')">
+                    Limon Bus Station Before
+                </a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_map')">
+                    Limon Bus Station Mapped
+                </a>
+            </div>
+
+            
+            <div id="limon_bus">
+                <div class="row" id="plotCards_limon_map" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Limonade</h2>
+                                <p>Schematic demonstration of corridor development concentration, with transportation and landscape-based urban interventions.</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/limon_map.jpg" width="100%"  onclick="swapPlotCard('limon_bus', 'plotCards_limon_after')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="plotCards_limon_before" hidden>
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Limonade</h2>
+                                <p>Original view of site.</p>
+                            </div>
+                            <div class="col-xs-8">
+                                <img alt="before" src="smart/slide_imgs/limon_before.jpg" width="100%"  onclick="swapPlotCard('limon_bus', 'plotCards_limon_after')"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="plotCards_limon_after">
+                    <div class="col-xs-12 darkCard">
+                        <div class="row">
+                            <div class="col-xs-2"></div>
+                            <div class="col-xs-2 textContainer" style="margin-top:-50px">
+                                <h2>Limonade</h2>
+                                <p>Porous landscapes provide public space and passive water remediation systems. Urban development leverages density, transit activities, and public space.</p>
+                            </div>
+                            <div class="col-sm-8">
+                                <img alt="before" src="smart/slide_imgs/limon_after.jpg" width="100%"  onclick="swapPlotCard('limon_bus', 'plotCards_limon_before')"/>
                             </div>
                         </div>
                     </div>

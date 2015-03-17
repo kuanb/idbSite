@@ -186,19 +186,10 @@
         mode: 'fade',
         captions: true,
         pagerCustom: '#bx_slider01',
+        onSlideAfter: function(){
+            location.hash = "#maps"
+          }
     });
-
-    // $('#slider02').bxSlider({
-    //     mode: 'fade',
-    //     auto: true,
-    //     pause: 3000,
-    // });
-
-    // $('#slider03').bxSlider({
-    //     mode: 'fade',
-    //     autoControls: true,
-    //     pause: 3000
-    // });
     
     swapPlotCard = function(superDiv, toToggle) {
         $('div#' + superDiv + '>div').each(function(){ 

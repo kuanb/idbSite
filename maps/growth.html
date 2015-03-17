@@ -81,23 +81,33 @@
         <a href="growth.html#maps"><div class="sideBarTitle">Maps Data</div></a>
         <div id="bx_slider01" class="top_slider">
                 <div class="sideBarTitle subTitle">Growth Levels</div><br>
-                <a href="growth.html#maps"><a data-slide-index="0">
-                    <div class="btn btn-default btn-md sideBar growth">Year: 1985</div>
-                </a></a>
-                <a href="growth.html#maps"><a data-slide-index="1">
-                    <div class="btn btn-default btn-md sideBar growth">Year: 2010</div>
-                </a></a>
-                <a href="growth.html#maps"><a data-slide-index="2">
-                    <div class="btn btn-default btn-md sideBar growth">Year: 2013</div>
-                </a></a>
+                <a data-slide-index="0">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 1985
+                    </div>
+                </a>
+                <a data-slide-index="1">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2010
+                    </div>
+                </a>
+                <a data-slide-index="2">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2013
+                    </div>
+                </a>
                 
                 <div class="sideBarTitle subTitle">Land Development</div><br>
-                <a href="growth.html#maps"><a data-slide-index="3">
-                    <div class="btn btn-default btn-md sideBar growth">Year: 1986</div>
-                </a></a>
-                <a href="growth.html#maps"><a data-slide-index="4">
-                    <div class="btn btn-default btn-md sideBar growth">Year: 2010</div>
-                </a></a>
+                <a data-slide-index="3">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 1986
+                    </div>
+                </a>
+                <a data-slide-index="4">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2010
+                    </div>
+                </a>
         </div>
         
         <div class="sideBarTitle">Learn More</div>
@@ -183,7 +193,6 @@
         </div>
 
         <!-- MAPS BXSLIDER DIV -->
-        <a id='maps'></a>
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-2 plotCard-hdr">
@@ -191,6 +200,7 @@
             </div>
         </div>
         <div class="row bx_maps">
+            <a id='maps'></a>
             <div class="bxslider">
                 <ul class="bxslider" id='slider01'>
                     <li class='slider_img'><img src="growth/growth_1985.png"  title="1985 Growth Levels"/></li>
@@ -346,19 +356,10 @@
         mode: 'fade',
         captions: true,
         pagerCustom: '#bx_slider01',
+        onSlideAfter: function(){
+            location.hash = "#maps"
+          }
     });
-
-    // $('#slider02').bxSlider({
-    //     mode: 'fade',
-    //     auto: true,
-    //     pause: 3000,
-    // });
-
-    // $('#slider03').bxSlider({
-    //     mode: 'fade',
-    //     autoControls: true,
-    //     pause: 3000
-    // });
     
     swapPlotCard = function(superDiv, toToggle) {
         $('div#' + superDiv + '>div').each(function(){ 

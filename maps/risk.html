@@ -82,7 +82,10 @@
         <div id="bx_slider01" class="top_slider">
                 <div class="sideBarTitle subTitle">Risk Modeling</div><br>
                 <a data-slide-index="0">
-                    <div class="btn btn-default btn-md sideBar risk">Coastal Floods</div></a><br>
+                    <div class="btn btn-default btn-md sideBar risk">
+                        <a href="risk.html#maps">Coastal Floods</a>
+                    </div>
+                </a>
         </div>
         
         <div class="sideBarTitle">Learn More</div>
@@ -249,19 +252,10 @@
         mode: 'fade',
         captions: true,
         pagerCustom: '#bx_slider01',
+        onSlideAfter: function(){
+            location.hash = "#maps"
+          }
     });
-
-    // $('#slider02').bxSlider({
-    //     mode: 'fade',
-    //     auto: true,
-    //     pause: 3000,
-    // });
-
-    // $('#slider03').bxSlider({
-    //     mode: 'fade',
-    //     autoControls: true,
-    //     pause: 3000
-    // });
     
     swapPlotCard = function(superDiv, toToggle) {
         $('div#' + superDiv + '>div').each(function(){ 

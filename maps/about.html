@@ -197,6 +197,9 @@
         mode: 'fade',
         captions: true,
         pagerCustom: '#bx_slider01',
+        onSlideAfter: function(){
+            location.hash = "#maps"
+          }
     });
 
     $(document).ready(function(){

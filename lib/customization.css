@@ -176,6 +176,9 @@
         .darkCard .textContainer {
             padding-top: 100px;
         }
+        .darkCard .dataList_growth {
+            font-size: 12px;
+        }
         .cardSideBox {
             background-color: rgba(0,0,0,0.5);
             color:white;

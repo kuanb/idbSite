@@ -24,7 +24,6 @@
     <!-- Leaflet -->
     <link rel="stylesheet" href="../lib/leaflet.css" />
     <link rel="stylesheet" href="../lib/customization.css" />
-    <script src="../lib/leaflet.js"></script>
 
 
 </head>
@@ -111,8 +110,6 @@
         </div>
         
         <div class="sideBarTitle">Learn More</div>
-        <a href="growth.html#graphs">
-            <div class="btn btn-default btn-md sideBar growth">Graphs</div></a>
         
         <div class="sideBarTitle subTitle">Urban Centers</div>
         <a href="growth.html#villages">
@@ -131,6 +128,10 @@
             <div class="btn btn-default btn-md sideBar growth" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">
                 Terrier Rouge
             </div></a>
+
+        <div class="sideBarTitle subTitle">Additional</div>
+        <a href="growth.html#graphs">
+            <div class="btn btn-default btn-md sideBar growth">Graphs</div></a>
     </div>
     </div>
 
@@ -218,18 +219,38 @@
             Development Strategy
         </div>
         <div class="row">
-            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">  Terrier Rouge </button>
-            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_trou')">     Trou-du-Nord  </button>
-            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')"> Limonade      </button>
-            <button class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">  Caracol       </button>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">  Terrier Rouge </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_trou')">     Trou-du-Nord  </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')"> Limonade      </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">  Caracol       </a>
         </div>
 
         <div id="growthMaps">
             <div class="col-sm-12 darkCard" id="plotCards_caracol">
                 <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
+                <div class="col-sm-2">
                     <h2>Caracol</h2>
-                    <p>Lorem ipsum.</p>
+                    <div class="dataList_growth">
+                        <p>Urban area: 212.91 hectares</p>
+                        <ul>
+                            <li>Empty Land: 44%  </li>
+                            <li>Residential: 39% </li>
+                            <li>Roads: 8%        </li>
+                            <li>Services: 4%     </li>
+                            <li>Wooded: 2%       </li>
+                            <li>Commercial: 1%   </li>
+                            <li>Open Space 1%    </li>
+                        </ul>
+                            
+                        <p>Under Risk: 59.9 ha (28%)<br>
+                           Available Land: 153 ha</p>
+                        <ul>
+                            <li>For Roads/Public Space/Naturalized: 42%</li>
+                            <li>For Residential (small commerce included): 42%</li>
+                            <li>Institutional & Commercial: 10%</li>
+                            <li>Industry: 3%</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-sm-8">
                     <img src="growth/gis/caracol.png"  style="width:100%"/>
@@ -238,9 +259,29 @@
 
             <div class="col-sm-12 darkCard" id="plotCards_limonade" hidden>
                 <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
+                <div class="col-sm-2">
                     <h2>Limonade</h2>
-                    <p>Lorem ipsum.</p>
+                    <div class="dataList_growth">
+                        <p>Urban area: 212.91 hectares</p>
+                        <ul>
+                            <li>Empty Land: 44%  </li>
+                            <li>Residential: 39% </li>
+                            <li>Roads: 8%        </li>
+                            <li>Services: 4%     </li>
+                            <li>Wooded: 2%       </li>
+                            <li>Commercial: 1%   </li>
+                            <li>Open Space 1%    </li>
+                        </ul>
+                            
+                        <p>Under Risk: 59.9 ha (28%)<br>
+                           Available Land: 153 ha</p>
+                        <ul>
+                            <li>For Roads/Public Space/Naturalized: 42%</li>
+                            <li>For Residential (small commerce included): 42%</li>
+                            <li>Institutional & Commercial: 10%</li>
+                            <li>Industry: 3%</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-sm-8">
                     <img src="growth/gis/limonade.png"  style="width:100%"/>
@@ -249,9 +290,29 @@
 
             <div class="col-sm-12 darkCard" id="plotCards_trou" hidden>
                 <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
+                <div class="col-sm-2">
                     <h2>Trou-du-Nord</h2>
-                    <p>Lorem ipsum.</p>
+                    <div class="dataList_growth">
+                        <p>Urban area: 212.91 hectares</p>
+                        <ul>
+                            <li>Empty Land: 44%  </li>
+                            <li>Residential: 39% </li>
+                            <li>Roads: 8%        </li>
+                            <li>Services: 4%     </li>
+                            <li>Wooded: 2%       </li>
+                            <li>Commercial: 1%   </li>
+                            <li>Open Space 1%    </li>
+                        </ul>
+                            
+                        <p>Under Risk: 59.9 ha (28%)<br>
+                           Available Land: 153 ha</p>
+                        <ul>
+                            <li>For Roads/Public Space/Naturalized: 42%</li>
+                            <li>For Residential (small commerce included): 42%</li>
+                            <li>Institutional & Commercial: 10%</li>
+                            <li>Industry: 3%</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-sm-8">
                     <img src="growth/gis/troudunord.png"  style="width:100%"/>
@@ -260,9 +321,29 @@
 
             <div class="col-sm-12 darkCard" id="plotCards_terrier" hidden>
                 <div class="col-sm-2"></div>
-                <div class="col-sm-2 textContainer">
+                <div class="col-sm-2">
                     <h2>Terrier Rouge</h2>
-                    <p>Lorem ipsum.</p>
+                    <div class="dataList_growth">
+                        <p>Urban area: 212.91 hectares</p>
+                        <ul>
+                            <li>Empty Land: 44%  </li>
+                            <li>Residential: 39% </li>
+                            <li>Roads: 8%        </li>
+                            <li>Services: 4%     </li>
+                            <li>Wooded: 2%       </li>
+                            <li>Commercial: 1%   </li>
+                            <li>Open Space 1%    </li>
+                        </ul>
+                            
+                        <p>Under Risk: 59.9 ha (28%)<br>
+                           Available Land: 153 ha</p>
+                        <ul>
+                            <li>For Roads/Public Space/Naturalized: 42%</li>
+                            <li>For Residential (small commerce included): 42%</li>
+                            <li>Institutional & Commercial: 10%</li>
+                            <li>Industry: 3%</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-sm-8">
                     <img src="growth/gis/terrierrouge.png"  style="width:100%"/>
@@ -275,7 +356,11 @@
                 <img src="growth/gis/key.png"  style="width:100%"/>
             </div>
             <div class="col-sm-3 pull-right" style="padding-top:10px">
-                <span style="font-size:0.8em;font-style:italic;">Above maps generated to provide spatial understanding of development patterns at each site as they relate the areas within which sustainable development can occur.</span>
+                <span style="font-size:0.8em;font-style:italic;">
+                    <p>Above maps generated to provide spatial understanding of development patterns at each site as they relate the areas within which sustainable development can occur.</p>
+                    <p>Generated GIS model of development strategy, targeting areas by optimal use. For more information on analyses output, visit <a href="smart.html">Smart Growth</a>.</p>
+                </span>
+                </span>
             </div>
         </div>
 

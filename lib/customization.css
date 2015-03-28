@@ -14,6 +14,12 @@
         .btn {
             border-radius:0px
         }
+        a.anchor{
+            display: block; 
+            position: relative; 
+            top: -55px; 
+            visibility: hidden;
+        }
         .plotCard-hdr {
             margin: 10px !important;
             margin-top: 15px !important;

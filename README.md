@@ -14,6 +14,6 @@ A simple method for achieving this is to `cd` to the repository in your director
 If Python is not on your computer, download it at this address: https://www.python.org/downloads/
 
 ##### Including in an existing framework
-This project is entirely self contained. If you want it incorporated in another project/website, simply move the repository into a public folder and direct a url pathname to this repository (folder). `index.html` will leverage the resources in the folders and the project should run, automatically, at that point.
+This project is a static series of web pages. All dependencies are already entirely self contained. If you want it incorporated in another project/website, simply move the repository into a public folder and direct a url pathname to this repository (folder). `index.html` will leverage the resources in the folders and the project should run, automatically, at that point.
 
 

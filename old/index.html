@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://alvarotrigo.com/fullPage/examples/fixedHeaders.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden; height: 100%;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>ESCI - Northern Haiti</title>
+  <meta name="author" content="Alvaro Trigo Lopez">
+  <meta name="description" content="fullPage fixed header and footer.">
+  <meta name="keywords" content="fullpage,jquery,demo,screen,fixed, header,footer, absolute, positioned,css">
+  <meta name="Resource-type" content="Document">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <link href="lib/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="lib/customization.css" />
+
+  <link rel="stylesheet" type="text/css" href="lib/fp/jquery.fullPage.css">
+  <link rel="stylesheet" type="text/css" href="lib/fp/examples.css">
+  <style>
+
+  /* Style for our header texts
+  * --------------------------------------- */
+  h1{
+    font-size: 5em;
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+    padding:0;
+  }
+  li {
+    font-size: 1.75em;
+  }
+  .intro p{
+    color: #fff;
+  }
+
+  /* Centered texts in each section
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+  }
+
+  /* Fixed header and footer.
+  * --------------------------------------- */
+  #header, #footer{
+    position:fixed;
+    height: 50px;
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:9;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+  }
+
+  #header{
+    top:0px;
+  }
+  #footer{
+    bottom:0px;
+  }
+
+
+  /* Bottom menu
+  * --------------------------------------- */
+  #infoMenu {
+    bottom: 80px;
+  }
+  #infoMenu li a {
+    color: #fff;
+    z-index: 999;
+  }
+
+  /* Defining each sectino background and styles
+  * --------------------------------------- */
+  #section0{
+    background: url(maps/splash/haiti.png) center center;
+  }
+  #section1{
+    background: url(maps/splash/corridor.png) center center;
+  }
+  #section2{
+    background: url(maps/splash/sites.png) center center;
+  }
+  #section3{
+    background: url(maps/splash/goals.png) center center;
+  }
+  #section4{
+    background: url(maps/splash/process.png) center center;
+  }
+
+  </style>
+
+  <!--[if IE]>
+    <script type="text/javascript">
+       var console = { log: function() {} };
+    </script>
+  <![endif]-->
+
+  <script src="lib/fp/jquery.min.js"></script>
+  <script src="lib/fp/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="lib/fp/jquery.slimscroll.min.js"></script>
+
+  <script type="text/javascript" src="lib/fp/jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="lib/fp/examples.js"></script>
+
+
+
+<style type="text/css"></style></head>
+
+<body style="overflow: hidden; height: 100%; font-size: 79.64%;">
+
+
+
+<div id="header">
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <h1>ESCI's Approach: Adapted Methodology</h1>
+                    <p>NORTHERN DEVELOPMENT CORRIDOR, HAITI 2014</p>
+                </a>
+            </div>
+            
+            <div id="navbar" class="collapse navbar-collapse">
+              
+                <ul class="nav navbar-nav">
+                
+                    <li><a href="maps/risk.html" class="riskTab">Risks &<br>Vulnerability</a></li>
+                    <li><a href="maps/growth.html" class="growthTab">Urban Growth<br>& Projections</a></li>
+                    <li><a href="maps/survey.html" class="surveyTab">Survey<br>Plus</a></li>
+                    <li><a href="maps/mobility.html" class="mobilityTab">Mobility<br>& Logistics</a></li>
+                    <li><a href="maps/smart.html" class="smartTab">Smart Growth<br>Scenario</a></li>
+                    <li class="aboutTab_div"><a href="about.html" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
+
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</div>
+<div id="footer">
+  <p>About ESCI @ IDB: The <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities/">Emerging and Sustainable Cities Initiative</a> (ESCI) is a technical assistance program of the <a href="http://www.iadb.org/">Inter-American Development Bank</a> (IDB) that helps intermediate cities in Latin America and the Caribbean in identifying prioritizing and structuring projects to improve their environmental, urban and fiscal sustainability. <a href="http://www.iadb.org/en/topics/emerging-and-sustainable-cities/responding-to-urban-development-challenges-in-emerging-cities,6690.html">Learn more here.</a></p>
+</div>
+
+<div id="fullpage" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; -webkit-transform: translate3d(0px, 0px, 0px); transform: translate3d(0px, 0px, 0px);">
+  
+  <div class="section fp-section active fp-table" id="section0" data-anchor="1stPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>
+          <i class="fa fa-briefcase"></i> Background
+        </h1>
+        <p>In 2013, the IDB’s Emerging and Sustainable Cities Initiative (ESCI) started to develop interdisciplinary urban development plans for selected communes in Haiti’s Northern Development Corridor of Haiti.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="section fp-section fp-table" id="section1" data-anchor="2ndPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>
+          <i class="fa fa-compass"></i> Area
+        </h1>
+        <p>A 70 km corridor in Northern Haiti, extending along Route Nationale 6, provides the setting for ESCI's research. An informal collection of recent development initiatives represent potential to significantly impact the roughly 600,000 residents between Cap Haitian and neighboring Dominican Republic.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fp-section fp-table" id="section2" data-anchor="3rdPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1>
+          <i class="fa fa-map-marker"></i> Economic Stimulators
+        </h1>
+        <p>The study area contains a number of economic instigators. The Caracol Industrial Park (PIC), in particular, stands to bring an estimated 20,000-40,000 new manufacturing jobs to the region within the next few years. Combined, these developments and their requisite infrastructural, ecological, and agricultural investments will spur economic opportunities, producing rapid demographic and urban growth in the municipalities of its area of influence.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fp-section fp-table" id="section3" data-anchor="4thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1 style="text-shadow: 0px 0px 5px black;">
+          <i class="fa fa-bullseye"></i> Goals
+        </h1>
+        <ul style="text-shadow: 0px 0px 5px black;">
+          <li>• Mitigate short-term impacts while ensuring future sustainable growth</li>
+          <li>• Generate and analyze previously unavailable data and information</li>
+          <li>• Achieve the highest level of specificity in both diagnostic and future planning work</li>
+          <li>• Translate a regional vision into site-specific and interdisciplinary plans for the communes closest to the PIC</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section fp-section fp-table" id="section4" data-anchor="5thPage">
+    <div class="fp-tableCell">
+      <div class="intro">
+        <h1 style="margin-bottom:15px">
+          <i class="fa fa-sitemap"></i> Process
+        </h1>
+        <p style="font-size:16px">ESCI has performed four Baseline Studies to analyze this region. These reports, the datasets generated, and the resulting development strategy, are available, for free, via this site. Explore each through the portals below.</p>
+        <ul>
+          <li>
+            <div class="btn_num">1</div>
+            <a href="maps/risk.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(205,201,43,0.75);">
+                <b>Risks & Natural Hazards</b>
+                <br>
+                <i>Probabilistic Modeling & Composite Mapping</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">2</div>
+            <a href="maps/growth.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(171,195,55,0.75);">
+                <b>Urban Growth Projections</b>
+                <br>
+                <i>Multiple scenario approach based on potential regional growth</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">3</div>
+            <a href="maps/survey.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(136,191,141,0.75);">
+                <b>Survey Plus</b>
+                <br>
+                <i>Implementation of Socio-demographic & Public Opinion Survey</i>
+              </button>
+            </a>
+          </li> 
+          <li>
+            <div class="btn_num">4</div>
+            <a href="maps/transport.html">
+              <button type="button" class="btn btn-default btn-lg btn-block" style="background-color:rgba(103,182,204,0.75);">
+                <b>Mobility & Logistics</b>
+                <br>
+                <i>Unprecedented Data Collection & Analysis For Transportation</i>
+              </button>
+            </a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="infoMenu"></div>
+
+</body>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+        anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+        sectionsColor: ['rgb(0,159,255)', 
+          '#1BBC9B', 
+          '#1BBC9B',
+          '#C63D0F',
+          '#1BBC9B',],
+        css3: true,
+        navigation: true,
+        navigationPosition: 'left',
+        navigationTooltips: ['Background', 'Study Area', 'Site', 'Goals', 'Process'],
+      });
+    });
+</script>
+
+</html>

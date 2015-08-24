@@ -1,0 +1,431 @@
+@import url('http://fonts.googleapis.com/css?family=Raleway');
+
+        body {
+            background: -webkit-linear-gradient(#1a2020, #0a1212); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(#1a2020, #0a1212); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(#1a2020, #0a1212); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(#1a2020, #0a1212); /* Standard syntax */
+            max-width:1600px;
+            min-width: 1010px !important;
+            margin-right: auto;
+            margin-left: auto;
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+        }
+        .btn {
+            border-radius:0px
+        }
+        a.anchor{
+            display: block; 
+            position: relative; 
+            top: -55px; 
+            visibility: hidden;
+        }
+        .plotCard-hdr {
+            margin: 10px !important;
+            margin-top: 15px !important;
+            margin-right: 50px !important;
+            font-size: 1em;
+            font-weight: 500;
+            background-color: rgba(0,0,0,0);
+            color: rgba(955, 955, 955, 0.35);
+            font-style: italic;
+        }
+        .bx_maps {
+            margin-bottom: -30px;
+        }
+        .btn-plotCards {
+            margin: 10px !important;
+            margin-top: 13px !important;
+            margin-right: 50px !important;
+            float: right;
+            font-size: 1em;
+            font-weight: 900;
+            background-color: rgba(0,0,0,0);
+            color: rgba(955, 955, 955, 0.35);
+        }
+        .btn-plotCards:hover {
+            color:white;
+        }
+        .foot_aerial {
+            background: url('../static/footer/coastAerial.png');
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-color: black;
+            background-position: center;
+            height: 500px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .intro h1 {
+            text-shadow: 0px 0px 5px black;
+        }
+        .intro p {
+            text-shadow: 0px 0px 3px black;
+        }
+
+        .intro_nav {
+            background: url('../static/photos/panorama.jpg');
+            background-size: auto 100% ;
+            background-width: 200px;
+            margin-top: 50px;
+            padding-bottom:35px; 
+            padding-top:35px;
+            height: 380px;
+            background-position: center;
+        }
+        .ndc_splash {
+            background: url('../static/photos/motorbike.jpg');
+            background-size:  100% auto;
+            margin-bottom: 50px;
+            padding-bottom:25px; 
+            padding-top:45px;
+            height: 250px;
+            background-position: center;
+            background-position-y: bottom;
+        }
+        .leftNav {
+            z-index:100;
+            padding-left:0px;
+            position:fixed;
+            height:100%;
+            /*width:100%;*/
+        }
+        .leftNav>div {
+            background-color:rgba(0,0,0,0.5);
+            height:100%;
+            width:150px;
+            padding-top: 1.5em;
+        }
+        @media screen and (max-width: 600px) {
+            .ndc_splash {
+                background-size: auto 100%;
+            }
+            .leftNav {
+                 position:relative
+            }
+            .leftNav>div {
+                 width:none
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .intro_nav {
+                color: white;
+                text-align: center;
+                height: 800px;
+            }
+            .leftNav {
+                 position:fixed;
+            }
+            .leftNav>div {
+                 width:none
+            }
+        }
+        @media screen and (max-width: 925px) {
+            .foot_aerial {
+                background-size: auto 100%;
+            }
+        }
+        .bxslider {
+            padding: 0px;
+            max-width: 1600px;
+            margin: 0px 0 0 0
+        }
+        .slider_img {
+            background-color: rgba(0,0,0,0);
+        }
+        .bx_subtext {
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 55px;
+            margin-right: 55px;
+        }
+        .beneathMap {
+            margin-left: auto;
+            margin-right: auto;
+            /*background-color: #f8f8f8;*/
+        }
+        .beneathMap .row {
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .span_image {
+            width: 100%;
+        }
+        .container {
+            margin-bottom: 50px;
+            margin-top: 5px;
+        }
+        .navbar {
+            min-width: 1010px !important;
+        }
+        .navbar.navbar-default.navbar-fixed-top>.container {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .cardTop {
+            background-color: red;
+        }
+        .card {
+            background-color: #f8f8f8;
+            box-shadow: 0px 10px 0px rgba(0,50,50,0.95);
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-bottom: 10px;
+        }
+        .darkCard {
+            background-color: black;
+            box-shadow: 0px 10px 0px rgba(0,50,50,0.95);
+            color:rgba(950,950,950,0.9);
+            margin-bottom: 10px
+        }
+        .darkCard .textContainer {
+            padding-top: 100px;
+        }
+        .darkCard .dataList_growth {
+            font-size: 12px;
+        }
+        .cardSideBox {
+            background-color: rgba(0,0,0,0.5);
+            color:white;
+            font-weight: 300;
+            padding: 25px;
+        }
+        .center_logos {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 4em;
+            margin-top: 80px;
+        }
+        .img_forSlider {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .sideBarAll {
+            background-color: rgba(0,0,0,0.5);
+        }
+        .sideBar, .siderBar:link, .siderBar:active {
+            background-color: rgba(0,0,0,0);
+            color: white;
+            border-width:0px;
+            padding-left: 1em;
+            text-decoration: none;
+            white-space:nowrap;
+        }
+        .sideBarTitle {
+            color: white;
+            border-width:0px;
+            display:inline-block;
+            padding: 0px;
+            margin-top:0em;
+            margin-bottom:0;
+            font-size:18px;
+            font-weight:900;
+            line-height:1.42857143;
+            text-align:center;
+            white-space:nowrap;
+            vertical-align:middle;
+            -webkit-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            background-image:none;
+            border-radius:0px;
+        }
+        .sideBarTitle.subTitle {
+            background-color: rgba(0,0,0,0);
+            font-size:14px;
+            font-weight:300;
+            margin-top: 0px;
+            font-style: italic;
+        }
+        .sideBar a {
+            color: white;
+            text-decoration: none;
+        }
+        .sideBar:hover {
+            font-weight: 900;
+            text-decoration: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-right: 0em;
+            margin-left: -15px;
+            width:155px;
+            background-color: #00cdcd;
+            border-right-width: 5px;
+        }
+
+        .sideBar.risk:hover {
+            background-color: rgba(210,199,77,1);
+            border-color: rgba(190,176,33,1);
+        }
+        .sideBar.growth:hover {
+            background-color: rgba(168,194,96,1);
+            border-color: rgba(113,135,68,1);
+        }
+        .sideBar.survey:hover {
+            background-color: rgba(130,191,152,1);
+            border-color: rgba(123,156,136,1);
+        }
+        .sideBar.mobility:hover {
+            background-color: rgba(86,182,199,1);
+            border-color: rgba(100,140,190,1);
+        }
+        .sideBar.smart:hover {
+            background-color: rgba(233,233,233,1);
+            border-color: rgba(100,100,100,1);
+        }
+
+        /*JUST COLORS*/
+
+        .riskColor {
+            background-color: rgba(210,199,77,1);
+            border-color: rgba(190,176,33,1);
+        }
+        .growthColor {
+            background-color: rgba(168,194,96,1);
+            border-color: rgba(113,135,68,1);
+        }
+        .surveyColor {
+            background-color: rgba(130,191,152,1);
+            border-color: rgba(123,156,136,1);
+        }
+        .mobilityColor {
+            background-color: rgba(86,182,199,1);
+            border-color: rgba(100,140,190,1);
+        }
+        .smartColor {
+            background-color: rgba(233,233,233,1);
+            border-color: rgba(100,100,100,1);
+        }
+
+        /*navbars*/
+
+        .navbar {
+            background-color: black;
+            border-bottom-width:0px;
+            height:60px;
+        }
+        .navbar-brand {
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:900;
+            padding-right: 1.5em;
+        }
+        .navbar-brand>h1 {
+            color:rgba(248,208,72,1);
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:900;
+            font-size: 14px;
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .navbar-brand>p {
+            color:rgba(248,208,72,1);
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:500;
+            font-size: 11px;
+            padding:0px 0px 0px 0px;
+            margin:0px 0px 0px 0px;
+        }
+        .nav.navbar-nav {
+            float:right;
+        }
+        .nav.navbar-nav>li {
+            min-width:125px;
+        }
+        .nav.navbar-nav>li>a {
+            color:black;
+            font-family:"Open Sans", helvetica, verdana, sans-serif;
+            font-weight:500;
+            text-align:center;
+            line-height:15px;
+            vertical-align: center;
+            height: 60px;
+        }
+
+        .riskTab {
+            color: rgba(210,199,77,1) !important;
+        }
+        .riskTab:hover, .riskTab:focus, .riskTab.select {
+            background-color: rgba(210,199,77,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(190,176,33,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .growthTab {
+            color: rgba(168,194,96,1) !important;
+        }
+        .growthTab:hover, .growthTab:focus, .growthTab.select {
+            background-color: rgba(168,194,96,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(113,135,68,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .surveyTab {
+            color: rgba(130,191,152,1) !important;
+        }
+        .surveyTab:hover, .surveyTab:focus, .surveyTab.select {
+            background-color: rgba(130,191,152,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(123,156,136,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .mobilityTab {
+            color: rgba(86,182,199,1) !important;
+        }
+        .mobilityTab:hover, .mobilityTab:focus, .mobilityTab.select {
+            background-color: rgba(86,182,199,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(100,140,190,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .smartTab {
+            color: rgba(233,233,233,1) !important;
+        }
+        .smartTab:hover, .smartTab:focus, .smartTab.select {
+            background-color: rgba(233,233,233,1) !important;
+            border-width: 0px 0px 5px 0px;
+            height: 65px !important;
+            border-color: rgba(100,100,100,1) !important;
+            border-style: solid;
+            color: black !important;
+        }
+
+        .nav.navbar-nav>li.aboutTab_div {
+            width:65px;
+            min-width:0px;
+        }
+        .aboutTab {
+            background-color: rgba(100,100,100,1);
+            font-size: 2em;
+        }
+        .aboutTab:hover, .aboutTab:focus, .aboutTab.select {
+            background-color: rgba(100,100,100,1) !important;
+            color: black !important;
+        }
+        .smart_sideBox {
+            width: 100%;
+        }
+
+
+
+
+
+
+
+
+
+
+

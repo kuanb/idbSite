@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Urban Growth Projections</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    <!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="../lib/leaflet.css" />
+    <link rel="stylesheet" href="../lib/customization.css" />
+
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <h1>ESCI's Approach: Adapted Methodology</h1>
+                    <p>NORTHERN DEVELOPMENT CORRIDOR, HAITI 2014</p>
+                </a>
+            </div>
+            
+            <div id="navbar" class="collapse navbar-collapse">
+              
+                <ul class="nav navbar-nav">
+                
+                    <li><a href="risk.html" class="riskTab">Risks &<br>Vulnerability</a></li>
+                    <li><a href="growth.html" class="growthTab select">Urban Growth<br>& Projections</a></li>
+                    <li><a href="survey.html" class="surveyTab">Survey<br>Plus</a></li>
+                    <li><a href="mobility.html" class="mobilityTab">Mobility<br>& Logistics</a></li>
+                    <li><a href="smart.html" class="smartTab">Smart Growth<br>Scenario</a></li>
+                    <li class="aboutTab_div"><a href="about.html" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
+
+                </ul>
+
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+
+    <!-- buffers the top -->
+    <div style="margin-top:50px"></div>
+
+    <!-- SIDEBAR DIV -->
+    <div class="col-md-2 leftNav">
+    <div class="col-xs-9">
+        <a href="growth.html#"><div class="sideBarTitle">Introduction</div></a>
+        <a href="growth.html#description">
+            <div class="btn btn-default btn-md sideBar growth">Description</div></a><br>
+
+        <a href="growth.html#maps"><div class="sideBarTitle">Maps Data</div></a>
+        <div id="bx_slider01" class="top_slider">
+                <div class="sideBarTitle subTitle">Growth Levels</div><br>
+                <a data-slide-index="0">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 1985
+                    </div>
+                </a>
+                <a data-slide-index="1">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2010
+                    </div>
+                </a>
+                <a data-slide-index="2">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2013
+                    </div>
+                </a>
+                
+                <div class="sideBarTitle subTitle">Land Development</div><br>
+                <a data-slide-index="3">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 1986
+                    </div>
+                </a>
+                <a data-slide-index="4">
+                    <div class="btn btn-default btn-md sideBar growth">
+                        Year: 2010
+                    </div>
+                </a>
+        </div>
+        
+        <div class="sideBarTitle">Learn More</div>
+        
+        <div class="sideBarTitle subTitle">Urban Centers</div>
+        <a href="growth.html#villages">
+            <div class="btn btn-default btn-md sideBar growth" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">
+                Caracol
+            </div></a>
+        <a href="growth.html#villages">
+            <div class="btn btn-default btn-md sideBar growth" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')">
+                Limonade
+            </div></a>
+        <a href="growth.html#villages">
+            <div class="btn btn-default btn-md sideBar growth" onclick="swapPlotCard('growthMaps', 'plotCards_trou')">
+                Trou-du-Norde
+            </div></a>
+        <a href="growth.html#villages">
+            <div class="btn btn-default btn-md sideBar growth" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">
+                Terrier Rouge
+            </div></a>
+
+        <div class="sideBarTitle subTitle">Additional</div>
+        <a href="growth.html#graphs">
+            <div class="btn btn-default btn-md sideBar growth">Graphs</div></a>
+    </div>
+    </div>
+
+    <!-- context div -->
+    <div class="beneathMap" id="includedContent" style="">
+
+        <!-- INTERNAL CAN BE SWAPPED -->
+        
+        <a class="anchor" id='description'></a>
+        <div class="col-sm-12 cardTop growthColor">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-10" style="margin-top:30px;margin-bottom:30px">
+                <h1 style="font-weight:700;">
+                    Urban Growth Projections
+                </h1>
+                <h5>A MULTIPLE SCENARIO APPROACH BASED ON POTENTIAL GROWTH FROM THE INDUSTRIAL PARK IN CARACOL</h5>
+            </div>
+        </div>
+
+        <div class="col-sm-12 card">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-6">
+                <h3>Objectives</h3>
+                    <p>Model the region focusing on identifying ‘suitability’ areas in which development ‘as a whole’ should and should not occur based on a mechanism that combines ‘attraction’ and ‘restriction’ elements that contribute to the rationale of an individual, family or firm’s location decision.</p>
+                <h3>Key Activities</h3>
+                    <p>• Define all the ‘attraction’ and ‘restriction’ data.</p>
+                    <p>• Identify the historical growth from the region since 1986 and project future territorial growth.</p>
+                    <p>• Carry out population projections across different growth scenarios and analyze potential spatial distributions and densities.</p>
+                    <p>• Calculate the historical change of land use.</p>
+                <h3>Deliverables</h3>
+                    <p>• Generate over 100 geospatial layers, to be delivered to Haitian counterparts as well as internal IDB stakeholder.</p>
+                    <p>• Provide guidelines and recommendations for future growth for the communes closest to the PIC.</p>
+                    <p>• Offer a summary and complementary analysis of existing planning tools and documents.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                        <h4>Full Report</h4>
+                        <p>Download the full report by selecting one the language options below.</p>
+                        <hr>
+                        <p>ENGLISH</p>
+                        <p>SPANISH</p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+                <div class="row"  style="padding-top:25px">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                        <h4>Report Data</h4>
+                        <p>Data and geospatial shapefiles pertaining to this report that have been made available through the below links.</p>
+                        <hr>
+                        <p>MAP IMAGES</p>
+                        <p>GIS SHAPEFILES</p>
+                        <p>DATABASE FILES</p>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAPS BXSLIDER DIV -->
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2 plotCard-hdr">
+                Maps Data
+            </div>
+        </div>
+        <div class="row bx_maps">
+            <a class="anchor" id='maps'></a>
+            <div class="bxslider">
+                <ul class="bxslider" id='slider01'>
+                    <li class='slider_img'><img src="growth/growth_1985.png"  title="1985 Growth Levels"/></li>
+                    <li class='slider_img'><img src="growth/growth_2010.png"  title="2010 Growth Levels"/></li>
+                    <li class='slider_img'><img src="growth/growth_2013.png"  title="2013 Growth Levels"/></li>
+                    <li class='slider_img'><img src="growth/landuse_1986.png" title="1986 Land Development"/></li>
+                    <li class='slider_img'><img src="growth/landuse_2010.png" title="2010 Land Development"/></li>
+                </ul>
+            </div>
+        </div>
+
+        <a class="anchor" id='villages'></a>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 plotCard-hdr">
+            Development Strategy
+        </div>
+        <div class="row">
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">  Terrier Rouge </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_trou')">     Trou-du-Nord  </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')"> Limonade      </a>
+            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">  Caracol       </a>
+        </div>
+
+        <div id="growthMaps">
+            <div class="col-sm-12 darkCard" id="plotCards_caracol">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <h2>Caracol</h2>
+                    <div class="dataList_growth">
+                        <p>Caracol comprises an urban area of 43ha where 51% is in a flood area and 49% is outside. The land available for future development only represents 8.11ha. Due to its condition it is important to prevent any expansion of the township and it must be consider to apply an urban suitaitable land use model adding 2ha of roads creating a public space realm of open spaces and wooded areas of 13ha doubling the area for institutional and commercial activities, and setting aside 2ha of land for other productive activities, in terms of residential surface the township could only allocate 18 ha.</p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <img src="growth/gis/caracol.png"  style="width:100%"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_limonade" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <h2>Limonade</h2>
+                    <div class="dataList_growth">
+                        <p>Limonade comprises an urban area of 155ha, 19% is contained in the flood area and 81% is outside. 72ha from the available land can be developed in the future with a sustaintable urbanization model comprised of 31ha for roads, public spaces, natural or naturalized areas; 30ha for residential uses (in which small scale commerce and other complementary uses are included); 7.2ha for institutional and commercial uses and 2.1ha for other, industry-relateduses.</p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <img src="growth/gis/limonade.png"  style="width:100%"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_trou" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <h2>Trou-du-Nord</h2>
+                    <div class="dataList_growth">
+                        <p>Trou-du-Nord has 212.91 ha of urban areas 28% is in flood area and 72% is outside leaving 63 ha available for future development which in a sustainable urbanization model for land use would comprise of 45% for roads, public spaces, natural or naturalized areas; 42% for residential uses (in which small scale commerce and other complementary uses are included); 10% for institutional and commercial uses and 3% for other, industry-relateduses. </p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <img src="growth/gis/troudunord.png"  style="width:100%"/>
+                </div>
+            </div>
+
+            <div class="col-sm-12 darkCard" id="plotCards_terrier" hidden>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-2">
+                    <h2>Terrier Rouge</h2>
+                    <div class="dataList_growth">
+                        <p>Terrier Rouge has an urban area of 130ha where 2% is in the flood area and 98% is outside the risk zone. Its empty land for future development represents 53.7% of the total urban area and with a sustaintable urbanization model it could be developed 25ha for roads, public spaces, natural or naturalized areas; 24.2ha for residential uses (in which small scale commerce and other complementary uses are included); 5.3ha for institutional and commercial uses and 1.73ha for other, industry-relateduses. </p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <img src="growth/gis/terrierrouge.png"  style="width:100%"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 darkCard">
+            <div class="col-sm-5 pull-right" >
+                <img src="growth/gis/key.png"  style="width:100%"/>
+            </div>
+            <div class="col-sm-3 pull-right" style="padding-top:10px">
+                <span style="font-size:0.8em;font-style:italic;">
+                    <p>Above maps generated to provide spatial understanding of development patterns at each site as they relate the areas within which sustainable development can occur.</p>
+                    <p>Generated GIS model of development strategy, targeting areas by optimal use. For more information on analyses output, visit <a href="smart.html">Smart Growth</a>.</p>
+                </span>
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-2 plotCard-hdr">
+                Graph Analyses
+            </div>
+            <div class="row">
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_scenarios')">Scenarios</a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_population')">Population</a>
+                <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_landuse')">Land Use</a>
+            </div>
+            
+            <a class="anchor" id='graphs'></a>
+            <div id="plotCards">
+                <div class="col-sm-12 darkCard" id="plotCards_landuse">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2 textContainer">
+                        <h2>Land Use</h2>
+                        <p>An analysis of land use evolution from years 1986 to 2010.</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <img src="growth/graphs/landchage.png"  style="width:100%"/>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 darkCard" id="plotCards_population" hidden>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2 textContainer">
+                        <h2>Population</h2>
+                        <p>A multiple scenario approach to population projections. The scenarios present a detailed analysis of the population of the area study in order to understand the dynamics in place and better predict the impact of development projects and investments and future needs.</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <img src="growth/graphs/pop_projection.png"  style="width:100%"/>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 darkCard" id="plotCards_scenarios" hidden>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-2 textContainer">
+                        <h2>Scenarios</h2>
+                        <p>The ‘smart’ growth scenario results from the instance in which, attractions and restrictions are ‘maximized’. The computational process selects and creates a hierarchy of all areas with the highest degree of attraction from factors that have been classified as such. It discards areas affected or controlled by factors that ought to restrict settlement.</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <img src="growth/graphs/model_overlap.png"  style="width:100%"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END OF SWAPPED SECTION -->
+    
+    </div>
+
+
+
+<!-- FOOTER -->
+<div id="footer">
+</div>
+
+</body>
+
+<!-- Bootstrap core JavaScript -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../lib/jquery.min.js"></script>
+<script src="../lib/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../lib/ie10-viewport-bug-workaround.js"></script>
+
+<!-- bxSlider Javascript file -->
+<script src="../lib/jquery.bxslider.js"></script>
+<!-- bxSlider CSS file -->
+<link href="../lib/jquery.bxslider.css" rel="stylesheet" />
+
+<script>
+
+
+    $('#slider01').bxSlider({
+        mode: 'fade',
+        captions: true,
+        pagerCustom: '#bx_slider01',
+        onSlideAfter: function(){
+            location.hash = "#maps"
+          }
+    });
+    
+    swapPlotCard = function(superDiv, toToggle) {
+        $('div#' + superDiv + '>div').each(function(){ 
+            $(this).hide();
+        });
+        $('#'+toToggle).show()
+    };
+    
+
+    $( "#footer" ).load( "footer.html" );
+
+</script>
+
+
+</html>

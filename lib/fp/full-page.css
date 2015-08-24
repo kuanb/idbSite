@@ -1,0 +1,143 @@
+@CHARSET "ISO-8859-1";
+
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+  padding: 0;
+  margin: 0;
+}
+a{
+text-decoration:none;
+}
+table {
+  border-spacing: 0;
+}
+fieldset,img {
+  border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-weight: normal;
+  font-style: normal;
+}
+strong{
+font-weight: bold;
+}
+ol,ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+caption,th {
+  text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 700;
+  font-size: 100%;
+  margin:0;
+  padding:0;
+  padding-bottom: 1em;
+  color:#444;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { 
+	border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial, helvetica;
+	color: #333;
+	color: rgba(0,0,0,0.5);
+}
+.intro {
+  color: #fff;
+	height:100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.intro h1{
+	font-size: 4em;
+	color: white;
+	margin-bottom: 0em;
+	padding-bottom: 0em;
+}
+.intro p, .intro li {
+	width: 75%;
+	margin: 0 auto;
+	font-size: 2em;
+}
+.intro li{
+	margin: 0 auto;
+	text-align: left;
+	text-indent: -0.75em;
+	padding-top: 1em;
+}
+.intro button {
+	border-width:0px;
+	margin: 0px 0px 0px 0px;
+	border-top-left-radius: 20px;
+	/*border-bottom-right-radius: 100px*/
+}
+
+.btn_num {
+	font-size: 22px; 
+	position:absolute;
+	border-radius: 50%;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+  behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+  width: 36px;
+  height: 36px;
+  padding-top: 4px;
+  padding-left: 20px;
+  padding-bottom: 18px;
+  
+  background: #05221c;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.section{
+	text-align:center;
+}
+
+/* Defining each sectino background and styles
+* --------------------------------------- */
+#section0 {
+  background: url(../../maps/splash/haiti.png) center center;
+}
+#section1 {
+  background: url(../../maps/splash/corridor.png) center center;
+}
+#section2 {
+  background: url(../../maps/splash/sites.png) center center;
+}
+#section3 {
+  background: url(../../maps/splash/goals.png) center center;
+}
+#section4 {
+  background: url(../../maps/splash/process.png) center center;
+}
+
+#footer{
+  bottom:0px;
+  position:fixed;
+  height: 45px;
+  margin-left: 65px;
+  margin-right: 65px;
+  background: rgba(10,10,10,0.75);
+  z-index: 10;
+  color: rgba(250,250,250,0.8);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  font-size: 12px;
+  overflow: hidden;
+  padding: 7px 10px 0px 10px;
+}

@@ -5,9 +5,22 @@ body {
   margin-left: auto;
   font-family:"Open Sans", helvetica, verdana, sans-serif;
 }
+
+.bluegradient {
+  background: -webkit-linear-gradient(#444173, #161251, #0d0a30, #050412, #050412) !important; /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#444173, #161251, #0d0a30, #050412, #050412 !important); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#444173, #161251, #0d0a30, #050412, #050412 !important); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#444173, #161251, #0d0a30, #050412, #050412) !important; /* Standard syntax */
+}
+
 .btn {
   border-radius:0px
 }
+
+nav {
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.35);
+}
+
 a.anchor{
   display: block; 
   position: relative; 
@@ -79,17 +92,15 @@ a.anchor{
   background-position-y: bottom;
 }
 .leftNav {
-  z-index:100;
-  padding-left:0px;
-  position:fixed;
-  height:100%;
-  /*width:100%;*/
-}
-.leftNav>div {
-  background-color:rgba(0,0,0,0.5);
-  height:100%;
-  width:150px;
-  padding-top: 1.5em;
+  z-index: 100;
+  position: fixed;
+  height: 100%;
+  width: 150px;
+  padding: 5px 15px 5px 15px;
+  overflow-y: scroll;
+  -webkit-box-shadow: inset 125px 100px 200px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow:    inset 125px 100px 200px 0px rgba(0,0,0,0.75);
+  box-shadow:         inset 125px 100px 200px 0px rgba(0,0,0,0.75);
 }
 @media screen and (max-width: 600px) {
   .ndc_splash {
@@ -137,7 +148,6 @@ a.anchor{
 .beneathMap {
   margin-left: auto;
   margin-right: auto;
-  /*background-color: #f8f8f8;*/
 }
 .beneathMap .row {
   margin-left: 0px;
@@ -157,15 +167,16 @@ a.anchor{
   margin-bottom: 0px;
   margin-top: 0px;
 }
+.navbar-nav {
+  cursor: pointer;
+}
 .cardTop {
   background-color: red;
 }
 .card {
   background-color: #f8f8f8;
-  box-shadow: 0px 10px 0px rgba(0,50,50,0.95);
   padding-top: 50px;
   padding-bottom: 50px;
-  margin-bottom: 10px;
 }
 .darkCard {
   background-color: black;
@@ -195,77 +206,49 @@ a.anchor{
   width: 100%;
   margin-bottom: 30px;
 }
-.sideBarAll {
-  background-color: rgba(0,0,0,0.5);
-}
 .sideBar, .siderBar:link, .siderBar:active {
-  background-color: rgba(0,0,0,0);
   color: white;
-  border-width:0px;
-  padding-left: 1em;
-  text-decoration: none;
-  white-space:nowrap;
+  width: 135px;
+  text-align: left;
 }
 .sideBarTitle {
   color: white;
-  border-width:0px;
-  display:inline-block;
-  padding: 0px;
-  margin-top:0em;
-  margin-bottom:0;
   font-size:18px;
   font-weight:900;
-  line-height:1.42857143;
-  text-align:center;
-  white-space:nowrap;
-  vertical-align:middle;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  user-select:none;
-  background-image:none;
-  border-radius:0px;
 }
-.sideBarTitle.subTitle {
+.sideBarTitle .subTitle {
   background-color: rgba(0,0,0,0);
   font-size:14px;
   font-weight:300;
-  margin-top: 0px;
   font-style: italic;
 }
 .sideBar a {
   color: white;
   text-decoration: none;
 }
-.sideBar:hover {
+.sideBar:hover, .sideBar.select {
   font-weight: 900;
-  text-decoration: none;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-right: 0em;
-  margin-left: -15px;
-  width:155px;
-  background-color: #00cdcd;
+  color: white;
   border-right-width: 5px;
 }
 
-.sideBar.risk:hover {
+.sideBar.risk:hover, .sideBar.risk.select {
   background-color: rgba(210,199,77,1);
   border-color: rgba(190,176,33,1);
 }
-.sideBar.growth:hover {
+.sideBar.growth:hover, .sideBar.growth.select {
   background-color: rgba(168,194,96,1);
   border-color: rgba(113,135,68,1);
 }
-.sideBar.survey:hover {
+.sideBar.survey:hover, .sideBar.survey.select {
   background-color: rgba(130,191,152,1);
   border-color: rgba(123,156,136,1);
 }
-.sideBar.mobility:hover {
+.sideBar.mobility:hover, .sideBar.mobility.select {
   background-color: rgba(86,182,199,1);
   border-color: rgba(100,140,190,1);
 }
-.sideBar.smart:hover {
+.sideBar.smart:hover, .sideBar.smart.select {
   background-color: rgba(233,233,233,1);
   border-color: rgba(100,100,100,1);
 }
@@ -337,6 +320,14 @@ a.anchor{
   height: 60px;
 }
 
+.embedded {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  overflow-y: scroll;
+}
+
 .riskTab {
   color: rgba(210,199,77,1) !important;
 }
@@ -347,6 +338,7 @@ a.anchor{
   border-color: rgba(190,176,33,1) !important;
   border-style: solid;
   color: black !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .growthTab {
@@ -359,6 +351,7 @@ a.anchor{
   border-color: rgba(113,135,68,1) !important;
   border-style: solid;
   color: black !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .surveyTab {
@@ -371,6 +364,7 @@ a.anchor{
   border-color: rgba(123,156,136,1) !important;
   border-style: solid;
   color: black !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .mobilityTab {
@@ -383,6 +377,7 @@ a.anchor{
   border-color: rgba(100,140,190,1) !important;
   border-style: solid;
   color: black !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .smartTab {
@@ -395,6 +390,7 @@ a.anchor{
   border-color: rgba(100,100,100,1) !important;
   border-style: solid;
   color: black !important;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
 .nav.navbar-nav>li.aboutTab_div {
@@ -411,6 +407,18 @@ a.anchor{
 }
 .smart_sideBox {
   width: 100%;
+}
+
+.baseInformation {
+  padding-bottom: 70px;
+  color: #FFF;
+  width: 100%;
+  overflow-x: hidden;
+}
+.baseInformation button {
+  margin-bottom: 10px;
+  color: white;
+  border-width: 0px;
 }
 
 

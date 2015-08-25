@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://alvarotrigo.com/fullPage/examples/fixedHeaders.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" style="overflow: hidden; height: 100%;">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>ESCI - Northern Haiti</title>
+
+    <script src="lib/fp/jquery.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/jquery.bxslider.js"></script>
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/fonts/css/font-awesome.min.css">
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
+
+    <script src="lib/customization.js"></script>
+    <link rel="stylesheet" href="lib/customization.css" />
+  </head>
+
+  <body style="height: 100%; overflow-y: scroll" class="bluegradient" ng-app="idbSiteApp" ng-controller="idbSite"> 
+
+    <div id="header">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
+        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+              <img class="logo" src="static/logos/idb_logo_white.png" />
+            </a>
+            <a class="navbar-brand" href="index.html">
+              <h1>The Emerging and Sustainable Cities Initiative</h1>
+              <p>Northern Development Corridor, Haiti</p>
+            </a>
+          </div>
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li>
+                <a class="riskTab" ng-click="currentTab = 'risk'"
+                    ng-class="currentTab == 'risk' ? 'select' : ''">
+                  Risks &<br>Vulnerability
+                </a>
+              </li>
+              <li>
+                <a class="growthTab" ng-click="currentTab = 'growth'"
+                    ng-class="currentTab == 'growth' ? 'select' : ''">
+                  Urban Growth<br>& Projections
+                </a>
+              </li>
+              <li>
+                <a class="surveyTab" ng-click="currentTab = 'survey'"
+                    ng-class="currentTab == 'survey' ? 'select' : ''">
+                  Survey<br>Plus
+                </a>
+              </li>
+              <li>
+                <a class="mobilityTab" ng-click="currentTab = 'mobility'"
+                    ng-class="currentTab == 'mobility' ? 'select' : ''">
+                  Mobility<br>& Logistics
+                </a>
+              </li>
+              <li>
+                <a class="smartTab" ng-click="currentTab = 'smart'"
+                    ng-class="currentTab == 'smart' ? 'select' : ''">
+                  Smart Growth<br>Scenario
+                </a>
+              </li>
+              <li class="aboutTab_div">
+                <a class="aboutTab" ng-click="currentTab = 'about'"
+                    ng-class="currentTab == 'about' ? 'select' : ''">
+                  <center>
+                    <i class="fa fa-info-circle" style="color:#FFF"></i>
+                  </center>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <div class="embedded" id="risk_content" ng-show="currentTab=='risk'" ng-include="'maps/risk.html'"></div>
+
+
+
+
+  </body>
+
+  <script>
+    $('.embedded').height($('.embedded').height()-60);
+  </script>
+
+</html>

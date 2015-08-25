@@ -1,175 +1,175 @@
 
 
-    <!-- SIDEBAR DIV -->
-    <div class="leftNav">
-      <div class="sideBarTitle" ng-click="goTo('risk', 'introduction')">
-        Introduction
-        <div class="btn sideBar risk" ng-click="goTo('risk', 'description')"
-              ng-class="currentRef=='description' ? 'select' : ''">
-          Description
-        </div>
-      </div>
-
-      <div class="sideBarTitle" ng-click="goTo('risk', 'maps')">
-        Maps Data
-        <div id="bx_slider01" class="top_slider" ng-click="goTo('risk', 'maps')">
-          <div class="subTitle">
-            Risk Modeling
-          </div>
-          <a data-slide-index="0">
-            <div class="btn sideBar risk" ng-click="goTo('risk', 'maps')"
-                  ng-class="currentRef=='maps' ? 'select' : ''">
-              Coastal Floods
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="sideBarTitle">
-        Graphs
-        <div class="subTitle">
-          Risk Analyses
-        </div>
-        <div class="btn sideBar risk" ng-click="goTo('risk', 'graph_flood')"
-              ng-class="currentRef=='graph_flood' ? 'select' : ''" 
-              onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">
-          Flood Hazard
-        </div>
-        <div class="btn sideBar risk" ng-click="goTo('risk', 'graph_water')"
-              ng-class="currentRef=='graph_water' ? 'select' : ''" 
-              onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
-          Water Balance
-        </div>
-      </div>
+<!-- SIDEBAR DIV -->
+<div class="leftNav">
+  <div class="sideBarTitle">
+    Introduction
+    <div class="btn sideBar risk" ng-click="goTo('risk', 'description')"
+          ng-class="currentRef=='description' ? 'select' : ''">
+      Description
     </div>
+  </div>
 
-
-
-
-    <div class="beneathMap" id="includedContent">
-        
-        <div class="row" id="risk_introduction">
-          <div class="col-sm-12 cardTop riskColor">
-              <div class="col-sm-2"></div>
-              <div class="col-sm-10" style="margin-top:30px;margin-bottom:30px">
-                  <h1 style="font-weight:700;">
-                      Vulnerability to Risks & Natural Hazards
-                  </h1>
-                  <h5>PROBABILISTIC MODELING & COMPOSITE MAPPING</h5>
-              </div>
-          </div>
-
-          <div class="col-sm-12 card" id="risk_description">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-6">
-              <h3>
-                Objective
-              </h3>
-              <p>
-                Create a composite model based on diverse studies to identify key areas of the Region that need action by means of a development plan.
-              </p>
-              <h3>Key Aspects</h3>
-              <p>An analysis of four categories of risk:</p>
-              <p>• Inland and coastal flooding.</p>
-              <p>• Seismicity. That is, the occurrence or frequency of earthquakes in a region.</p>
-              <p>• Hurricanes.</p>
-              <p>• Drought risks, including a water balance study.</p>
-              <h3>Deliverables</h3>
-              <p>• Probabilistic modeling for risk categories, including effects of climate change.</p>
-              <p>• Risk and exposure maps, including loss estimation for hazard events.</p>
-              <p>• Composite map that weights all the factors involved.</p>
-              <p>• Identification of attraction-restriction zones under two categories:</p>
-              <ul>
-                <li>Highest aggregated risk zones.</li>
-                <li>Greatest expected risk resilience.</li>
-              </ul>
-          </div>
-          <div class="col-sm-4">
-              <div class="row">
-                  <div class="col-sm-1"></div>
-                  <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
-                      <h4>Full Report</h4>
-                      <p>Download the full report by selecting one the language options below.</p>
-                      <hr>
-                      <p>ENGLISH</p>
-                      <p>SPANISH</p>
-                  </div>
-                  <div class="col-sm-1"></div>
-              </div>
-              <div class="row"  style="padding-top:25px">
-                  <div class="col-sm-1"></div>
-                  <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
-                      <h4>Report Data</h4>
-                      <p>Data and geospatial shapefiles pertaining to this report that have been made available through the below links.</p>
-                      <hr>
-                      <p>MAP IMAGES</p>
-                      <p>GIS SHAPEFILES</p>
-                      <p>DATABASE FILES</p>
-                  </div>
-                  <div class="col-sm-1"></div>
-              </div>
-            </div>
-          </div>
+  <div class="sideBarTitle">
+    Maps Data
+    <div id="bx_slider01" class="top_slider" ng-click="goTo('risk', 'maps')">
+      <div class="subTitle">
+        Risk Modeling
+      </div>
+      <a data-slide-index="0">
+        <div class="btn sideBar risk" ng-click="goTo('risk', 'maps')"
+              ng-class="currentRef=='maps' ? 'select' : ''">
+          Coastal Floods
         </div>
+      </a>
+    </div>
+  </div>
 
-        <!-- MAPS BXSLIDER DIV -->
-        <div class="row" id="risk_maps">
+  <div class="sideBarTitle">
+    Graphs
+    <div class="subTitle">
+      Risk Analyses
+    </div>
+    <div class="btn sideBar risk" ng-click="goTo('risk', 'graph_flood')"
+          ng-class="currentRef=='graph_flood' ? 'select' : ''" 
+          onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')">
+      Flood Hazard
+    </div>
+    <div class="btn sideBar risk" ng-click="goTo('risk', 'graph_water')"
+          ng-class="currentRef=='graph_water' ? 'select' : ''" 
+          onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
+      Water Balance
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="beneathMap" id="includedContent">
+    
+    <div class="row" id="risk_introduction">
+      <div class="col-sm-12 cardTop riskColor">
           <div class="col-sm-2"></div>
-          <div class="col-sm-2 plotCard-hdr">
-              Maps Data
+          <div class="col-sm-10" style="margin-top:30px;margin-bottom:30px">
+              <h1 style="font-weight:700;">
+                  Vulnerability to Risks & Natural Hazards
+              </h1>
+              <h5>PROBABILISTIC MODELING & COMPOSITE MAPPING</h5>
           </div>
-        </div>
-        <div class="row bx_maps">
-          <div class="bxslider">
-            <ul class="bxslider" id='slider01'>
-              <li class='slider_img'><img src="maps/risk/flooding.png" title="Risk modeling example: Coastal flooding high resolution model"/></li>
-            </ul>
-          </div>
-        </div>
+      </div>
 
-        <a class="anchor" id='villages'></a>
+      <div class="col-sm-12 card" id="risk_description">
         <div class="col-sm-2"></div>
-        <div class="col-sm-2 plotCard-hdr">
-            Risk Analyses
-        </div>
-        <div class="row">
-            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')"
-                id="risk_graph_water">
-              Water Balance
-            </a>
-            <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')"
-                id="risk_graph_flood">
-              Flood Hazard
-            </a>
-        </div>
-
-        <a class="anchor" id='graphs'></a>
-        <div id="riskGraphs">
-          <div class="col-sm-12 darkCard" id="plotCards_flood_hazard">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 textContainer">
-              <h2>Impacts & Losses</h2>
-              <p>Shown is an estimate of the losses attributable to each hazard, arranged according to average period of re-occurrence and arrayed vertically by probability and imact level.</p>
-            </div>
-            <div class="col-sm-8">
-              <img src="maps/risk/graphs/flood_hazard.png"  style="width:100%"/>
-            </div>
+        <div class="col-sm-6">
+          <h3>
+            Objective
+          </h3>
+          <p>
+            Create a composite model based on diverse studies to identify key areas of the Region that need action by means of a development plan.
+          </p>
+          <h3>Key Aspects</h3>
+          <p>An analysis of four categories of risk:</p>
+          <p>• Inland and coastal flooding.</p>
+          <p>• Seismicity. That is, the occurrence or frequency of earthquakes in a region.</p>
+          <p>• Hurricanes.</p>
+          <p>• Drought risks, including a water balance study.</p>
+          <h3>Deliverables</h3>
+          <p>• Probabilistic modeling for risk categories, including effects of climate change.</p>
+          <p>• Risk and exposure maps, including loss estimation for hazard events.</p>
+          <p>• Composite map that weights all the factors involved.</p>
+          <p>• Identification of attraction-restriction zones under two categories:</p>
+          <ul>
+            <li>Highest aggregated risk zones.</li>
+            <li>Greatest expected risk resilience.</li>
+          </ul>
+      </div>
+      <div class="col-sm-4">
+          <div class="row">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                  <h4>Full Report</h4>
+                  <p>Download the full report by selecting one the language options below.</p>
+                  <hr>
+                  <p>ENGLISH</p>
+                  <p>SPANISH</p>
+              </div>
+              <div class="col-sm-1"></div>
           </div>
-
-          <div class="col-sm-12 darkCard" id="plotCards_water_balance" hidden>
-            <div class="col-sm-2"></div>
-            <div class="col-sm-2 textContainer">
-              <h2>Water Balance</h2>
-              <p>Monthly variations in water availability potential: Climate change and projected growth will reduce the available water stock and potentially increase the impacts of prolonged periods of water deficit. The analysis does not consider the effects of salinization and potentially higher aquifer pollution levels.</p>
-            </div>
-            <div class="col-sm-8">
-              <img src="maps/risk/graphs/water_balance.png"  style="width:100%"/>
-            </div>
+          <div class="row"  style="padding-top:25px">
+              <div class="col-sm-1"></div>
+              <div class="col-sm-10 cardSideBox" style="margin-left:auto;margin-right:auto">
+                  <h4>Report Data</h4>
+                  <p>Data and geospatial shapefiles pertaining to this report that have been made available through the below links.</p>
+                  <hr>
+                  <p>MAP IMAGES</p>
+                  <p>GIS SHAPEFILES</p>
+                  <p>DATABASE FILES</p>
+              </div>
+              <div class="col-sm-1"></div>
           </div>
+        </div>
       </div>
     </div>
 
-    <div ng-include="'maps/footer.html'"></div>
+    <!-- MAPS BXSLIDER DIV -->
+    <div class="row" id="risk_maps">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2 plotCard-hdr">
+          Maps Data
+      </div>
+    </div>
+    <div class="row bx_maps">
+      <div class="bxslider">
+        <ul class="bxslider" id='slider01'>
+          <li class='slider_img'><img src="maps/risk/flooding.png" title="Risk modeling example: Coastal flooding high resolution model"/></li>
+        </ul>
+      </div>
+    </div>
+
+    <a class="anchor" id='villages'></a>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-2 plotCard-hdr">
+        Risk Analyses
+    </div>
+    <div class="row">
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')"
+            id="risk_graph_water">
+          Water Balance
+        </a>
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')"
+            id="risk_graph_flood">
+          Flood Hazard
+        </a>
+    </div>
+
+    <a class="anchor" id='graphs'></a>
+    <div id="riskGraphs">
+      <div class="col-sm-12 darkCard" id="plotCards_flood_hazard">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 textContainer">
+          <h2>Impacts & Losses</h2>
+          <p>Shown is an estimate of the losses attributable to each hazard, arranged according to average period of re-occurrence and arrayed vertically by probability and imact level.</p>
+        </div>
+        <div class="col-sm-8">
+          <img src="maps/risk/graphs/flood_hazard.png"  style="width:100%"/>
+        </div>
+      </div>
+
+      <div class="col-sm-12 darkCard" id="plotCards_water_balance" hidden>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 textContainer">
+          <h2>Water Balance</h2>
+          <p>Monthly variations in water availability potential: Climate change and projected growth will reduce the available water stock and potentially increase the impacts of prolonged periods of water deficit. The analysis does not consider the effects of salinization and potentially higher aquifer pollution levels.</p>
+        </div>
+        <div class="col-sm-8">
+          <img src="maps/risk/graphs/water_balance.png"  style="width:100%"/>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div ng-include="'maps/footer.html'"></div>
 
 
 
@@ -179,11 +179,4 @@
     captions: true,
     pagerCustom: '#bx_slider01'
   });
-  
-  swapPlotCard = function(superDiv, toToggle) {
-    $('div#' + superDiv + '>div').each(function(){ 
-        $(this).hide();
-    });
-    $('#'+toToggle).show()
-  };
 </script>

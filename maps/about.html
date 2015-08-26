@@ -1,79 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>About ESCI - Haiti</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../lib/bootstrap.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    <!-- Google Font -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    
-    <!-- bxSlider CSS file -->
-    <link href="../lib/jquery.bxslider.css" rel="stylesheet" />
-    
-    <!-- Slider Image -->
-    <link rel="stylesheet" href="../lib/diffWidget/diffWidget.css" />
-
-    <link rel="stylesheet" href="../lib/customization.css" />
-
-
-</head>
-
-<body>
-
-<!-- HEADER -->
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="z-index:1000;">
-        <div class="container" style="margin-left:0px;margin-right:0px;width:100%;padding-right:0px;">
-
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="../index.html">
-                    <h1>ESCI's Approach: Adapted Methodology</h1>
-                    <p>NORTHERN DEVELOPMENT CORRIDOR, HAITI 2014</p>
-                </a>
-            </div>
-            
-            <div id="navbar" class="collapse navbar-collapse">
-              
-                <ul class="nav navbar-nav">
-                
-                    <li><a href="risk.html" class="riskTab">Risks &<br>Vulnerability</a></li>
-                    <li><a href="growth.html" class="growthTab">Urban Growth<br>& Projections</a></li>
-                    <li><a href="survey.html" class="surveyTab">Survey<br>Plus</a></li>
-                    <li><a href="mobility.html" class="mobilityTab">Mobility<br>& Logistics</a></li>
-                    <li><a href="smart.html" class="smartTab">Smart Growth<br>Scenario</a></li>
-                    <li class="aboutTab_div"><a href="about.html" class="aboutTab"><i class="fa fa-info-circle" style="color:rgba(300,300,300,1)"></i></a></li>
-
-                </ul>
-
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
-
-
-    <!-- buffers the top -->
-    <div style="margin-top:50px"></div>
-
 
     <!-- context div -->
     <div class="beneathMap" id="includedContent">
@@ -127,11 +51,11 @@
 
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="about/haiti_map.png" class="smart_sideBox">
+                    <img src="maps/about/haiti_map.png" class="smart_sideBox">
                     <p><i>Location of the Northern Development Corridor in the context of all of Haiti.</i></p>
                 </div>
                 <div class="col-sm-6">
-                    <img src="about/ndc_sites.png" class="smart_sideBox">
+                    <img src="maps/about/ndc_sites.png" class="smart_sideBox">
                     <p><i>Urban areas of note along or near RN6 in the Northern Development Corridor.</i></p>
                 </div>
             </div>
@@ -162,13 +86,13 @@
                 <div class="col-sm-6">
                     <div class="row">
                         <div class="col-sm-12">
-                            <img src="about/new_growth.png" class="smart_sideBox">
+                            <img src="maps/about/new_growth.png" class="smart_sideBox">
                             <p><i>Other anchor projects are currently being developed in the region.</i></p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <img src="about/challenges.png" class="smart_sideBox">
+                            <img src="maps/about/challenges.png" class="smart_sideBox">
                             <p><i>Urban challenges and needs.</i></p>
                         </div>
                     </div>
@@ -176,87 +100,7 @@
             </div>
         </div>
 
-
-        <!-- END OF SWAPPED SECTION -->
     
     </div>
 
-
-
-<!-- FOOTER -->
-<a class="anchor" id='more'></a>
-<div id="footer">
-</div>
-
-</body>
-
-<!-- Bootstrap core JavaScript -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="../lib/jquery.min.js"></script>
-<script src="../lib/bootstrap.min.js"></script>
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script src="../lib/ie10-viewport-bug-workaround.js"></script>
-
-<!-- bxSlider Javascript file -->
-<script src="../lib/jquery.bxslider.js"></script>
-
-<!-- Image Slider Javascript file -->
-<script src="../lib/diffWidget/diffWidget.js"></script>
-
-<!-- Image Slider -->
-<link href="../lib/jquery.bxslider.css" rel="stylesheet" />
-
-<script>
-
-
-    $('#slider01').bxSlider({
-        mode: 'fade',
-        captions: true,
-        pagerCustom: '#bx_slider01',
-        onSlideAfter: function(){
-            location.hash = "#maps"
-          }
-    });
-
-    $(document).ready(function(){
-
-        $('#ex1').diffWidget({
-            'width': '1500px',
-            'height': '1000',
-            'top': 'smart/slide_imgs/bike_before.jpg',
-            'bottom': 'smart/slide_imgs/bike_after.jpg',
-            'position': '25%'
-        });
-
-        $('#ex2').diffWidget({
-            'width': '1500px',
-            'height': '591px',
-            'top': 'smart/slide_imgs/intermodal_before.jpg',
-            'bottom': 'smart/slide_imgs/intermodal_after.jpg',
-            'position': '25%'
-        });
-
-        $('#ex3').diffWidget({
-            'width': '1500px',
-            'height': '495px',
-            'top': 'smart/slide_imgs/limon_before.jpg',
-            'bottom': 'smart/slide_imgs/limon_after.jpg',
-            'position': '25%'
-        })
-
-    })
-    
-    swapPlotCard = function(superDiv, toToggle) {
-        $('div#' + superDiv + '>div').each(function(){ 
-            $(this).hide();
-        });
-        $('#'+toToggle).show()
-    };
-    
-
-    $( "#footer" ).load( "footer.html" );
-
-</script>
-
-
-</html>
+<div ng-include="'maps/footer.html'"></div>

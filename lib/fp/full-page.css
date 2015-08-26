@@ -72,6 +72,11 @@ body{
 	margin: 0 auto;
 	font-size: 2em;
 }
+
+.intro a {
+  color: white;
+  /*text-decoration: none;*/
+}
 .intro li{
 	margin: 0 auto;
 	text-align: left;
@@ -84,6 +89,24 @@ body{
 	border-top-left-radius: 20px;
 	/*border-bottom-right-radius: 100px*/
 }
+
+.intro .box_container {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.intro .box_container li {
+  width: 90%;
+  margin-left: 0px;
+  margin-right: 0px;
+  word-wrap: normal;
+}
+.intro .box_container li button {
+  height: 100px;
+  word-wrap: normal;
+}
+
+
 
 .btn_num {
 	font-size: 22px; 
@@ -141,3 +164,4 @@ body{
   overflow: hidden;
   padding: 7px 10px 0px 10px;
 }
+

@@ -1,34 +1,59 @@
 
 
-
-<div class="col-md-2 leftNav">
-    <div class="col-xs-9">
-        <a href="mobility.html#"><div class="sideBarTitle">Introduction</div></a>
-        <a href="mobility.html#description">
-            <div class="btn btn-default btn-md sideBar mobility">Description</div></a>
-
-        <a href="mobility.html#maps"><div class="sideBarTitle">Maps Data</div></a>
-        <div id="bx_slider04" class="top_slider">
-            <div class="sideBarTitle subTitle">Travel Study</div><br>
-            <a data-slide-index="0">
-                <div class="btn btn-default btn-md sideBar mobility">Patterns</div></a><br>
-            <a data-slide-index="1">
-                <div class="btn btn-default btn-md sideBar mobility">Volumes</div></a><br>
-            <a data-slide-index="2">
-                <div class="btn btn-default btn-md sideBar mobility">Modes</div></a><br>
-        </div>
-        
-        <div class="sideBarTitle">Learn More</div>
-        <a href="mobility.html#graphs">
-            <div class="btn btn-default btn-md sideBar mobility">Graphs</div></a>
+<!-- SIDEBAR DIV -->
+<div class="leftNav">
+  <div class="sideBarTitle">
+    Introduction
+    <div class="btn sideBar mobility" ng-click="goTo('mobility', 'description')"
+          ng-class="currentRef=='description' ? 'select' : ''">
+      Description
     </div>
+  </div>
+
+  <div class="sideBarTitle">
+    Travel Study
+    <div id="bx_slider04" class="top_slider">
+      <a data-slide-index="0">
+        <div class="btn sideBar mobility" ng-click="goTo('mobility', 'maps_patterns')"
+              ng-class="currentRef=='maps_patterns' ? 'select' : ''">
+          Patterns
+        </div>
+      </a>
+      <a data-slide-index="1">
+        <div class="btn sideBar mobility" ng-click="goTo('mobility', 'maps_volumes')"
+              ng-class="currentRef=='maps_volumes' ? 'select' : ''">
+          Volumes
+        </div>
+      </a>
+      <a data-slide-index="2">
+        <div class="btn sideBar mobility" ng-click="goTo('mobility', 'maps_modes')"
+              ng-class="currentRef=='maps_modes' ? 'select' : ''">
+          Modes
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sideBarTitle">
+    Graphs
+    <div class="btn sideBar mobility" ng-click="goTo('mobility', 'graph_mode')"
+          ng-class="currentRef=='graph_flood' ? 'select' : ''" 
+          onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')">
+      Mode Volumes
+    </div>
+    <div class="btn sideBar mobility" ng-click="goTo('mobility', 'graph_travel')"
+          ng-class="currentRef=='graph_water' ? 'select' : ''" 
+          onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')">
+      Travel Times
+    </div>
+  </div>
 </div>
+
+
+
 
 <div class="beneathMap" id="includedContent">
 
-    <!-- INTERNAL CAN BE SWAPPED -->
-    
-    <a class="anchor" id='description'></a>
     <div class="row">
         <div class="col-sm-12 cardTop mobilityColor">
             <div class="col-sm-2"></div>
@@ -40,7 +65,7 @@
             </div>
         </div>
 
-        <div class="col-sm-12 card">
+        <div class="col-sm-12 card" id='mobility_description'>
             <div class="col-sm-2"></div>
             <div class="col-sm-6">
                 <h3>Objectives</h3>
@@ -89,13 +114,18 @@
     </div>
 
     <!-- MAPS BXSLIDER DIV -->
-    <a class="anchor" id='maps'></a>
+
     <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-2 plotCard-hdr">
-            Maps Data
-        </div>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2 plotCard-hdr">
+          Travel Study
+      </div>
     </div>
+
+    <a id='mobility_maps_patterns'></a>
+    <a id='mobility_maps_volumes'></a>
+    <a id='mobility_maps_modes'></a>
+
     <div class="row bx_maps">
         <div class="bxslider">
             <ul class="bxslider" id='slider04'>
@@ -106,7 +136,9 @@
         </div>
     </div>
 
-    <a class="anchor" id='graphs'></a>
+    <a class="anchor" id='mobility_graph_mode'></a>
+    <a class="anchor" id='mobility_graph_travel'></a>
+
     <div class="col-sm-2"></div>
     <div class="col-sm-2 plotCard-hdr">
         Data Visualizations

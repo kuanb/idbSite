@@ -8,9 +8,17 @@
           ng-class="currentRef=='description' ? 'select' : ''">
       Description
     </div>
+
+    <div class="btn sideBar risk" ng-click="goTo('risk', 'maps')"
+          ng-class="currentRef=='maps' ? 'select' : ''">
+      Risk Modeling
+    </div>
   </div>
 
-  <div class="sideBarTitle">
+
+
+
+<!--   <div class="sideBarTitle">
     Maps Data
     <div id="bx_slider01" class="top_slider">
       <div class="subTitle">
@@ -23,10 +31,17 @@
         </div>
       </a>
     </div>
-  </div>
+  </div> -->
 
   <div class="sideBarTitle">
     Other Analyses
+    <div class="btn sideBar risk" ng-click="goTo('risk', 'graph_flood')"
+          ng-class="currentRef=='graph_flood' || 
+                    currentRef=='graph_water' ? 'select' : ''">
+      Risk Analyses
+    </div>
+
+    <!-- 
     <div class="subTitle">
       Risk Analyses
     </div>
@@ -39,7 +54,7 @@
           ng-class="currentRef=='graph_water' ? 'select' : ''" 
           onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')">
       Water Balance
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -118,6 +133,13 @@
       <div class="col-sm-2 plotCard-hdr">
           Maps Data
       </div>
+      <div class="row">
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')" 
+            ng-click="goTo('risk', 'maps')"
+            ng-class="currentRef=='maps' ? 'select' : ''">
+            Flooding Risk
+        </a>
+      </div>
     </div>
     <div class="row bx_maps">
       <div class="bxslider">
@@ -128,22 +150,30 @@
     </div>
 
     
+    <a id='graphs'></a>
+    <a id='risk_graph_water'></a>
+    <a id="risk_graph_flood"></a>
+
     <div class="col-sm-2"></div>
     <div class="col-sm-2 plotCard-hdr">
         Risk Analyses
     </div>
     <div class="row">
         <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_water_balance')"
-            id="risk_graph_water">
+            ng-click="goTo('risk', 'graph_water')"
+            ng-class="currentRef=='graph_water' ? 'select' : ''">
           Water Balance
         </a>
         <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('riskGraphs', 'plotCards_flood_hazard')"
-            id="risk_graph_flood">
+            ng-click="goTo('risk', 'graph_flood')"
+            ng-class="currentRef=='graph_flood' ? 'select' : ''" >
           Flood Hazard
         </a>
     </div>
 
-    <a class="anchor" id='graphs'></a>
+
+
+    
     <div id="riskGraphs">
       <div class="col-sm-12 darkCard" id="plotCards_flood_hazard">
         <div class="col-sm-2"></div>

@@ -8,9 +8,22 @@
           ng-class="currentRef=='description' ? 'select' : ''">
       Description
     </div>
+
+    <div class="btn sideBar mobility" ng-click="goTo('mobility', 'maps_patterns')"
+          ng-class="currentRef=='maps_patterns' ||
+                    currentRef=='maps_volumes' ||
+                    currentRef=='maps_modes' ? 'select' : ''">
+      Maps Data
+    </div>
+    <div class="btn sideBar mobility" ng-click="goTo('mobility', 'graph_mode')"
+          ng-class="currentRef=='graph_flood' ||
+                    currentRef=='graph_water' ? 'select' : ''"
+          onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')">
+      Transport
+    </div>
   </div>
 
-  <div class="sideBarTitle">
+<!--   <div class="sideBarTitle">
     Travel Study
     <div id="bx_slider04" class="top_slider">
       <a data-slide-index="0">
@@ -32,9 +45,9 @@
         </div>
       </a>
     </div>
-  </div>
+  </div> -->
 
-  <div class="sideBarTitle">
+<!--   <div class="sideBarTitle">
     Graphs
     <div class="btn sideBar mobility" ng-click="goTo('mobility', 'graph_mode')"
           ng-class="currentRef=='graph_flood' ? 'select' : ''" 
@@ -46,7 +59,7 @@
           onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')">
       Travel Times
     </div>
-  </div>
+  </div> -->
 </div>
 
 
@@ -115,37 +128,69 @@
 
     <!-- MAPS BXSLIDER DIV -->
 
-    <div class="row">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-2 plotCard-hdr">
-          Travel Study
-      </div>
-    </div>
-
     <a id='mobility_maps_patterns'></a>
     <a id='mobility_maps_volumes'></a>
     <a id='mobility_maps_modes'></a>
 
-    <div class="row bx_maps">
-        <div class="bxslider">
-            <ul class="bxslider" id='slider04'>
-                <li class='slider_img'><img src="maps/mobility/patterns.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
-                <li class='slider_img'><img src="maps/mobility/volumes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
-                <li class='slider_img'><img src="maps/mobility/traveltimes.png" title="Average travel time arranged by mode of transport."/></li>
-            </ul>
-        </div>
-    </div>
-
-    <a class="anchor" id='mobility_graph_mode'></a>
-    <a class="anchor" id='mobility_graph_travel'></a>
-
-    <div class="col-sm-2"></div>
-    <div class="col-sm-2 plotCard-hdr">
-        Data Visualizations
-    </div>
     <div class="row">
-        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')">Travel Times</a>
-        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')">Mode Volumes</a>
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2 plotCard-hdr">
+          Maps Data
+      </div>
+
+      <div id="bx_slider04" class="row top_slider">
+        <a data-slide-index="2">
+          <div class="btn btn-xs btn-plotCards" ng-click="goTo('mobility', 'maps_modes')"
+                ng-class="currentRef=='maps_modes' ? 'select' : ''">
+            Modes
+          </div>
+        </a>
+        <a data-slide-index="1">
+          <div class="btn btn-xs btn-plotCards" ng-click="goTo('mobility', 'maps_volumes')"
+                ng-class="currentRef=='maps_volumes' ? 'select' : ''">
+            Volumes
+          </div>
+        </a>
+        <a data-slide-index="0">
+          <div class="btn btn-xs btn-plotCards" ng-click="goTo('mobility', 'maps_patterns')"
+                ng-class="currentRef=='maps_patterns' ? 'select' : ''">
+            Patterns
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+
+    <div class="row bx_maps">
+      <div class="bxslider">
+        <ul class="bxslider" id='slider04'>
+            <li class='slider_img'><img src="maps/mobility/patterns.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
+            <li class='slider_img'><img src="maps/mobility/volumes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
+            <li class='slider_img'><img src="maps/mobility/traveltimes.png" title="Average travel time arranged by mode of transport."/></li>
+        </ul>
+      </div>
+    </div>
+
+    <a id='mobility_graph_mode'></a>
+    <a id='mobility_graph_travel'></a>
+
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2 plotCard-hdr">
+          Transportation Indicators
+      </div>
+      <div class="row">
+          <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_traveltimes')"
+              ng-click="goTo('mobility', 'graph_travel')"
+              ng-class="currentRef=='graph_travel' ? 'select' : ''">
+            Travel Patterns
+          </a>
+          <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('mobilityCharts', 'plotCards_modevolumes')"
+              ng-click="goTo('mobility', 'graph_mode')"
+              ng-class="currentRef=='graph_mode' ? 'select' : ''">
+            Mode Volumes
+          </a>
+      </div>
     </div>
 
     <div id="mobilityCharts">
@@ -163,7 +208,7 @@
         <div class="col-sm-12 darkCard" id="plotCards_modevolumes" hidden>
             <div class="col-sm-2"></div>
             <div class="col-sm-2 textContainer">
-                <h2>Mode Volumes</h2>
+                <h2>Modal Split, Time, and Costs</h2>
                 <p>Modes measured through multimodal research: private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses, bicycles, and pedestrians.</p>
             </div>
             <div class="col-sm-8">

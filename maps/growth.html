@@ -17,6 +17,22 @@
                     currentRef == 'maps_land10' ? 'select' : ''">
       Maps Data
     </div>
+    
+    <div class="btn sideBar growth" ng-click="goTo('growth', 'devStrat_caracol')"
+          ng-class="currentRef=='devStrat_caracol' ||
+                    currentRef=='devStrat_limonade' ||
+                    currentRef=='devStrat_trou' ||
+                    currentRef=='devStrat_terrier' ? 'select' : ''" 
+          onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">
+      Future Growth
+    </div>
+    <div class="btn sideBar growth" ng-click="goTo('growth', 'maps_landuse')"
+          ng-class="currentRef=='maps_landuse' ||
+                    currentRef=='maps_population' ||
+                    currentRef=='maps_scenarios' ? 'select' : ''" 
+          onclick="swapPlotCard('plotCards', 'plotCards_landuse')">
+      Other Analyses
+    </div>
   </div>
 <!-- 
   <div class="sideBarTitle">
@@ -60,30 +76,11 @@
         </div>
       </a>
     </div>
-  </div> -->
+  </div>
 
   <div class="sideBarTitle">
     Learn More
-
-
-    <div class="btn sideBar growth" ng-click="goTo('growth', 'devStrat_caracol')"
-          ng-class="currentRef=='devStrat_caracol' ||
-                    currentRef=='devStrat_limonade' ||
-                    currentRef=='devStrat_trou' ||
-                    currentRef=='devStrat_terrier' ? 'select' : ''" 
-          onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">
-      Urban Centers
-    </div>
-    <div class="btn sideBar growth" ng-click="goTo('growth', 'maps_landuse')"
-          ng-class="currentRef=='maps_landuse' ||
-                    currentRef=='maps_population' ||
-                    currentRef=='maps_scenarios' ? 'select' : ''" 
-          onclick="swapPlotCard('plotCards', 'plotCards_landuse')">
-      Graph Analyses
-    </div>
-
-
-    <!-- <div class="subTitle">
+    <div class="subTitle">
       Urban Centers
     </div>
     <div class="btn sideBar growth" ng-click="goTo('growth', 'devStrat_caracol')"
@@ -266,7 +263,7 @@
 
   <div class="col-sm-2"></div>
   <div class="col-sm-2 plotCard-hdr">
-      Development Strategy
+      Future Growth Strategy
   </div>
   <div class="row">
       <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')" 
@@ -352,7 +349,6 @@
       <div class="col-sm-3 pull-right" style="padding-top:10px">
           <span style="font-size:0.8em;font-style:italic;">
               <p>Above maps generated to provide spatial understanding of development patterns at each site as they relate the areas within which sustainable development can occur.</p>
-              <p>Generated GIS model of development strategy, targeting areas by optimal use. For more information on analyses output, visit <a href="smart.html">Smart Growth</a>.</p>
           </span>
           </span>
       </div>
@@ -366,7 +362,7 @@
 
     <div class="col-sm-2"></div>
     <div class="col-sm-2 plotCard-hdr">
-        Graph Analyses
+        Other Analyses
     </div>
     <div class="row">
         <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_scenarios')"

@@ -50,7 +50,7 @@ a.anchor{
   background-color: rgba(0,0,0,0);
   color: rgba(955, 955, 955, 0.35);
 }
-.btn-plotCards:hover {
+.btn-plotCards:hover, .btn-plotCards.select {
   color:white;
 }
 .foot_aerial {
@@ -213,7 +213,7 @@ a.anchor{
 }
 .sideBarTitle {
   color: white;
-  font-size:18px;
+  font-size:16px;
   font-weight:900;
 }
 .sideBarTitle .subTitle {

@@ -8,11 +8,20 @@
           ng-class="currentRef=='description' ? 'select' : ''">
       Description
     </div>
+    <div class="btn sideBar growth" ng-click="goTo('growth', 'maps_growth85')"
+          ng-class="currentRef == 'maps_growth85' ||
+                    currentRef == 'maps_growth10' ||
+                    currentRef == 'maps_growth13' ||
+                    currentRef == 'maps_land86' ||
+                    currentRef == 'maps_land10' ||
+                    currentRef == 'maps_land10' ? 'select' : ''">
+      Maps Data
+    </div>
   </div>
-
+<!-- 
   <div class="sideBarTitle">
     Maps Data
-    <div id="bx_slider02" class="top_slider">
+    <div >
       <div class="subTitle">
         Growth Levels
       </div>
@@ -51,11 +60,30 @@
         </div>
       </a>
     </div>
-  </div>
+  </div> -->
 
   <div class="sideBarTitle">
     Learn More
-    <div class="subTitle">
+
+
+    <div class="btn sideBar growth" ng-click="goTo('growth', 'devStrat_caracol')"
+          ng-class="currentRef=='devStrat_caracol' ||
+                    currentRef=='devStrat_limonade' ||
+                    currentRef=='devStrat_trou' ||
+                    currentRef=='devStrat_terrier' ? 'select' : ''" 
+          onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">
+      Urban Centers
+    </div>
+    <div class="btn sideBar growth" ng-click="goTo('growth', 'maps_landuse')"
+          ng-class="currentRef=='maps_landuse' ||
+                    currentRef=='maps_population' ||
+                    currentRef=='maps_scenarios' ? 'select' : ''" 
+          onclick="swapPlotCard('plotCards', 'plotCards_landuse')">
+      Graph Analyses
+    </div>
+
+
+    <!-- <div class="subTitle">
       Urban Centers
     </div>
     <div class="btn sideBar growth" ng-click="goTo('growth', 'devStrat_caracol')"
@@ -96,7 +124,7 @@
           ng-class="currentRef=='maps_scenarios' ? 'select' : ''" 
           onclick="swapPlotCard('plotCards', 'plotCards_scenarios')">
       Scenarios
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -162,28 +190,69 @@
 
   <!-- MAPS BXSLIDER DIV -->
   <div class="row">
+
+    <a id="growth_maps_growth85"></a>
+    <a id="growth_maps_growth10"></a>
+    <a id="growth_maps_growth13"></a>
+    <a id="growth_maps_land86"></a>
+    <a id="growth_maps_land10"></a>
+
       <div class="col-sm-2"></div>
       <div class="col-sm-2 plotCard-hdr">
-          Maps Data
+          <small>Growth + Land Development</small>
+          <br> Maps Data
+      </div>
+      <div class="row" id="bx_slider02" class="top_slider">
+        <a data-slide-index="4" class="btn btn-xs btn-plotCards" ng-click="goTo('growth', 'maps_land10')"
+                ng-class="currentRef=='maps_land10' ? 'select' : ''">
+            <small>Development</small>
+             <br> 2010
+            
+        </a>
+        <a data-slide-index="3" class="btn btn-xs btn-plotCards" ng-click="goTo('growth', 'maps_land86')"
+                ng-class="currentRef=='maps_land86' ? 'select' : ''">
+            <small>Development</small>
+             <br> 1986
+            
+        </a>
+
+        <a data-slide-index="2" class="btn btn-xs btn-plotCards" ng-click="goTo('growth', 'maps_growth13')"
+                ng-class="currentRef=='maps_growth13' ? 'select' : ''">
+            <small>Growth</small>
+             <br>2013
+
+        </a>
+        <a data-slide-index="1" class="btn btn-xs btn-plotCards" ng-click="goTo('growth', 'maps_growth10')"
+                ng-class="currentRef=='maps_growth10' ? 'select' : ''">
+            <small>Growth</small>
+             <br>2010
+
+        </a>
+        <a data-slide-index="0" class="btn btn-xs btn-plotCards" ng-click="goTo('growth', 'maps_growth85')"
+                ng-class="currentRef=='maps_growth85' ? 'select' : ''">
+            <small>Growth</small>
+             <br>1985
+
+        </a>
       </div>
   </div>
   <div class="row bx_maps">
       <a class="anchor" id="maps"></a>
       <div class="bxslider">
           <ul class="bxslider" id='slider02'>
-              <li class='slider_img' id="growth_maps_growth85">
+              <li class='slider_img'>
                 <img src="maps/growth/growth_1985.png"  title="1985 Growth Levels"/>
               </li>
-              <li class='slider_img' id="growth_maps_growth10">
+              <li class='slider_img'>
                 <img src="maps/growth/growth_2010.png"  title="2010 Growth Levels"/>
               </li>
-              <li class='slider_img' id="growth_maps_growth13">
+              <li class='slider_img'>
                 <img src="maps/growth/growth_2013.png"  title="2013 Growth Levels"/>
               </li>
-              <li class='slider_img' id="growth_maps_land86">
+              <li class='slider_img'>
                 <img src="maps/growth/landuse_1986.png" title="1986 Land Development"/>
               </li>
-              <li class='slider_img' id="growth_maps_land10">
+              <li class='slider_img'>
                 <img src="maps/growth/landuse_2010.png" title="2010 Land Development"/>
               </li>
           </ul>
@@ -200,10 +269,26 @@
       Development Strategy
   </div>
   <div class="row">
-      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')">  Terrier Rouge </a>
-      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_trou')">     Trou-du-Nord  </a>
-      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')"> Limonade      </a>
-      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')">  Caracol       </a>
+      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_terrier')" 
+          ng-click="goTo('growth', 'devStrat_terrier')"
+          ng-class="currentRef=='devStrat_terrier' ? 'select' : ''">
+          Terrier Rouge
+      </a>
+      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_trou')"
+          ng-click="goTo('growth', 'devStrat_trou')"
+          ng-class="currentRef=='devStrat_trou' ? 'select' : ''">
+        Trou-du-Nord
+      </a>
+      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_limonade')"
+          ng-click="goTo('growth', 'devStrat_limonade')"
+          ng-class="currentRef=='devStrat_limonade' ? 'select' : ''">
+        Limonade
+      </a>
+      <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('growthMaps', 'plotCards_caracol')"
+          ng-click="goTo('growth', 'devStrat_caracol')"
+          ng-class="currentRef=='devStrat_caracol' ? 'select' : ''">
+        Caracol
+      </a>
   </div>
 
   <div id="growthMaps">
@@ -275,19 +360,32 @@
 
   <div class="row">
 
+    <a id="growth_maps_scenarios"></a>
     <a id="growth_maps_population"></a>
     <a id="growth_maps_landuse"></a>
-    <a id="growth_maps_scenarios"></a>
 
     <div class="col-sm-2"></div>
     <div class="col-sm-2 plotCard-hdr">
         Graph Analyses
     </div>
     <div class="row">
-        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_scenarios')">Scenarios</a>
-        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_population')">Population</a>
-        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_landuse')">Land Use</a>
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_scenarios')"
+            ng-click="goTo('growth', 'maps_scenarios')"
+            ng-class="currentRef=='maps_scenarios' ? 'select' : ''">
+          Scenarios
+        </a>
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_population')"
+            ng-click="goTo('growth', 'maps_population')"
+            ng-class="currentRef=='maps_population' ? 'select' : ''">
+          Population
+        </a>
+        <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('plotCards', 'plotCards_landuse')"
+            ng-click="goTo('growth', 'maps_landuse')"
+            ng-class="currentRef=='maps_landuse' ? 'select' : ''">
+          Land Use
+        </a>
     </div>
+
     
     <a class="anchor" id='graphs'></a>
     <div id="plotCards">

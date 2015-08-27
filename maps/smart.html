@@ -3,14 +3,19 @@
 <!-- SIDEBAR DIV -->
 <div class="leftNav">
   <div class="sideBarTitle">
-    Smart Growth
+    Development
     <div class="btn sideBar smart" ng-click="goTo('smart', 'description')"
           ng-class="currentRef=='description' ? 'select' : ''">
       Description
     </div>
+    <div class="btn sideBar smart" ng-click="goTo('smart', 'maps_strategy')"
+          ng-class="currentRef=='maps_strategy' || 
+                    currentRef=='maps_gis' ? 'select' : ''">
+      Maps Data
+    </div>
   </div>
 
-  <div class="sideBarTitle">
+<!--   <div class="sideBarTitle">
     Maps Data
     <div id="bx_slider05" class="top_slider">
       <div class="subTitle">
@@ -29,13 +34,10 @@
         </div>
       </a>
     </div>
-  </div>
+  </div> -->
 
   <div class="sideBarTitle">
-    Learn More
-    <div class="subTitle">
-      Before/After
-    </div>
+    Proposed Interventions
     <div class="btn sideBar smart" ng-click="goTo('smart', 'render_bike')"
           ng-class="currentRef=='render_bike' ? 'select' : ''" >
       PIC Bike Path
@@ -46,7 +48,7 @@
     </div>
     <div class="btn sideBar smart" ng-click="goTo('smart', 'render_bus')"
           ng-class="currentRef=='render_bus' ? 'select' : ''" >
-      Bus Station
+      Multimodal Station
     </div>
   </div>
 </div>
@@ -114,22 +116,37 @@
     </div>
 
     <!-- MAPS BXSLIDER DIV -->
-    <a class="anchor" id='maps'></a>
-    <div class="row">
-        <div class="col-sm-2"></div>
-        <div class="col-sm-2 plotCard-hdr">
-            Maps Data
-        </div>
-    </div>
-    <div class="row bx_maps">
-
     <a id="smart_maps_gis"></a>
     <a id="smart_maps_strategy"></a>
 
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-2 plotCard-hdr">
+        Maps Data
+      </div>
+      <div id="bx_slider05" class="row top_slider">
+<!--         <a data-slide-index="1">
+          <div class="btn btn-xs btn-plotCards" ng-click="goTo('smart', 'maps_gis')"
+                ng-class="currentRef=='maps_gis' ? 'select' : ''">
+            GIS Model
+          </div>
+        </a> -->
+        <a data-slide-index="0">
+          <div class="btn btn-xs btn-plotCards" ng-click="goTo('smart', 'maps_strategy')"
+                ng-class="currentRef=='maps_strategy' ? 'select' : ''">
+            Strategy
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="row bx_maps">
+
+
         <div class="bxslider">
             <ul class="bxslider" id='slider05'>
-                <li class='slider_img'><img src="maps/smart/smartgrowth_limonade.png" title="Future + Sustainable Land Use Map, Limonade: Based on the potential restrictions for future development, and considering the many attractions in the city (infrastructure such as roads, schools, markets, etc.) the map below shows the areas that could accommodate future urban development."/></li>
                 <li class='slider_img'><img src="maps/smart/limonade_plan.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
+<!--                 <li class='slider_img'><img src="maps/smart/smartgrowth_limonade.png" title="Future + Sustainable Land Use Map, Limonade: Based on the potential restrictions for future development, and considering the many attractions in the city (infrastructure such as roads, schools, markets, etc.) the map below shows the areas that could accommodate future urban development."/></li> -->
             </ul>
         </div>
     </div>
@@ -268,16 +285,16 @@
         <div class="row" id="smart_render_bus">
             <div class="col-xs-2"></div>
             <div class="col-xs-2 plotCard-hdr">
-                Before/After
+                Limon Before/After
             </div>
             <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_after')">
-                Limon Bus Station After
+                Multimodal Stn. After
             </a>
             <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_before')">
-                Limon Bus Station Before
+                Multimodal Stn. Before
             </a>
             <a class="btn btn-xs btn-plotCards" onclick="swapPlotCard('limon_bus', 'plotCards_limon_map')">
-                Limon Bus Station Mapped
+                Multimodal Stn. Mapped
             </a>
         </div>
 

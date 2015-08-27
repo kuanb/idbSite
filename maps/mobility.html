@@ -159,13 +159,14 @@
         </a>
       </div>
     </div>
-    </div>
 
     <div class="row bx_maps">
       <div class="bxslider">
         <ul class="bxslider" id='slider04'>
             <li class='slider_img'><img src="maps/mobility/patterns.png" title="Travel patterns and transportation demand: 2 major studies commissined. 1. Origin-destination survey: a study of general traffic, mass transport, and travel characteristics. 2. Multimodal traffic study: a three week study of private vehicles, trucks, motorcycles, moto-taxis, minibuses/tap-taps, buses,bicycles, and pedestrians."/></li>
+            
             <li class='slider_img'><img src="maps/mobility/volumes.png" title="Primary congestion points exacerbated by collective transport vehicles’ frequent stops. Scroll below for enhanced graph visualization."/></li>
+
             <li class='slider_img'><img src="maps/mobility/traveltimes.png" title="Average travel time arranged by mode of transport."/></li>
         </ul>
       </div>
@@ -223,10 +224,7 @@
 $('#slider04').bxSlider({
     mode: 'fade',
     captions: true,
-    pagerCustom: '#bx_slider04',
-    onSlideAfter: function(){
-        location.hash = "#maps"
-      }
+    pagerCustom: '#bx_slider04'
 });
 </script>
 

@@ -133,8 +133,6 @@ a.anchor{
 }
 .bxslider {
   padding: 0px;
-  max-width: 1600px;
-  margin: 0px 0 0 0
 }
 .slider_img {
   background-color: rgba(0,0,0,0);
@@ -146,8 +144,8 @@ a.anchor{
   margin-right: 55px;
 }
 .beneathMap {
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  overflow-x: hidden;
 }
 .beneathMap .row {
   margin-left: 0px;
